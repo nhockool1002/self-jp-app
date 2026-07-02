@@ -303,6 +303,52 @@ button.primary {
   gap: 8px;
 }
 
+.vocab-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.vocab-word-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 480px;
+}
+
+.vocab-word-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.vocab-word-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 100px;
+}
+
+.vocab-kanji {
+  font-size: 1.1rem;
+}
+
+.vocab-kana {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.vocab-meaning {
+  flex: 1;
+  font-size: 0.9em;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
@@ -326,8 +372,13 @@ button.primary {
   }
 
   .kana-card,
-  .kanji-card {
+  .kanji-card,
+  .vocab-word-card {
     background: #1f1f1f;
+  }
+
+  .vocab-kana {
+    color: #aaa;
   }
 
   .kana-romaji,
