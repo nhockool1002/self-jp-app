@@ -109,6 +109,96 @@ button:hover {
   text-align: center;
 }
 
+.kana-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.kana-settings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+}
+
+.field select,
+.field input {
+  padding: 0.4em;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+button.primary {
+  background: #396cd8;
+  color: #fff;
+}
+
+.kana-session {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.kana-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 48px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.kana-card-compact {
+  padding: 12px 20px;
+  min-width: 100px;
+}
+
+.kana-char {
+  font-size: 4rem;
+  line-height: 1;
+}
+
+.kana-card-compact .kana-char {
+  font-size: 2.2rem;
+}
+
+.kana-romaji {
+  font-size: 1.2rem;
+  color: #666;
+  min-height: 1.4rem;
+}
+
+.kana-audio-btn {
+  background: transparent;
+  box-shadow: none;
+  font-size: 1.2rem;
+}
+
+.kana-progress {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.kana-controls {
+  display: flex;
+  gap: 8px;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
@@ -122,5 +212,21 @@ button:hover {
 
   .main-menu {
     border-bottom-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .field select,
+  .field input {
+    border-color: rgba(255, 255, 255, 0.2);
+    background: #1f1f1f;
+    color: #fff;
+  }
+
+  .kana-card {
+    background: #1f1f1f;
+  }
+
+  .kana-romaji,
+  .kana-progress {
+    color: #aaa;
   }
 }
