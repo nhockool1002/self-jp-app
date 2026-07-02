@@ -28,7 +28,6 @@ interface AppState {
   updateKanaSettings: (partial: Partial<AppSettings["kana"]>) => void;
   updateKanjiSettings: (partial: Partial<AppSettings["kanji"]>) => void;
   markKanjiStudied: (kanjiId: string) => void;
-  studiedKanjiToday: () => Set<string>;
 }
 
 export const useAppStore = create<AppState>((set, get) => ({
@@ -80,13 +79,8 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({ progress });
     void saveProgress(progress);
   },
-
-  studiedKanjiToday: () => {
-    const date = today();
-    return new Set(
-      get()
-        .progress.kanji.filter((r) => r.lastStudiedDate === date)
-        .map((r) => r.itemId)
-    );
-  },
 }));
+
+export function todayDateString(): string {
+  return today();
+}

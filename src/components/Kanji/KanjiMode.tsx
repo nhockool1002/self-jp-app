@@ -1,7 +1,7 @@
 import { useMemo, useState } from "react";
 import kanjiData from "../../data/kanji.json";
 import { playAudio } from "../../lib/audio";
-import { useAppStore } from "../../lib/store";
+import { todayDateString, useAppStore } from "../../lib/store";
 import type { KanjiDataset, KanjiEntry } from "../../lib/types";
 import { KanjiCard } from "./KanjiCard";
 import { KanjiDailyProgress } from "./KanjiDailyProgress";
@@ -19,8 +19,12 @@ export function KanjiMode({ compact }: { compact: boolean }) {
   const wordsPerDay = useAppStore((s) => s.settings.kanji.wordsPerDay);
   const progress = useAppStore((s) => s.progress.kanji);
   const markKanjiStudied = useAppStore((s) => s.markKanjiStudied);
-  const studiedToday = useAppStore((s) => s.studiedKanjiToday());
   const [index, setIndex] = useState(0);
+
+  const studiedToday = useMemo(() => {
+    const date = todayDateString();
+    return new Set(progress.filter((r) => r.lastStudiedDate === date).map((r) => r.itemId));
+  }, [progress]);
 
   const todaysList = useMemo(() => {
     const progressMap = new Map(progress.map((r) => [r.itemId, r]));
