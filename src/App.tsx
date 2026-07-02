@@ -1,50 +1,35 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import { invoke } from "@tauri-apps/api/core";
+import { useEffect } from "react";
+import { MainMenu } from "./components/Shell/MainMenu";
+import { CompactBubble } from "./components/Shell/CompactBubble";
+import { KanaMode } from "./components/Kana/KanaMode";
+import { KanjiMode } from "./components/Kanji/KanjiMode";
+import { VocabMode } from "./components/Vocab/VocabMode";
+import { useAppStore } from "./lib/store";
 import "./App.css";
 
 function App() {
-  const [greetMsg, setGreetMsg] = useState("");
-  const [name, setName] = useState("");
+  const mode = useAppStore((s) => s.mode);
+  const isCompact = useAppStore((s) => s.isCompact);
+  const hydrated = useAppStore((s) => s.hydrated);
+  const hydrate = useAppStore((s) => s.hydrate);
 
-  async function greet() {
-    // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
-    setGreetMsg(await invoke("greet", { name }));
+  useEffect(() => {
+    void hydrate();
+  }, [hydrate]);
+
+  if (!hydrated) {
+    return <div className="loading">Loading...</div>;
   }
 
   return (
-    <main className="container">
-      <h1>Welcome to Tauri + React</h1>
-
-      <div className="row">
-        <a href="https://vite.dev" target="_blank">
-          <img src="/vite.svg" className="logo vite" alt="Vite logo" />
-        </a>
-        <a href="https://tauri.app" target="_blank">
-          <img src="/tauri.svg" className="logo tauri" alt="Tauri logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <p>Click on the Tauri, Vite, and React logos to learn more.</p>
-
-      <form
-        className="row"
-        onSubmit={(e) => {
-          e.preventDefault();
-          greet();
-        }}
-      >
-        <input
-          id="greet-input"
-          onChange={(e) => setName(e.currentTarget.value)}
-          placeholder="Enter a name..."
-        />
-        <button type="submit">Greet</button>
-      </form>
-      <p>{greetMsg}</p>
-    </main>
+    <div className={isCompact ? "app app-compact" : "app"}>
+      {isCompact ? <CompactBubble /> : <MainMenu />}
+      <main className="mode-area">
+        {mode === "kana" && <KanaMode compact={isCompact} />}
+        {mode === "kanji" && <KanjiMode compact={isCompact} />}
+        {mode === "vocab" && <VocabMode compact={isCompact} />}
+      </main>
+    </div>
   );
 }
 
