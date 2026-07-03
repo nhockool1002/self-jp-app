@@ -56,7 +56,12 @@ async function main() {
   const kana = JSON.parse(readFileSync(join(dataDir, "kana.json"), "utf8"));
   const kanji = JSON.parse(readFileSync(join(dataDir, "kanji.json"), "utf8"));
 
-  const chars = new Set(kana.map((k) => k.char));
+  // Kana combination sounds (yōon, e.g. きゃ) are two-character strings —
+  // split so each individual character (き and ゃ) gets its own stroke data.
+  const chars = new Set();
+  for (const k of kana) {
+    for (const c of k.char) chars.add(c);
+  }
   for (const entries of Object.values(kanji)) {
     for (const e of entries) chars.add(e.kanji);
   }

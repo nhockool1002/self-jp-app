@@ -50,7 +50,6 @@ export function KanaMode({ compact }: { compact: boolean }) {
   const current = session ? session[index] : null;
 
   useEffect(() => {
-    if (current) speak(current);
     setShowRomaji(false);
   }, [current]);
 

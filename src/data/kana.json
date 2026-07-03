@@ -850,5 +850,401 @@
     "romaji": "po",
     "char": "ポ",
     "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "kya",
+    "char": "きゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "kya",
+    "char": "キャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "kyu",
+    "char": "きゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "kyu",
+    "char": "キュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "kyo",
+    "char": "きょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "kyo",
+    "char": "キョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "sha",
+    "char": "しゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "sha",
+    "char": "シャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "shu",
+    "char": "しゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "shu",
+    "char": "シュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "sho",
+    "char": "しょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "sho",
+    "char": "ショ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "cha",
+    "char": "ちゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "cha",
+    "char": "チャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "chu",
+    "char": "ちゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "chu",
+    "char": "チュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "cho",
+    "char": "ちょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "cho",
+    "char": "チョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "nya",
+    "char": "にゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "nya",
+    "char": "ニャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "nyu",
+    "char": "にゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "nyu",
+    "char": "ニュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "nyo",
+    "char": "にょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "nyo",
+    "char": "ニョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "hya",
+    "char": "ひゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "hya",
+    "char": "ヒャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "hyu",
+    "char": "ひゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "hyu",
+    "char": "ヒュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "hyo",
+    "char": "ひょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "hyo",
+    "char": "ヒョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "mya",
+    "char": "みゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "mya",
+    "char": "ミャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "myu",
+    "char": "みゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "myu",
+    "char": "ミュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "myo",
+    "char": "みょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "myo",
+    "char": "ミョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "rya",
+    "char": "りゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "rya",
+    "char": "リャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "ryu",
+    "char": "りゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "ryu",
+    "char": "リュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "ryo",
+    "char": "りょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "ryo",
+    "char": "リョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "gya",
+    "char": "ぎゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "gya",
+    "char": "ギャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "gyu",
+    "char": "ぎゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "gyu",
+    "char": "ギュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "gyo",
+    "char": "ぎょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "gyo",
+    "char": "ギョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "ja",
+    "char": "じゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "ja",
+    "char": "ジャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "ju",
+    "char": "じゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "ju",
+    "char": "ジュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "jo",
+    "char": "じょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "jo",
+    "char": "ジョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "bya",
+    "char": "びゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "bya",
+    "char": "ビャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "byu",
+    "char": "びゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "byu",
+    "char": "ビュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "byo",
+    "char": "びょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "byo",
+    "char": "ビョ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "pya",
+    "char": "ぴゃ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "pya",
+    "char": "ピャ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "pyu",
+    "char": "ぴゅ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "pyu",
+    "char": "ピュ",
+    "audioFile": null
+  },
+  {
+    "type": "hiragana",
+    "romaji": "pyo",
+    "char": "ぴょ",
+    "audioFile": null
+  },
+  {
+    "type": "katakana",
+    "romaji": "pyo",
+    "char": "ピョ",
+    "audioFile": null
   }
 ]

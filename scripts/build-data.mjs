@@ -249,6 +249,25 @@ const KATAKANA_CHARS = {
 };
 const KATAKANA_DA_ROW = ["ダ", "ヂ", "ヅ", "デ", "ド"];
 
+// Yōon (拗音 / "âm ghép", combination sounds): a base kana from the -i column
+// combined with a small や/ゆ/よ. Romaji isn't a plain base+vowel concat for
+// し/ち/じ (shi/chi/ji), so each base carries its own romaji prefix.
+const YOON_BASES = [
+  { hira: "き", kata: "キ", prefix: "ky" },
+  { hira: "し", kata: "シ", prefix: "sh" },
+  { hira: "ち", kata: "チ", prefix: "ch" },
+  { hira: "に", kata: "ニ", prefix: "ny" },
+  { hira: "ひ", kata: "ヒ", prefix: "hy" },
+  { hira: "み", kata: "ミ", prefix: "my" },
+  { hira: "り", kata: "リ", prefix: "ry" },
+  { hira: "ぎ", kata: "ギ", prefix: "gy" },
+  { hira: "じ", kata: "ジ", prefix: "j" },
+  { hira: "び", kata: "ビ", prefix: "by" },
+  { hira: "ぴ", kata: "ピ", prefix: "py" },
+];
+const YOON_SMALL_HIRA = { a: "ゃ", u: "ゅ", o: "ょ" };
+const YOON_SMALL_KATA = { a: "ャ", u: "ュ", o: "ョ" };
+
 function buildKana() {
   const entries = [];
   const push = (type, romaji, char) =>
@@ -283,6 +302,15 @@ function buildKana() {
   for (const romaji of HANDAKUTEN_ROW) {
     push("hiragana", romaji, HIRAGANA_CHARS[romaji]);
     push("katakana", romaji, KATAKANA_CHARS[romaji]);
+  }
+
+  // Yōon (combination sounds)
+  for (const { hira, kata, prefix } of YOON_BASES) {
+    for (const vowel of ["a", "u", "o"]) {
+      const romaji = `${prefix}${vowel}`;
+      push("hiragana", romaji, hira + YOON_SMALL_HIRA[vowel]);
+      push("katakana", romaji, kata + YOON_SMALL_KATA[vowel]);
+    }
   }
 
   return entries;

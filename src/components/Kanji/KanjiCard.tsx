@@ -1,5 +1,5 @@
 import type { KanjiEntry } from "../../lib/types";
-import { StrokeOrderDiagram } from "../Strokes/StrokeOrderDiagram";
+import { StrokeButton } from "../Strokes/StrokeOrderDiagram";
 
 interface KanjiCardProps {
   entry: KanjiEntry;
@@ -33,12 +33,14 @@ export function KanjiCard({ entry, isStudied, onPlayAudio, onMarkStudied, compac
       <div className="kanji-card-columns">
         <div className="kanji-card-left">
           <div className="kanji-char">{entry.kanji}</div>
-          <button className="kana-audio-btn" onClick={onPlayAudio} title="Phát âm">
-            🔊
-          </button>
+          <div className="kanji-card-actions">
+            <button className="kana-audio-btn" onClick={onPlayAudio} title="Phát âm">
+              🔊
+            </button>
+            <StrokeButton char={entry.kanji} />
+          </div>
           {entry.hanviet && <div className="kanji-hanviet">Hán Việt: {entry.hanviet}</div>}
           <div className="kanji-jlpt-badge">{entry.jlpt}</div>
-          <StrokeOrderDiagram char={entry.kanji} size={120} />
         </div>
 
         <div className="kanji-detail">

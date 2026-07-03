@@ -1,5 +1,5 @@
 import type { KanaEntry } from "../../lib/types";
-import { StrokeOrderDiagram } from "../Strokes/StrokeOrderDiagram";
+import { StrokeButton } from "../Strokes/StrokeOrderDiagram";
 
 interface KanaFlashcardProps {
   entry: KanaEntry;
@@ -14,21 +14,19 @@ export function KanaFlashcard({ entry, showRomaji, onReveal, onPlayAudio, compac
     <div className={compact ? "kana-card kana-card-compact" : "kana-card"} onClick={onReveal}>
       <div className="kana-char">{entry.char}</div>
       <div className="kana-romaji">{showRomaji ? entry.romaji : " "}</div>
-      <button
-        className="kana-audio-btn"
-        onClick={(e) => {
-          e.stopPropagation();
-          onPlayAudio();
-        }}
-        title="Play audio"
-      >
-        🔊
-      </button>
-      {!compact && showRomaji && (
-        <div onClick={(e) => e.stopPropagation()}>
-          <StrokeOrderDiagram char={entry.char} />
-        </div>
-      )}
+      <div className="kana-card-actions" onClick={(e) => e.stopPropagation()}>
+        <button
+          className="kana-audio-btn"
+          onClick={(e) => {
+            e.stopPropagation();
+            onPlayAudio();
+          }}
+          title="Phát âm"
+        >
+          🔊
+        </button>
+        {!compact && <StrokeButton char={entry.char} />}
+      </div>
     </div>
   );
 }
