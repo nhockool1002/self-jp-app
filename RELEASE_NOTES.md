@@ -1,7 +1,7 @@
 # Self JP App — v0.1.0 Release Notes
 
 **Date:** 2026-07-03
-**Platform:** macOS (Apple Silicon, built & verified) · Windows (build pipeline ready, not yet verified on hardware — see [Building on Windows](README.md#windows))
+**Platform:** macOS (Apple Silicon, built & verified) · Windows & Linux (build pipeline ready via CI, not yet verified on physical hardware — see [README.md](README.md#development))
 
 First release. A Tauri v2 + React desktop app for daily Japanese study, built for Vietnamese speakers — all learning content and UI text is in Vietnamese.
 
@@ -53,10 +53,11 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 - Bundled kana audio (currently TTS-only; no clearly-licensed CC0/MIT/public-domain dataset found)
 - Full example sentences for kanji (currently isolated example words, not full sentences)
 - Grammar covers 1–2 core points per lesson, not exhaustive textbook coverage
-- Windows build is set up (`npm run tauri build` on Windows, or the `build` GitHub Actions workflow) but not yet run/verified on real Windows hardware
+- Windows and Linux builds are set up (`npm run tauri build` on that platform, or the `build` GitHub Actions workflow) but not yet run/verified on real hardware
 
 ## Build
 
 - **macOS**: `npm run tauri build` → `.app` + `.dmg` (see [README.md](README.md#macos))
-- **Windows**: `npm run tauri build` on a Windows machine, or via CI (see below)
-- **CI**: [.github/workflows/build.yml](.github/workflows/build.yml) builds both macOS and Windows on every push to `main`, on manual trigger, or on a `v*` tag (see [README.md](README.md#building-via-ci-no-windows-machine-needed))
+- **Windows**: `npm run tauri build` on a Windows machine → `.msi`/`.exe` (see [README.md](README.md#windows))
+- **Linux**: `npm run tauri build` on a Linux machine → `.deb`/`.AppImage` (see [README.md](README.md#linux))
+- **CI**: [.github/workflows/build.yml](.github/workflows/build.yml) builds macOS, Windows, and Linux on every push to `main`, on manual trigger, or on a `v*` tag (see [README.md](README.md#building-via-ci-no-macoswindowslinux-machine-needed))

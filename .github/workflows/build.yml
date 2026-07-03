@@ -1,9 +1,9 @@
 name: Build
 
-# Tauri doesn't cross-compile installers, so macOS and Windows each build on
-# their own native runner. Every push to main / manual run just builds and
-# uploads workflow artifacts; pushing a v* tag additionally publishes those
-# same installers as assets on a GitHub Release for that tag.
+# Tauri doesn't cross-compile installers, so each platform builds on its own
+# native runner. Every push to main / manual run just builds and uploads
+# workflow artifacts; pushing a v* tag additionally publishes those same
+# installers as assets on a GitHub Release for that tag.
 on:
   push:
     branches: [main]
@@ -16,11 +16,13 @@ permissions:
 
 jobs:
   build:
+    name: Build (${{ matrix.name }})
     strategy:
       fail-fast: false
       matrix:
         include:
-          - platform: macos-latest
+          - name: macOS
+            platform: macos-latest
             artifact-name: self-jp-app-macos
             # actions/upload-artifact can zip a directory, so the .app bundle
             # is fine here; it's included for anyone who grabs the workflow
@@ -31,7 +33,8 @@ jobs:
             # Release assets must be actual files — a .app is a directory, so
             # only the .dmg (the real installer) gets attached to Releases.
             release-paths: src-tauri/target/release/bundle/dmg/*.dmg
-          - platform: windows-latest
+          - name: Windows
+            platform: windows-latest
             artifact-name: self-jp-app-windows
             artifact-paths: |
               src-tauri/target/release/bundle/msi/*.msi
@@ -39,6 +42,15 @@ jobs:
             release-paths: |
               src-tauri/target/release/bundle/msi/*.msi
               src-tauri/target/release/bundle/nsis/*.exe
+          - name: Linux
+            platform: ubuntu-latest
+            artifact-name: self-jp-app-linux
+            artifact-paths: |
+              src-tauri/target/release/bundle/deb/*.deb
+              src-tauri/target/release/bundle/appimage/*.AppImage
+            release-paths: |
+              src-tauri/target/release/bundle/deb/*.deb
+              src-tauri/target/release/bundle/appimage/*.AppImage
     runs-on: ${{ matrix.platform }}
     steps:
       - uses: actions/checkout@v4
@@ -48,6 +60,13 @@ jobs:
           node-version: 20
 
       - uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Linux build dependencies
+        if: matrix.platform == 'ubuntu-latest'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev build-essential curl wget file \
+            libxdo-dev libssl-dev libayatana-appindicator3-dev librsvg2-dev
 
       - name: Install frontend dependencies
         run: npm install

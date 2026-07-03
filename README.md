@@ -57,14 +57,30 @@ Production build: `npm run tauri build` → `.msi` and/or NSIS `.exe` installer 
 
 Tauri doesn't cross-compile installers — a Windows build must run on Windows (or CI); this hasn't been verified on a physical Windows machine yet.
 
-#### Building via CI (no Windows machine needed)
+### Linux
 
-[.github/workflows/build.yml](.github/workflows/build.yml) builds the app on both `macos-latest` and `windows-latest` GitHub Actions runners (Tauri can't cross-compile installers, so each platform builds natively). It runs on:
+Prerequisites (Debian/Ubuntu package names; see [Tauri's Linux prerequisites](https://tauri.app/start/prerequisites/) for other distros):
+```bash
+sudo apt-get update
+sudo apt-get install -y libwebkit2gtk-4.1-dev build-essential curl wget file \
+  libxdo-dev libssl-dev libayatana-appindicator3-dev librsvg2-dev
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+source "$HOME/.cargo/env"
+
+npm install
+npm run tauri dev
+```
+
+Production build: `npm run tauri build` → `.deb` and/or `.AppImage` under `src-tauri/target/release/bundle/`. Not yet verified on a physical Linux machine.
+
+#### Building via CI (no macOS/Windows/Linux machine needed)
+
+[.github/workflows/build.yml](.github/workflows/build.yml) builds the app on `macos-latest`, `windows-latest`, and `ubuntu-latest` GitHub Actions runners (Tauri can't cross-compile installers, so each platform builds natively). It runs on:
 - Every push to `main`,
 - A manual trigger from the Actions tab (`workflow_dispatch`), or
 - A tag matching `v*` (e.g. `git tag v0.1.0 && git push --tags`).
 
-The `.app`/`.dmg` and `.msi`/`.exe` are always uploaded as workflow artifacts (`self-jp-app-macos`, `self-jp-app-windows`, under the run's **Artifacts** section, expire after 90 days). Pushing a **`v*` tag** additionally publishes those same installers as assets on a GitHub Release for that tag (body copied from [RELEASE_NOTES.md](RELEASE_NOTES.md)) — plain pushes to `main` or manual runs do not create a release, to avoid a release per commit.
+The `.app`/`.dmg`, `.msi`/`.exe`, and `.deb`/`.AppImage` are always uploaded as workflow artifacts (`self-jp-app-macos`, `self-jp-app-windows`, `self-jp-app-linux`, under the run's **Artifacts** section, expire after 90 days). Pushing a **`v*` tag** additionally publishes those same installers as assets on a GitHub Release for that tag (body copied from [RELEASE_NOTES.md](RELEASE_NOTES.md)) — plain pushes to `main` or manual runs do not create a release, to avoid a release per commit.
 
 ## Known MVP gaps / fast-follows
 
