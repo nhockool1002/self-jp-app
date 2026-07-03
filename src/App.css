@@ -544,28 +544,6 @@ button.primary {
   gap: 6px;
 }
 
-.alphabet-grid-letter {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.alphabet-grid-letter .alphabet-cell {
-  flex: 0 0 64px;
-}
-
-.alphabet-letter-title {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: #396cd8;
-}
-
-.alphabet-letter-empty {
-  font-size: 0.82em;
-  color: #aaa;
-  font-style: italic;
-}
-
 .kana-chart {
   display: flex;
   flex-direction: column;

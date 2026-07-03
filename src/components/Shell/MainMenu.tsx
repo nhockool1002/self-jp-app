@@ -6,7 +6,6 @@ const MODES: { id: AppMode; label: string }[] = [
   { id: "kanji", label: "Kanji" },
   { id: "vocab", label: "Từ vựng" },
   { id: "grammar", label: "Ngữ pháp" },
-  { id: "alphabet", label: "Alphabet" },
 ];
 
 export function MainMenu() {

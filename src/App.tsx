@@ -5,7 +5,6 @@ import { KanaMode } from "./components/Kana/KanaMode";
 import { KanjiMode } from "./components/Kanji/KanjiMode";
 import { VocabMode } from "./components/Vocab/VocabMode";
 import { GrammarMode } from "./components/Grammar/GrammarMode";
-import { AlphabetMode } from "./components/Alphabet/AlphabetMode";
 import { AboutMode } from "./components/About/AboutMode";
 import { useAppStore } from "./lib/store";
 import "./App.css";
@@ -32,7 +31,6 @@ function App() {
         {mode === "kanji" && <KanjiMode compact={isCompact} />}
         {mode === "vocab" && <VocabMode compact={isCompact} />}
         {mode === "grammar" && <GrammarMode compact={isCompact} />}
-        {mode === "alphabet" && <AlphabetMode compact={isCompact} />}
         {mode === "about" && <AboutMode compact={isCompact} />}
       </main>
       {!isCompact && <footer className="app-footer">NhutNguyen © 2026</footer>}
