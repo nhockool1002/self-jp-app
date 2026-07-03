@@ -64,7 +64,7 @@ Tauri doesn't cross-compile installers — a Windows build must run on Windows (
 - A manual trigger from the Actions tab (`workflow_dispatch`), or
 - A tag matching `v*` (e.g. `git tag v0.1.0 && git push --tags`).
 
-The `.app`/`.dmg` and `.msi`/`.exe` are uploaded as workflow artifacts (`self-jp-app-macos`, `self-jp-app-windows`), not published as a release automatically.
+The `.app`/`.dmg` and `.msi`/`.exe` are always uploaded as workflow artifacts (`self-jp-app-macos`, `self-jp-app-windows`, under the run's **Artifacts** section, expire after 90 days). Pushing a **`v*` tag** additionally publishes those same installers as assets on a GitHub Release for that tag (body copied from [RELEASE_NOTES.md](RELEASE_NOTES.md)) — plain pushes to `main` or manual runs do not create a release, to avoid a release per commit.
 
 ## Known MVP gaps / fast-follows
 

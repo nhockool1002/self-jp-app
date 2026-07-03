@@ -1,13 +1,18 @@
 name: Build
 
 # Tauri doesn't cross-compile installers, so macOS and Windows each build on
-# their own native runner.
+# their own native runner. Every push to main / manual run just builds and
+# uploads workflow artifacts; pushing a v* tag additionally publishes those
+# same installers as assets on a GitHub Release for that tag.
 on:
   push:
     branches: [main]
     tags:
       - "v*"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -41,8 +46,16 @@ jobs:
       - name: Build Tauri app
         run: npm run tauri build
 
-      - name: Upload installers
+      - name: Upload build artifact
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact-name }}
           path: ${{ matrix.artifact-paths }}
+
+      - name: Publish to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ matrix.artifact-paths }}
+          body_path: RELEASE_NOTES.md
+          fail_on_unmatched_files: true
