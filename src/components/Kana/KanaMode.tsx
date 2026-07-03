@@ -5,6 +5,7 @@ import { useAppStore } from "../../lib/store";
 import type { KanaEntry } from "../../lib/types";
 import { KanaFlashcard } from "./KanaFlashcard";
 import { KanaSettings } from "./KanaSettings";
+import { KanaReferenceChart } from "../Alphabet/KanaReferenceChart";
 
 const KANA: KanaEntry[] = kanaData as KanaEntry[];
 
@@ -31,6 +32,7 @@ export function KanaMode({ compact }: { compact: boolean }) {
   const [index, setIndex] = useState(0);
   const [showRomaji, setShowRomaji] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showChart, setShowChart] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   function startSession() {
@@ -54,7 +56,7 @@ export function KanaMode({ compact }: { compact: boolean }) {
   }, [current]);
 
   useEffect(() => {
-    if (!isPlaying || !session) return;
+    if (!isPlaying || !session || showChart) return;
     timerRef.current = setInterval(() => {
       setIndex((i) => {
         if (i + 1 >= session.length) {
@@ -67,7 +69,7 @@ export function KanaMode({ compact }: { compact: boolean }) {
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };
-  }, [isPlaying, session, intervalMs]);
+  }, [isPlaying, session, intervalMs, showChart]);
 
   function goNext() {
     if (!session) return;
@@ -101,32 +103,47 @@ export function KanaMode({ compact }: { compact: boolean }) {
   return (
     <div className="mode-page">
       <div className="mode-controls-bar">
-        <KanaSettings typeFilter={typeFilter} onTypeFilterChange={setTypeFilter} onStart={startSession} />
-        {current && session && (
+        <button
+          className={showChart ? "tab tab-active" : "tab"}
+          onClick={() => setShowChart((v) => !v)}
+        >
+          {showChart ? "✕ Đóng bảng chữ cái" : "📖 Bảng chữ cái"}
+        </button>
+        {!showChart && (
           <>
             <span className="control-divider" />
-            <button onClick={goPrev} disabled={index === 0} title="Trước">
-              ◀
-            </button>
-            <button onClick={() => setIsPlaying((v) => !v)}>{isPlaying ? "⏸" : "▶"}</button>
-            <button onClick={goNext} disabled={index === session.length - 1} title="Tiếp">
-              ▶
-            </button>
-            <span className="kana-progress">
-              {index + 1} / {session.length}
-            </span>
+            <KanaSettings typeFilter={typeFilter} onTypeFilterChange={setTypeFilter} onStart={startSession} />
+            {current && session && (
+              <>
+                <span className="control-divider" />
+                <button onClick={goPrev} disabled={index === 0} title="Trước">
+                  ◀
+                </button>
+                <button onClick={() => setIsPlaying((v) => !v)}>{isPlaying ? "⏸" : "▶"}</button>
+                <button onClick={goNext} disabled={index === session.length - 1} title="Tiếp">
+                  ▶
+                </button>
+                <span className="kana-progress">
+                  {index + 1} / {session.length}
+                </span>
+              </>
+            )}
           </>
         )}
       </div>
 
-      <div className="mode-stage">
-        {current && (
-          <KanaFlashcard
-            entry={current}
-            showRomaji={showRomaji}
-            onReveal={() => setShowRomaji((v) => !v)}
-            onPlayAudio={() => speak(current)}
-          />
+      <div className={showChart ? "mode-stage mode-stage-scroll" : "mode-stage"}>
+        {showChart ? (
+          <KanaReferenceChart />
+        ) : (
+          current && (
+            <KanaFlashcard
+              entry={current}
+              showRomaji={showRomaji}
+              onReveal={() => setShowRomaji((v) => !v)}
+              onPlayAudio={() => speak(current)}
+            />
+          )
         )}
       </div>
     </div>

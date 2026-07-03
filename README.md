@@ -6,11 +6,11 @@ The UI and all learning content (kanji meanings, vocabulary, grammar explanation
 
 ## Modes
 
-- **Kana** — random Hiragana/Katakana flashcards (seion + dakuten + handakuten + yōon, 208 entries) with configurable session length and speed, TTS audio on click, animated stroke-order popover next to the audio button.
+- **Kana** — random Hiragana/Katakana flashcards (seion + dakuten + handakuten + yōon, 208 entries) with configurable session length and speed, TTS audio on click, animated stroke-order popover next to the audio button. A "📖 Bảng chữ cái" toggle (first control in the bar) swaps the flashcard view for the full gojuon reference chart (seion/dakuten/handakuten/yōon grid, Hiragana/Katakana toggle) in place.
 - **Kanji (N5–N1)** — daily kanji list sized by a configurable words-per-day setting, per-level browsing, Hán-Việt reading + Vietnamese meanings, example words (from the MNN vocab list, with Vietnamese meanings), animated stroke-order popover, daily progress tracking, TTS audio.
 - **Từ vựng (Vocab)** — Minna no Nihongo Shokyū I & II vocabulary, browsable lesson by lesson (1–50), Vietnamese meanings, TTS audio.
 - **Ngữ pháp (Grammar)** — MNN grammar points by lesson (1–50), each with structure, Vietnamese explanation, 5 example sentences with audio, and a usage note where relevant.
-- **Alphabet** — full Hiragana/Katakana reference chart (seion, dakuten, handakuten, yōon), click any character to hear it.
+- **Alphabet** — the Latin alphabet A–Z, and for each letter every kana (hiragana + katakana, all categories) whose romaji starts with it — a reverse index of "how is this Roman letter written in Japanese." Letters with no Japanese equivalent (L, Q, V, X) are shown with a note rather than omitted. Click any character to hear it.
 - **About** (ⓘ icon, top right) — app name, version, author, tech stack.
 
 ## Data sources
@@ -63,5 +63,5 @@ Tauri doesn't cross-compile installers — a Windows build must run on Windows (
 - Bundled kana audio (currently TTS-only pending a properly licensed dataset).
 - Full example sentences (not just isolated example words) for kanji.
 - Grammar content covers 1-2 core points per lesson, not exhaustive textbook coverage.
-- Alphabet chart cells play audio only; stroke order for a character is available in Kana/Kanji mode.
+- Alphabet tab cells play audio only; stroke order for a character is available in Kana/Kanji mode.
 - Windows build verification (needs a Windows machine or CI).

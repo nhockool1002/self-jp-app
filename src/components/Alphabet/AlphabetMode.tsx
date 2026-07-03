@@ -1,62 +1,42 @@
-import { useMemo, useState } from "react";
+import { useMemo } from "react";
 import kanaData from "../../data/kana.json";
 import type { KanaEntry } from "../../lib/types";
-import { alphabetSections } from "./alphabetLayout";
+import { groupByLatinLetter, LATIN_LETTERS } from "./romajiIndex";
 import { AlphabetCell } from "./AlphabetCell";
 
 const KANA: KanaEntry[] = kanaData as KanaEntry[];
 
+/** Shows the full Latin alphabet (A-Z) and, for each letter, every kana
+ * (hiragana + katakana) whose romaji starts with it — a reverse index from
+ * "how is this Roman letter written in Japanese" rather than from kana. */
 export function AlphabetMode({ compact }: { compact: boolean }) {
-  const [type, setType] = useState<"hiragana" | "katakana">("hiragana");
-
-  const byChar = useMemo(() => {
-    const map = new Map<string, KanaEntry>();
-    for (const entry of KANA) {
-      if (entry.type === type) map.set(entry.char, entry);
-    }
-    return map;
-  }, [type]);
-
-  const sections = alphabetSections(type);
+  const byLetter = useMemo(() => groupByLatinLetter(KANA), []);
 
   if (compact) {
-    return <div className="mode-compact">Mở cửa sổ chính để xem bảng chữ cái.</div>;
+    return <div className="mode-compact">Mở cửa sổ chính để xem bảng chữ cái Alphabet.</div>;
   }
 
   return (
     <div className="mode-page">
-      <div className="mode-controls-bar">
-        <button
-          className={type === "hiragana" ? "tab tab-active" : "tab"}
-          onClick={() => setType("hiragana")}
-        >
-          Hiragana
-        </button>
-        <button
-          className={type === "katakana" ? "tab tab-active" : "tab"}
-          onClick={() => setType("katakana")}
-        >
-          Katakana
-        </button>
-      </div>
-
       <div className="mode-stage mode-stage-scroll">
         <div className="alphabet-sections">
-          {sections.map((section) => (
-            <div key={section.title} className="alphabet-section">
-              <h3 className="alphabet-section-title">{section.title}</h3>
-              <div
-                className="alphabet-grid"
-                style={{ gridTemplateColumns: `repeat(${section.rows[0]?.length ?? 5}, 1fr)` }}
-              >
-                {section.rows.map((row, ri) =>
-                  row.map((char, ci) => (
-                    <AlphabetCell key={`${ri}-${ci}`} entry={char ? (byChar.get(char) ?? null) : null} />
-                  ))
+          {LATIN_LETTERS.map((letter) => {
+            const entries = byLetter.get(letter) ?? [];
+            return (
+              <div key={letter} className="alphabet-section">
+                <h3 className="alphabet-section-title alphabet-letter-title">{letter}</h3>
+                {entries.length > 0 ? (
+                  <div className="alphabet-grid alphabet-grid-letter">
+                    {entries.map((entry, i) => (
+                      <AlphabetCell key={`${entry.type}-${entry.char}-${i}`} entry={entry} />
+                    ))}
+                  </div>
+                ) : (
+                  <div className="alphabet-letter-empty">Không có âm này trong tiếng Nhật</div>
                 )}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>
