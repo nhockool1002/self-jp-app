@@ -5,7 +5,7 @@ export function CompactBubble() {
 
   return (
     <div className="compact-header">
-      <button className="compact-restore" onClick={() => setCompact(false)} title="Restore">
+      <button className="compact-restore" onClick={() => setCompact(false)} title="Mở rộng">
         ⤢
       </button>
     </div>

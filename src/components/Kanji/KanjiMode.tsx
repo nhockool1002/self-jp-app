@@ -46,7 +46,7 @@ export function KanjiMode({ compact }: { compact: boolean }) {
 
   if (compact) {
     if (!current) {
-      return <div className="mode-compact">No kanji available for this level.</div>;
+      return <div className="mode-compact">Không có kanji cho cấp độ này.</div>;
     }
     return (
       <div className="mode-compact">
@@ -84,13 +84,13 @@ export function KanjiMode({ compact }: { compact: boolean }) {
         {current && (
           <>
             <span className="control-divider" />
-            <button onClick={() => setIndex((i) => Math.max(i - 1, 0))} disabled={boundedIndex === 0} title="Previous">
+            <button onClick={() => setIndex((i) => Math.max(i - 1, 0))} disabled={boundedIndex === 0} title="Trước">
               ◀
             </button>
             <button
               onClick={() => setIndex((i) => Math.min(i + 1, todaysList.length - 1))}
               disabled={boundedIndex === todaysList.length - 1}
-              title="Next"
+              title="Tiếp"
             >
               ▶
             </button>
@@ -110,7 +110,7 @@ export function KanjiMode({ compact }: { compact: boolean }) {
             onMarkStudied={() => markKanjiStudied(current.kanji)}
           />
         ) : (
-          <p>No kanji available for this level.</p>
+          <p>Không có kanji cho cấp độ này.</p>
         )}
       </div>
     </div>

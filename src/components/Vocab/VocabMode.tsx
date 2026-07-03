@@ -25,7 +25,7 @@ export function VocabMode({ compact }: { compact: boolean }) {
   if (compact) {
     const current = words[Math.min(index, words.length - 1)];
     if (!current) {
-      return <div className="mode-compact">No vocab available for this lesson.</div>;
+      return <div className="mode-compact">Không có từ vựng cho bài này.</div>;
     }
     return (
       <div className="mode-compact">
@@ -35,7 +35,7 @@ export function VocabMode({ compact }: { compact: boolean }) {
             ◀
           </button>
           <span className="kana-progress">
-            {index + 1} / {words.length} (Lesson {lesson})
+            {index + 1} / {words.length} (Bài {lesson})
           </span>
           <button
             onClick={() => setIndex((i) => Math.min(i + 1, words.length - 1))}
@@ -52,7 +52,7 @@ export function VocabMode({ compact }: { compact: boolean }) {
     <div className="mode-page">
       <div className="mode-controls-bar">
         <LessonPicker lesson={lesson} lessonCount={LESSON_COUNT} onChange={changeLesson} />
-        <span className="progress-count">{words.length} words</span>
+        <span className="progress-count">{words.length} từ</span>
       </div>
 
       <div className="mode-stage mode-stage-scroll">

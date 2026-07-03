@@ -289,6 +289,12 @@ button.primary {
   font-size: 2.4rem;
 }
 
+.kanji-hanviet {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
 .kanji-jlpt-badge {
   align-self: center;
   font-size: 0.75em;
@@ -365,6 +371,68 @@ button.primary {
   font-size: 1em;
 }
 
+.grammar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.grammar-card {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.grammar-card-compact {
+  padding: 10px 14px;
+  gap: 6px;
+}
+
+.grammar-title {
+  font-weight: 600;
+  font-size: 1.05em;
+}
+
+.grammar-structure {
+  font-family: ui-monospace, Menlo, monospace;
+  font-size: 0.9em;
+  color: #396cd8;
+}
+
+.grammar-explanation {
+  font-size: 0.9em;
+  line-height: 1.4;
+}
+
+.grammar-example {
+  margin-top: 4px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.grammar-example-jp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 1.1em;
+}
+
+.grammar-example-reading {
+  font-size: 0.85em;
+  color: #666;
+}
+
+.grammar-example-meaning {
+  font-size: 0.9em;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     color: #f6f6f6;
@@ -398,8 +466,13 @@ button.primary {
 
   .kana-card,
   .kanji-card,
-  .vocab-word-card {
+  .vocab-word-card,
+  .grammar-card {
     background: #1f1f1f;
+  }
+
+  .grammar-example {
+    border-top-color: rgba(255, 255, 255, 0.1);
   }
 
   .vocab-kana {
@@ -409,7 +482,9 @@ button.primary {
   .kana-romaji,
   .kana-progress,
   .progress-count,
-  .kanji-meaning {
+  .kanji-meaning,
+  .kanji-hanviet,
+  .grammar-example-reading {
     color: #aaa;
   }
 }

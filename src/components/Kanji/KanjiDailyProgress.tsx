@@ -11,7 +11,7 @@ export function KanjiDailyProgress({ studiedCount }: KanjiDailyProgressProps) {
   return (
     <>
       <label className="field-compact">
-        Per day
+        Mỗi ngày
         <input
           type="number"
           min={1}
@@ -21,7 +21,7 @@ export function KanjiDailyProgress({ studiedCount }: KanjiDailyProgressProps) {
         />
       </label>
       <span className="progress-count">
-        {studiedCount}/{wordsPerDay} today
+        {studiedCount}/{wordsPerDay} hôm nay
       </span>
     </>
   );

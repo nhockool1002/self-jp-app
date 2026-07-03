@@ -1,4 +1,4 @@
-export type AppMode = "kana" | "kanji" | "vocab";
+export type AppMode = "kana" | "kanji" | "vocab" | "grammar";
 
 export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 
@@ -12,12 +12,14 @@ export interface KanaEntry {
 export interface KanjiExampleWord {
   word: string;
   reading: string;
+  meaning: string;
 }
 
 export interface KanjiEntry {
   kanji: string;
   jlpt: JlptLevel;
   strokes: number | null;
+  hanviet: string;
   meanings: string[];
   onyomi: string[];
   kunyomi: string[];
@@ -36,6 +38,21 @@ export interface VocabEntry {
 }
 
 export type VocabDataset = Record<string, VocabEntry[]>;
+
+export interface GrammarExample {
+  japanese: string;
+  reading: string;
+  meaning: string;
+}
+
+export interface GrammarPoint {
+  title: string;
+  structure: string;
+  explanation: string;
+  examples: GrammarExample[];
+}
+
+export type GrammarDataset = Record<string, GrammarPoint[]>;
 
 export interface AppSettings {
   kana: {

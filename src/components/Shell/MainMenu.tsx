@@ -4,7 +4,8 @@ import type { AppMode } from "../../lib/types";
 const MODES: { id: AppMode; label: string }[] = [
   { id: "kana", label: "Kana" },
   { id: "kanji", label: "Kanji" },
-  { id: "vocab", label: "Vocab" },
+  { id: "vocab", label: "Từ vựng" },
+  { id: "grammar", label: "Ngữ pháp" },
 ];
 
 export function MainMenu() {
@@ -25,7 +26,7 @@ export function MainMenu() {
           </button>
         ))}
       </div>
-      <button className="compact-toggle" onClick={() => setCompact(true)} title="Compact mode">
+      <button className="compact-toggle" onClick={() => setCompact(true)} title="Chế độ thu nhỏ">
         ⤡
       </button>
     </nav>

@@ -4,6 +4,7 @@ import { CompactBubble } from "./components/Shell/CompactBubble";
 import { KanaMode } from "./components/Kana/KanaMode";
 import { KanjiMode } from "./components/Kanji/KanjiMode";
 import { VocabMode } from "./components/Vocab/VocabMode";
+import { GrammarMode } from "./components/Grammar/GrammarMode";
 import { useAppStore } from "./lib/store";
 import "./App.css";
 
@@ -18,7 +19,7 @@ function App() {
   }, [hydrate]);
 
   if (!hydrated) {
-    return <div className="loading">Loading...</div>;
+    return <div className="loading">Đang tải...</div>;
   }
 
   return (
@@ -28,6 +29,7 @@ function App() {
         {mode === "kana" && <KanaMode compact={isCompact} />}
         {mode === "kanji" && <KanjiMode compact={isCompact} />}
         {mode === "vocab" && <VocabMode compact={isCompact} />}
+        {mode === "grammar" && <GrammarMode compact={isCompact} />}
       </main>
     </div>
   );

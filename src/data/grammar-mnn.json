@@ -1,0 +1,1314 @@
+{
+  "1": [
+    {
+      "title": "N1 は N2 です",
+      "structure": "N1 は N2 です",
+      "explanation": "Mẫu câu khẳng định cơ bản nhất: N1 là N2. は đọc là 'wa' khi làm trợ từ chủ đề.",
+      "examples": [
+        {
+          "japanese": "わたしは学生です。",
+          "reading": "わたしは がくせいです。",
+          "meaning": "Tôi là học sinh."
+        }
+      ]
+    },
+    {
+      "title": "N1 は N2 じゃ(では) ありません",
+      "structure": "N1 は N2 じゃ ありません",
+      "explanation": "Dạng phủ định của です. じゃ là dạng nói, では là dạng trang trọng hơn.",
+      "examples": [
+        {
+          "japanese": "わたしは先生じゃありません。",
+          "reading": "わたしは せんせいじゃ ありません。",
+          "meaning": "Tôi không phải là giáo viên."
+        }
+      ]
+    },
+    {
+      "title": "N1 も N2 です",
+      "structure": "N1 も N2 です",
+      "explanation": "も thay thế は khi muốn nói 'cũng là', dùng khi thông tin giống với câu trước.",
+      "examples": [
+        {
+          "japanese": "わたしも学生です。",
+          "reading": "わたしも がくせいです。",
+          "meaning": "Tôi cũng là học sinh."
+        }
+      ]
+    }
+  ],
+  "2": [
+    {
+      "title": "これ／それ／あれ",
+      "structure": "これ／それ／あれ は N です",
+      "explanation": "これ (vật gần người nói), それ (vật gần người nghe), あれ (vật xa cả hai) — dùng để chỉ đồ vật.",
+      "examples": [
+        {
+          "japanese": "これは辞書です。",
+          "reading": "これは じしょです。",
+          "meaning": "Đây là từ điển."
+        }
+      ]
+    },
+    {
+      "title": "この／その／あの + N",
+      "structure": "この／その／あの + N",
+      "explanation": "Khác với これ/それ/あれ, これらのから phải đi kèm danh từ ngay sau, không đứng một mình.",
+      "examples": [
+        {
+          "japanese": "その本はわたしのです。",
+          "reading": "その ほんは わたしのです。",
+          "meaning": "Quyển sách đó là của tôi."
+        }
+      ]
+    }
+  ],
+  "3": [
+    {
+      "title": "ここ／そこ／あそこ／どこ",
+      "structure": "N は ここ／そこ／あそこ です",
+      "explanation": "Chỉ vị trí, nơi chốn: đây, đó, kia, ở đâu.",
+      "examples": [
+        {
+          "japanese": "会議室はあそこです。",
+          "reading": "かいぎしつは あそこです。",
+          "meaning": "Phòng họp ở đằng kia."
+        }
+      ]
+    },
+    {
+      "title": "～は いくらですか",
+      "structure": "N は いくらですか",
+      "explanation": "Hỏi giá tiền của một món đồ.",
+      "examples": [
+        {
+          "japanese": "このネクタイはいくらですか。",
+          "reading": "この ネクタイは いくらですか。",
+          "meaning": "Cái cà vạt này giá bao nhiêu?"
+        }
+      ]
+    }
+  ],
+  "4": [
+    {
+      "title": "今 ～時～分 です",
+      "structure": "今 ～時～分 です",
+      "explanation": "Cách nói giờ trong tiếng Nhật.",
+      "examples": [
+        {
+          "japanese": "今、9時半です。",
+          "reading": "いま、くじはんです。",
+          "meaning": "Bây giờ là 9 giờ rưỡi."
+        }
+      ]
+    },
+    {
+      "title": "～から ～まで",
+      "structure": "N から N まで",
+      "explanation": "Diễn tả khoảng thời gian hoặc quãng đường: từ ... đến ...",
+      "examples": [
+        {
+          "japanese": "銀行は9時から3時までです。",
+          "reading": "ぎんこうは くじから さんじまでです。",
+          "meaning": "Ngân hàng mở cửa từ 9 giờ đến 3 giờ."
+        }
+      ]
+    }
+  ],
+  "5": [
+    {
+      "title": "場所へ 行きます／来ます／帰ります",
+      "structure": "場所 へ 行きます／来ます／帰ります",
+      "explanation": "へ (đọc là 'e') chỉ hướng di chuyển đến một nơi.",
+      "examples": [
+        {
+          "japanese": "わたしは日本へ行きます。",
+          "reading": "わたしは にほんへ いきます。",
+          "meaning": "Tôi đi Nhật Bản."
+        }
+      ]
+    },
+    {
+      "title": "何で + Verb (phương tiện)",
+      "structure": "手段/道具 で 行きます",
+      "explanation": "で chỉ phương tiện di chuyển hoặc công cụ thực hiện hành động.",
+      "examples": [
+        {
+          "japanese": "電車で会社へ行きます。",
+          "reading": "でんしゃで かいしゃへ いきます。",
+          "meaning": "Tôi đi làm bằng tàu điện."
+        }
+      ]
+    }
+  ],
+  "6": [
+    {
+      "title": "N を Vます (động từ tha động)",
+      "structure": "N を Vます",
+      "explanation": "を đánh dấu tân ngữ trực tiếp của động từ.",
+      "examples": [
+        {
+          "japanese": "毎朝新聞を読みます。",
+          "reading": "まいあさ しんぶんを よみます。",
+          "meaning": "Mỗi sáng tôi đọc báo."
+        }
+      ]
+    },
+    {
+      "title": "～ませんか／～ましょう",
+      "structure": "Vませんか。／Vましょう。",
+      "explanation": "～ませんか: rủ ai đó làm gì (lịch sự). ～ましょう: đề nghị cùng làm.",
+      "examples": [
+        {
+          "japanese": "いっしょに映画を見ませんか。",
+          "reading": "いっしょに えいがを みませんか。",
+          "meaning": "Chúng ta cùng xem phim nhé?"
+        }
+      ]
+    }
+  ],
+  "7": [
+    {
+      "title": "N で (công cụ/phương tiện)",
+      "structure": "道具 で Vます",
+      "explanation": "で chỉ công cụ hay phương tiện dùng để thực hiện hành động.",
+      "examples": [
+        {
+          "japanese": "はしでご飯を食べます。",
+          "reading": "はしで ごはんを たべます。",
+          "meaning": "Tôi ăn cơm bằng đũa."
+        }
+      ]
+    },
+    {
+      "title": "あげます／もらいます",
+      "structure": "N1は N2に N3を あげます／もらいます",
+      "explanation": "あげます: cho/tặng ai đó cái gì. もらいます: nhận cái gì từ ai đó.",
+      "examples": [
+        {
+          "japanese": "わたしは友達に花をあげます。",
+          "reading": "わたしは ともだちに はなを あげます。",
+          "meaning": "Tôi tặng hoa cho bạn tôi."
+        }
+      ]
+    }
+  ],
+  "8": [
+    {
+      "title": "Tính từ đuôi い và な",
+      "structure": "N は い形容詞です／な形容詞です",
+      "explanation": "Hai loại tính từ trong tiếng Nhật: tính từ -i (kết thúc bằng い) và tính từ -na, chia câu khác nhau.",
+      "examples": [
+        {
+          "japanese": "この町はにぎやかです。",
+          "reading": "この まちは にぎやかです。",
+          "meaning": "Thị trấn này nhộn nhịp."
+        }
+      ]
+    },
+    {
+      "title": "～は どうですか／どんな Nですか",
+      "structure": "N は どうですか／どんな N ですか",
+      "explanation": "どうですか: hỏi cảm nhận, đánh giá. どんなNですか: hỏi N đó như thế nào, loại gì.",
+      "examples": [
+        {
+          "japanese": "大阪はどんな町ですか。",
+          "reading": "おおさかは どんな まちですか。",
+          "meaning": "Osaka là thành phố như thế nào?"
+        }
+      ]
+    }
+  ],
+  "9": [
+    {
+      "title": "すき(な)／きらい(な)／じょうず(な)／へた(な)",
+      "structure": "N1は N2が すき／きらい／じょうず／へた です",
+      "explanation": "Trợ từ が dùng với các tính từ chỉ sở thích, khả năng — đánh dấu đối tượng của cảm xúc/khả năng.",
+      "examples": [
+        {
+          "japanese": "わたしは料理が好きです。",
+          "reading": "わたしは りょうりが すきです。",
+          "meaning": "Tôi thích nấu ăn."
+        }
+      ]
+    },
+    {
+      "title": "～から (lý do)",
+      "structure": "Lý do から, kết quả",
+      "explanation": "から nối câu lý do với câu kết quả, tương đương 'vì'.",
+      "examples": [
+        {
+          "japanese": "忙しいから、行きません。",
+          "reading": "いそがしいから、いきません。",
+          "meaning": "Vì bận nên tôi không đi."
+        }
+      ]
+    }
+  ],
+  "10": [
+    {
+      "title": "あります／います",
+      "structure": "場所に N が あります／います",
+      "explanation": "あります dùng cho vật vô tri, います dùng cho người/động vật — diễn tả sự tồn tại.",
+      "examples": [
+        {
+          "japanese": "机の上に本があります。",
+          "reading": "つくえの うえに ほんが あります。",
+          "meaning": "Trên bàn có sách."
+        }
+      ]
+    },
+    {
+      "title": "Vị trí: 上／下／中／前／後ろ",
+      "structure": "N の 上／下／中／前／後ろ",
+      "explanation": "Các từ chỉ vị trí tương đối, kết hợp với の để tạo cụm chỉ vị trí.",
+      "examples": [
+        {
+          "japanese": "猫はいすの下にいます。",
+          "reading": "ねこは いすの したに います。",
+          "meaning": "Con mèo ở dưới cái ghế."
+        }
+      ]
+    }
+  ],
+  "11": [
+    {
+      "title": "Số đếm và lượng từ",
+      "structure": "N を 数字＋lượng từ Vます",
+      "explanation": "Tiếng Nhật dùng lượng từ riêng theo loại vật khi đếm (人, 枚, 台, つ...).",
+      "examples": [
+        {
+          "japanese": "りんごを三つ買います。",
+          "reading": "りんごを みっつ かいます。",
+          "meaning": "Tôi mua ba quả táo."
+        }
+      ]
+    },
+    {
+      "title": "～から～まで＋thời gian／tiền かかります",
+      "structure": "～は ～から～まで ／～ぐらい かかります",
+      "explanation": "かかります diễn tả thời gian hoặc tiền bạc cần thiết để làm việc gì.",
+      "examples": [
+        {
+          "japanese": "空港まで一時間かかります。",
+          "reading": "くうこうまで いちじかん かかります。",
+          "meaning": "Đến sân bay mất một tiếng."
+        }
+      ]
+    }
+  ],
+  "12": [
+    {
+      "title": "So sánh: N1 は N2 より",
+      "structure": "N1 は N2 より 形容詞",
+      "explanation": "So sánh hơn: N1 ... hơn N2.",
+      "examples": [
+        {
+          "japanese": "冬は夏より寒いです。",
+          "reading": "ふゆは なつより さむいです。",
+          "meaning": "Mùa đông lạnh hơn mùa hè."
+        }
+      ]
+    },
+    {
+      "title": "～で いちばん ～ですか",
+      "structure": "N（グループ）で いちばん 形容詞 N は 何ですか",
+      "explanation": "Hỏi/khẳng định cái gì đó nhất trong một nhóm/phạm vi nào đó.",
+      "examples": [
+        {
+          "japanese": "日本で富士山がいちばん高いです。",
+          "reading": "にほんで ふじさんが いちばん たかいです。",
+          "meaning": "Núi Phú Sĩ cao nhất Nhật Bản."
+        }
+      ]
+    }
+  ],
+  "13": [
+    {
+      "title": "～たいです",
+      "structure": "Vます-stem + たいです",
+      "explanation": "Diễn tả mong muốn của người nói (tôi muốn làm gì).",
+      "examples": [
+        {
+          "japanese": "沖縄へ行きたいです。",
+          "reading": "おきなわへ いきたいです。",
+          "meaning": "Tôi muốn đi Okinawa."
+        }
+      ]
+    },
+    {
+      "title": "場所へ N を Vます-stem に 行きます",
+      "structure": "場所へ 目的（Vます-stemに）行きます",
+      "explanation": "Diễn tả mục đích của việc đi đến một nơi.",
+      "examples": [
+        {
+          "japanese": "デパートへ買い物に行きます。",
+          "reading": "デパートへ かいものに いきます。",
+          "meaning": "Tôi đi mua sắm ở trung tâm thương mại."
+        }
+      ]
+    }
+  ],
+  "14": [
+    {
+      "title": "Thể て của động từ",
+      "structure": "Vて",
+      "explanation": "Thể て là dạng nối của động từ, dùng làm nền cho rất nhiều mẫu câu khác (てください, ています...).",
+      "examples": [
+        {
+          "japanese": "ここに名前を書いてください。",
+          "reading": "ここに なまえを かいて ください。",
+          "meaning": "Xin hãy viết tên vào đây."
+        }
+      ]
+    },
+    {
+      "title": "～てください",
+      "structure": "Vて ください",
+      "explanation": "Yêu cầu, nhờ vả ai đó làm gì một cách lịch sự.",
+      "examples": [
+        {
+          "japanese": "少々お待ちください。",
+          "reading": "しょうしょう おまち ください。",
+          "meaning": "Xin vui lòng đợi một chút."
+        }
+      ]
+    }
+  ],
+  "15": [
+    {
+      "title": "～ています (đang làm)",
+      "structure": "Vて います",
+      "explanation": "Diễn tả hành động đang diễn ra tại thời điểm nói.",
+      "examples": [
+        {
+          "japanese": "今、新聞を読んでいます。",
+          "reading": "いま、しんぶんを よんで います。",
+          "meaning": "Bây giờ tôi đang đọc báo."
+        }
+      ]
+    },
+    {
+      "title": "～ています (trạng thái/công việc, thông tin cá nhân)",
+      "structure": "Vて います",
+      "explanation": "Cũng dùng để diễn tả nghề nghiệp, nơi ở, tình trạng đã biết — không chỉ hành động tức thời.",
+      "examples": [
+        {
+          "japanese": "大阪に住んでいます。",
+          "reading": "おおさかに すんで います。",
+          "meaning": "Tôi đang sống ở Osaka."
+        }
+      ]
+    }
+  ],
+  "16": [
+    {
+      "title": "～てから",
+      "structure": "Vて から、V",
+      "explanation": "Diễn tả thứ tự: làm việc A xong rồi mới làm việc B.",
+      "examples": [
+        {
+          "japanese": "手を洗ってから、食べます。",
+          "reading": "てを あらってから、たべます。",
+          "meaning": "Tôi rửa tay xong rồi mới ăn."
+        }
+      ]
+    },
+    {
+      "title": "～ないでください",
+      "structure": "Vない で ください",
+      "explanation": "Yêu cầu ai đó đừng làm gì.",
+      "examples": [
+        {
+          "japanese": "ここに車を止めないでください。",
+          "reading": "ここに くるまを とめないで ください。",
+          "meaning": "Xin đừng đỗ xe ở đây."
+        }
+      ]
+    }
+  ],
+  "17": [
+    {
+      "title": "～なければ なりません",
+      "structure": "Vない-stem + なければ なりません",
+      "explanation": "Diễn tả nghĩa vụ: phải làm gì đó.",
+      "examples": [
+        {
+          "japanese": "薬を飲まなければなりません。",
+          "reading": "くすりを のまなければ なりません。",
+          "meaning": "Tôi phải uống thuốc."
+        }
+      ]
+    },
+    {
+      "title": "～なくても いいです",
+      "structure": "Vない-stem + なくても いいです",
+      "explanation": "Diễn tả việc không bắt buộc phải làm gì.",
+      "examples": [
+        {
+          "japanese": "あした来なくてもいいです。",
+          "reading": "あした こなくても いいです。",
+          "meaning": "Ngày mai bạn không cần đến cũng được."
+        }
+      ]
+    }
+  ],
+  "18": [
+    {
+      "title": "Thể từ điển (辞書形)",
+      "structure": "V-辞書形",
+      "explanation": "Dạng nguyên thể của động từ, dùng làm nền cho nhiều mẫu câu và trong văn nói thân mật.",
+      "examples": [
+        {
+          "japanese": "わたしはピアノが弾けます。",
+          "reading": "わたしは ピアノが ひけます。",
+          "meaning": "Tôi biết chơi piano."
+        }
+      ]
+    },
+    {
+      "title": "～ことが できます",
+      "structure": "V-辞書形 + ことが できます",
+      "explanation": "Diễn tả khả năng làm được việc gì.",
+      "examples": [
+        {
+          "japanese": "漢字を書くことができます。",
+          "reading": "かんじを かくことが できます。",
+          "meaning": "Tôi có thể viết kanji."
+        }
+      ]
+    }
+  ],
+  "19": [
+    {
+      "title": "Thể た (たけい)",
+      "structure": "Vた",
+      "explanation": "Dạng quá khứ thân mật của động từ, dùng làm nền cho nhiều mẫu câu (たり, たことがある...).",
+      "examples": [
+        {
+          "japanese": "去年、日本へ行った。",
+          "reading": "きょねん、にほんへ いった。",
+          "meaning": "Năm ngoái tôi đã đi Nhật."
+        }
+      ]
+    },
+    {
+      "title": "～たことが あります",
+      "structure": "Vた + ことが あります",
+      "explanation": "Diễn tả kinh nghiệm đã từng làm gì đó.",
+      "examples": [
+        {
+          "japanese": "富士山に登ったことがあります。",
+          "reading": "ふじさんに のぼったことが あります。",
+          "meaning": "Tôi đã từng leo núi Phú Sĩ."
+        }
+      ]
+    }
+  ],
+  "20": [
+    {
+      "title": "Thể thông thường (普通形)",
+      "structure": "普通形 (だ／る／た／ない)",
+      "explanation": "Thể thông thường dùng trong văn nói thân mật giữa bạn bè, gia đình, thay cho thể lịch sự です／ます.",
+      "examples": [
+        {
+          "japanese": "国へ帰るの？",
+          "reading": "くにへ かえるの？",
+          "meaning": "Bạn về nước à?"
+        }
+      ]
+    },
+    {
+      "title": "～と 思います",
+      "structure": "普通形 + と 思います",
+      "explanation": "Diễn tả suy nghĩ, ý kiến cá nhân của người nói.",
+      "examples": [
+        {
+          "japanese": "あした雨が降ると思います。",
+          "reading": "あした あめが ふると おもいます。",
+          "meaning": "Tôi nghĩ ngày mai trời sẽ mưa."
+        }
+      ]
+    }
+  ],
+  "21": [
+    {
+      "title": "～と 言っていました",
+      "structure": "普通形 + と 言っていました",
+      "explanation": "Tường thuật lại lời người khác đã nói.",
+      "examples": [
+        {
+          "japanese": "田中さんは来ないと言っていました。",
+          "reading": "たなかさんは こないと いって いました。",
+          "meaning": "Anh Tanaka nói là sẽ không đến."
+        }
+      ]
+    },
+    {
+      "title": "普通形の 名詞修飾",
+      "structure": "普通形 + N",
+      "explanation": "Dùng mệnh đề ở thể thông thường để bổ nghĩa trực tiếp cho danh từ đứng sau.",
+      "examples": [
+        {
+          "japanese": "きのう見た映画はおもしろかったです。",
+          "reading": "きのう みた えいがは おもしろかったです。",
+          "meaning": "Bộ phim tôi xem hôm qua rất thú vị."
+        }
+      ]
+    }
+  ],
+  "22": [
+    {
+      "title": "V-辞書形／Vない + とき",
+      "structure": "V-辞書形／Vない + とき、～",
+      "explanation": "Diễn tả 'khi làm gì' — thời điểm xảy ra hành động chính.",
+      "examples": [
+        {
+          "japanese": "日本へ行くとき、パスポートが要ります。",
+          "reading": "にほんへ いくとき、パスポートが いります。",
+          "meaning": "Khi đi Nhật cần có hộ chiếu."
+        }
+      ]
+    },
+    {
+      "title": "Vた + とき",
+      "structure": "Vた + とき、～",
+      "explanation": "Diễn tả 'sau khi/lúc đã làm gì' — hành động chính xảy ra sau khi việc trong とき đã hoàn thành.",
+      "examples": [
+        {
+          "japanese": "日本へ来たとき、日本語が下手でした。",
+          "reading": "にほんへ きたとき、にほんごが へたでした。",
+          "meaning": "Lúc mới đến Nhật, tiếng Nhật của tôi còn kém."
+        }
+      ]
+    }
+  ],
+  "23": [
+    {
+      "title": "普通形 + ら／と (điều kiện)",
+      "structure": "V/A-ば・たら、～",
+      "explanation": "Diễn tả điều kiện: nếu ... thì ...",
+      "examples": [
+        {
+          "japanese": "まっすぐ行くと、右に銀行があります。",
+          "reading": "まっすぐ いくと、みぎに ぎんこうが あります。",
+          "meaning": "Đi thẳng thì sẽ thấy ngân hàng bên phải."
+        }
+      ]
+    },
+    {
+      "title": "～すぎます",
+      "structure": "Vます-stem／Aい・な-stem + すぎます",
+      "explanation": "Diễn tả mức độ quá mức: quá làm gì / quá như thế nào.",
+      "examples": [
+        {
+          "japanese": "このかばんは重すぎます。",
+          "reading": "この かばんは おもすぎます。",
+          "meaning": "Cái cặp này nặng quá."
+        }
+      ]
+    }
+  ],
+  "24": [
+    {
+      "title": "～て あげます／もらいます／くれます",
+      "structure": "Vて あげます／もらいます／くれます",
+      "explanation": "Diễn tả việc làm giúp ai đó, hoặc được ai đó giúp làm gì.",
+      "examples": [
+        {
+          "japanese": "友達に道を教えてもらいました。",
+          "reading": "ともだちに みちを おしえて もらいました。",
+          "meaning": "Tôi được bạn chỉ đường giúp."
+        }
+      ]
+    },
+    {
+      "title": "～かもしれません",
+      "structure": "普通形 + かもしれません",
+      "explanation": "Diễn tả khả năng có thể xảy ra (không chắc chắn).",
+      "examples": [
+        {
+          "japanese": "あした雨が降るかもしれません。",
+          "reading": "あした あめが ふるかもしれません。",
+          "meaning": "Có lẽ ngày mai trời sẽ mưa."
+        }
+      ]
+    }
+  ],
+  "25": [
+    {
+      "title": "普通形 + でしょう",
+      "structure": "普通形 + でしょう",
+      "explanation": "Dự đoán, phỏng đoán của người nói (mức độ chắc chắn cao hơn かもしれません).",
+      "examples": [
+        {
+          "japanese": "あしたは晴れるでしょう。",
+          "reading": "あしたは はれるでしょう。",
+          "meaning": "Ngày mai chắc trời sẽ nắng."
+        }
+      ]
+    },
+    {
+      "title": "もし ～たら",
+      "structure": "もし普通形-たら、～",
+      "explanation": "Diễn tả giả định: nếu (giả sử) ... thì ...",
+      "examples": [
+        {
+          "japanese": "もし宝くじが当たったら、旅行します。",
+          "reading": "もし たからくじが あたったら、りょこうします。",
+          "meaning": "Nếu trúng số thì tôi sẽ đi du lịch."
+        }
+      ]
+    }
+  ],
+  "26": [
+    {
+      "title": "～んです",
+      "structure": "普通形 + んです",
+      "explanation": "Dùng khi giải thích lý do, hoàn cảnh, hoặc hỏi thêm về điều đã thấy/nghe.",
+      "examples": [
+        {
+          "japanese": "顔色が悪いですね。 — 頭が痛いんです。",
+          "reading": "かおいろが わるいですね。 — あたまが いたいんです。",
+          "meaning": "Trông sắc mặt bạn không tốt nhỉ. — Vì tôi bị đau đầu."
+        }
+      ]
+    },
+    {
+      "title": "～んですが、～ていただけませんか",
+      "structure": "普通形 + んですが、Vて いただけませんか",
+      "explanation": "Trình bày hoàn cảnh rồi nhờ vả ai đó một cách lịch sự, khiêm tốn.",
+      "examples": [
+        {
+          "japanese": "荷物が重いんですが、手伝っていただけませんか。",
+          "reading": "にもつが おもいんですが、てつだって いただけませんか。",
+          "meaning": "Hành lý nặng quá, anh/chị giúp tôi được không ạ?"
+        }
+      ]
+    }
+  ],
+  "27": [
+    {
+      "title": "～かどうか",
+      "structure": "普通形 + かどうか + わかりません／確認します",
+      "explanation": "Diễn tả sự không chắc chắn về việc có...hay không.",
+      "examples": [
+        {
+          "japanese": "彼が来るかどうかわかりません。",
+          "reading": "かれが くるかどうか わかりません。",
+          "meaning": "Tôi không biết anh ấy có đến hay không."
+        }
+      ]
+    },
+    {
+      "title": "疑問詞 + か",
+      "structure": "疑問詞 + か + わかりません",
+      "explanation": "Kết hợp từ để hỏi với か để tạo mệnh đề danh từ chỉ sự không rõ ràng (ai đó, cái gì đó, khi nào đó...).",
+      "examples": [
+        {
+          "japanese": "どこで買ったか覚えていません。",
+          "reading": "どこで かったか おぼえて いません。",
+          "meaning": "Tôi không nhớ đã mua ở đâu."
+        }
+      ]
+    }
+  ],
+  "28": [
+    {
+      "title": "～ようです（推量）",
+      "structure": "普通形 + ようです",
+      "explanation": "Diễn tả sự suy đoán dựa trên quan sát, cảm nhận trực tiếp của người nói.",
+      "examples": [
+        {
+          "japanese": "道が濡れています。雨が降ったようです。",
+          "reading": "みちが ぬれて います。あめが ふった ようです。",
+          "meaning": "Đường bị ướt. Có vẻ như trời đã mưa."
+        }
+      ]
+    },
+    {
+      "title": "疑問詞 + でも",
+      "structure": "疑問詞 + でも",
+      "explanation": "Diễn tả 'bất kỳ' (ai cũng, đâu cũng, gì cũng...).",
+      "examples": [
+        {
+          "japanese": "この店は何でもあります。",
+          "reading": "この みせは なんでも あります。",
+          "meaning": "Cửa hàng này có bất cứ thứ gì."
+        }
+      ]
+    }
+  ],
+  "29": [
+    {
+      "title": "Thể bị động (られる／れる)",
+      "structure": "V-受身形（られます／れます）",
+      "explanation": "Diễn tả hành động bị/được tác động từ người/vật khác.",
+      "examples": [
+        {
+          "japanese": "この本は多くの人に読まれています。",
+          "reading": "この ほんは おおくの ひとに よまれて います。",
+          "meaning": "Quyển sách này được nhiều người đọc."
+        }
+      ]
+    },
+    {
+      "title": "Thể bị động diễn tả sự phiền toái",
+      "structure": "N1は N2に Vられます（迷惑）",
+      "explanation": "Bị động cũng dùng để diễn tả việc gì đó gây phiền phức, khó chịu cho người nói.",
+      "examples": [
+        {
+          "japanese": "電車で足を踏まれました。",
+          "reading": "でんしゃで あしを ふまれました。",
+          "meaning": "Tôi bị dẫm chân trên tàu điện."
+        }
+      ]
+    }
+  ],
+  "30": [
+    {
+      "title": "Thể sai khiến (せる／させる)",
+      "structure": "V-使役形（せます／させます）",
+      "explanation": "Diễn tả việc bắt/cho phép ai đó làm gì.",
+      "examples": [
+        {
+          "japanese": "母は子どもに野菜を食べさせます。",
+          "reading": "ははは こどもに やさいを たべさせます。",
+          "meaning": "Người mẹ bắt con ăn rau."
+        }
+      ]
+    },
+    {
+      "title": "～（さ）せて ください",
+      "structure": "V-使役形て ください",
+      "explanation": "Xin phép được làm gì đó.",
+      "examples": [
+        {
+          "japanese": "すみません、写真を撮らせてください。",
+          "reading": "すみません、しゃしんを とらせて ください。",
+          "meaning": "Xin lỗi, cho tôi chụp ảnh nhé."
+        }
+      ]
+    }
+  ],
+  "31": [
+    {
+      "title": "～ておきます",
+      "structure": "Vて おきます",
+      "explanation": "Diễn tả hành động chuẩn bị trước cho việc gì đó sau này.",
+      "examples": [
+        {
+          "japanese": "旅行の前に資料を調べておきます。",
+          "reading": "りょこうの まえに しりょうを しらべて おきます。",
+          "meaning": "Trước chuyến đi tôi sẽ tìm hiểu tài liệu trước."
+        }
+      ]
+    },
+    {
+      "title": "～てしまいます",
+      "structure": "Vて しまいます",
+      "explanation": "Diễn tả việc hoàn thành trọn vẹn, hoặc điều đáng tiếc đã xảy ra.",
+      "examples": [
+        {
+          "japanese": "宿題を全部忘れてしまいました。",
+          "reading": "しゅくだいを ぜんぶ わすれて しまいました。",
+          "meaning": "Tôi đã quên hết bài tập về nhà mất rồi."
+        }
+      ]
+    }
+  ],
+  "32": [
+    {
+      "title": "～そうです（様態）",
+      "structure": "Vます-stem／Aい-stem／Aな + そうです",
+      "explanation": "Diễn tả vẻ ngoài, cảm giác 'trông có vẻ như sắp...' dựa trên quan sát trực tiếp.",
+      "examples": [
+        {
+          "japanese": "このケーキはおいしそうです。",
+          "reading": "この ケーキは おいしそうです。",
+          "meaning": "Cái bánh này trông có vẻ ngon."
+        }
+      ]
+    },
+    {
+      "title": "～そうです（伝聞）",
+      "structure": "普通形 + そうです",
+      "explanation": "Diễn tả thông tin nghe được từ người khác/nguồn khác (nghe nói rằng...).",
+      "examples": [
+        {
+          "japanese": "天気予報によると、あした雨だそうです。",
+          "reading": "てんきよほうに よると、あした あめだ そうです。",
+          "meaning": "Theo dự báo thời tiết, nghe nói ngày mai trời mưa."
+        }
+      ]
+    }
+  ],
+  "33": [
+    {
+      "title": "Điều kiện ば",
+      "structure": "V/A-ば形",
+      "explanation": "Một cách khác để diễn tả điều kiện 'nếu...thì', thường dùng cho quy luật chung, lời khuyên.",
+      "examples": [
+        {
+          "japanese": "薬を飲めば、すぐ治りますよ。",
+          "reading": "くすりを のめば、すぐ なおりますよ。",
+          "meaning": "Nếu uống thuốc thì sẽ khỏi ngay thôi."
+        }
+      ]
+    },
+    {
+      "title": "命令形／禁止形",
+      "structure": "V-命令形／V-禁止形",
+      "explanation": "Dạng mệnh lệnh mạnh (thường dùng trong biển báo, trích lời người khác), và dạng cấm đoán.",
+      "examples": [
+        {
+          "japanese": "危ない！　止まれ！",
+          "reading": "あぶない！　とまれ！",
+          "meaning": "Nguy hiểm! Dừng lại!"
+        }
+      ]
+    }
+  ],
+  "34": [
+    {
+      "title": "お～する／ご～する (khiêm nhường ngữ)",
+      "structure": "お + Vます-stem + する",
+      "explanation": "Khiêm nhường ngữ: hạ thấp hành động của bản thân để thể hiện sự tôn trọng người nghe.",
+      "examples": [
+        {
+          "japanese": "わたしがお荷物をお持ちします。",
+          "reading": "わたしが おにもつを おもちします。",
+          "meaning": "Để tôi mang hành lý giúp anh/chị."
+        }
+      ]
+    },
+    {
+      "title": "～か／～かどうか + Vて みます",
+      "structure": "普通形＋か／かどうか + Vて みます",
+      "explanation": "Thử làm gì đó để xem kết quả, tìm hiểu điều gì đó.",
+      "examples": [
+        {
+          "japanese": "作り方がわかるかどうか聞いてみます。",
+          "reading": "つくりかたが わかるかどうか きいて みます。",
+          "meaning": "Tôi sẽ thử hỏi xem có biết cách làm không."
+        }
+      ]
+    }
+  ],
+  "35": [
+    {
+      "title": "お～に なります (tôn kính ngữ)",
+      "structure": "お + Vます-stem + に なります",
+      "explanation": "Tôn kính ngữ: nâng cao hành động của người khác (cấp trên, khách hàng...) để thể hiện sự tôn trọng.",
+      "examples": [
+        {
+          "japanese": "先生はもうお帰りになりました。",
+          "reading": "せんせいは もう おかえりに なりました。",
+          "meaning": "Thầy giáo đã về rồi."
+        }
+      ]
+    },
+    {
+      "title": "～てくださいませんか",
+      "structure": "Vて くださいませんか",
+      "explanation": "Cách nhờ vả trang trọng, lịch sự hơn ～てください.",
+      "examples": [
+        {
+          "japanese": "もう少しゆっくり話してくださいませんか。",
+          "reading": "もう すこし ゆっくり はなして くださいませんか。",
+          "meaning": "Anh/chị nói chậm hơn một chút được không ạ?"
+        }
+      ]
+    }
+  ],
+  "36": [
+    {
+      "title": "Tự động từ và tha động từ",
+      "structure": "自動詞 vs 他動詞",
+      "explanation": "Tự động từ (không cần tân ngữ trực tiếp) mô tả trạng thái tự nhiên xảy ra; tha động từ cần を và mô tả hành động chủ động của ai đó.",
+      "examples": [
+        {
+          "japanese": "ドアが開いています。（自動詞）",
+          "reading": "ドアが あいて います。",
+          "meaning": "Cửa đang mở (tự nó mở)."
+        }
+      ]
+    },
+    {
+      "title": "自動詞＋てあります",
+      "structure": "自動詞て + あります",
+      "explanation": "Diễn tả trạng thái do có ai đó chuẩn bị/tác động trước, kết quả còn giữ nguyên.",
+      "examples": [
+        {
+          "japanese": "壁に絵が掛けてあります。",
+          "reading": "かべに えが かけて あります。",
+          "meaning": "Trên tường có treo sẵn một bức tranh."
+        }
+      ]
+    }
+  ],
+  "37": [
+    {
+      "title": "受身形（発明される／使われる）",
+      "structure": "V-受身形（客観的な事実）",
+      "explanation": "Thể bị động cũng dùng để diễn tả sự thật khách quan, lịch sử, không nhấn mạnh ai làm.",
+      "examples": [
+        {
+          "japanese": "この寺は８世紀に建てられました。",
+          "reading": "この てらは はっせいきに たてられました。",
+          "meaning": "Ngôi chùa này được xây vào thế kỷ thứ 8."
+        }
+      ]
+    },
+    {
+      "title": "～によって",
+      "structure": "N + によって",
+      "explanation": "Chỉ ra chủ thể thực hiện hành động trong câu bị động mang tính lịch sử, khách quan.",
+      "examples": [
+        {
+          "japanese": "電話はベルによって発明されました。",
+          "reading": "でんわは ベルに よって はつめいされました。",
+          "meaning": "Điện thoại được phát minh bởi Bell."
+        }
+      ]
+    }
+  ],
+  "38": [
+    {
+      "title": "N1（大きな／小さな）N2",
+      "structure": "大きな／小さな + N",
+      "explanation": "大きな/小さな là dạng bổ nghĩa trực tiếp cho danh từ, ý nghĩa gần giống 大きい/小さい.",
+      "examples": [
+        {
+          "japanese": "大きな声で話してください。",
+          "reading": "おおきな こえで はなして ください。",
+          "meaning": "Xin hãy nói to lên."
+        }
+      ]
+    },
+    {
+      "title": "～と いう N",
+      "structure": "N1 と いう N2",
+      "explanation": "Giới thiệu tên gọi: N2 tên là/gọi là N1.",
+      "examples": [
+        {
+          "japanese": "「ドラえもん」という漫画を知っていますか。",
+          "reading": "「ドラえもん」という まんがを しって いますか。",
+          "meaning": "Bạn có biết bộ truyện tranh tên là 'Doraemon' không?"
+        }
+      ]
+    }
+  ],
+  "39": [
+    {
+      "title": "Vた + り、Vた + り します",
+      "structure": "Vた り、Vた り します",
+      "explanation": "Liệt kê một vài hành động tiêu biểu trong số nhiều hành động khác.",
+      "examples": [
+        {
+          "japanese": "週末は本を読んだり、映画を見たりします。",
+          "reading": "しゅうまつは ほんを よんだり、えいがを みたり します。",
+          "meaning": "Cuối tuần tôi thường đọc sách, xem phim..."
+        }
+      ]
+    },
+    {
+      "title": "Vなる／Aくなる／Aになる (trở nên)",
+      "structure": "Aい-く／Aな-に／N-に + なります",
+      "explanation": "Diễn tả sự thay đổi trạng thái theo thời gian: trở nên như thế nào.",
+      "examples": [
+        {
+          "japanese": "日本語が上手になりました。",
+          "reading": "にほんごが じょうずに なりました。",
+          "meaning": "Tiếng Nhật của tôi đã giỏi lên."
+        }
+      ]
+    }
+  ],
+  "40": [
+    {
+      "title": "～すぎる (tiếp)／～やすい・にくい",
+      "structure": "Vます-stem + やすい／にくい",
+      "explanation": "やすい: dễ làm; にくい: khó làm.",
+      "examples": [
+        {
+          "japanese": "この靴は歩きやすいです。",
+          "reading": "この くつは あるきやすいです。",
+          "meaning": "Đôi giày này đi dễ chịu."
+        }
+      ]
+    },
+    {
+      "title": "～について",
+      "structure": "N + について",
+      "explanation": "Diễn tả chủ đề: về việc gì đó, liên quan đến.",
+      "examples": [
+        {
+          "japanese": "日本の歴史について調べています。",
+          "reading": "にほんの れきしに ついて しらべて います。",
+          "meaning": "Tôi đang tìm hiểu về lịch sử Nhật Bản."
+        }
+      ]
+    }
+  ],
+  "41": [
+    {
+      "title": "くれます (cho tôi)",
+      "structure": "N1は（わたしに）N2を くれます",
+      "explanation": "くれます diễn tả việc người khác cho/tặng mình cái gì (góc nhìn từ người nhận là 'tôi').",
+      "examples": [
+        {
+          "japanese": "友達がプレゼントをくれました。",
+          "reading": "ともだちが プレゼントを くれました。",
+          "meaning": "Bạn tôi đã tặng tôi một món quà."
+        }
+      ]
+    },
+    {
+      "title": "Vて くれます／もらいます",
+      "structure": "Vて くれます／もらいます",
+      "explanation": "Diễn tả việc ai đó làm giúp mình một việc gì đó.",
+      "examples": [
+        {
+          "japanese": "先生が漢字を教えてくれました。",
+          "reading": "せんせいが かんじを おしえて くれました。",
+          "meaning": "Thầy giáo đã dạy tôi kanji."
+        }
+      ]
+    }
+  ],
+  "42": [
+    {
+      "title": "使役形 + いただけませんか",
+      "structure": "V-使役形て いただけませんか",
+      "explanation": "Xin phép làm gì đó một cách lịch sự, khiêm tốn.",
+      "examples": [
+        {
+          "japanese": "早く帰らせていただけませんか。",
+          "reading": "はやく かえらせて いただけませんか。",
+          "meaning": "Cho tôi về sớm được không ạ?"
+        }
+      ]
+    },
+    {
+      "title": "～ば ～ほど",
+      "structure": "V/A-ば形 + V/A-辞書形 + ほど",
+      "explanation": "Diễn tả mối tương quan tỷ lệ: càng...càng...",
+      "examples": [
+        {
+          "japanese": "漢字は勉強すればするほど、覚えます。",
+          "reading": "かんじは べんきょうすれば するほど、おぼえます。",
+          "meaning": "Kanji càng học càng nhớ."
+        }
+      ]
+    }
+  ],
+  "43": [
+    {
+      "title": "V/A-普通形 + のに (mặc dù)",
+      "structure": "普通形 + のに、～",
+      "explanation": "Diễn tả sự trái ngược với dự đoán: mặc dù...nhưng...",
+      "examples": [
+        {
+          "japanese": "頑張ったのに、試験に落ちました。",
+          "reading": "がんばったのに、しけんに おちました。",
+          "meaning": "Mặc dù đã cố gắng nhưng tôi vẫn trượt kỳ thi."
+        }
+      ]
+    },
+    {
+      "title": "V-ば形／たら + よかったです",
+      "structure": "V-たら + よかったです",
+      "explanation": "Diễn tả sự nuối tiếc: giá mà đã làm gì đó.",
+      "examples": [
+        {
+          "japanese": "もっと早く来ればよかったです。",
+          "reading": "もっと はやく くれば よかったです。",
+          "meaning": "Giá mà tôi đến sớm hơn."
+        }
+      ]
+    }
+  ],
+  "44": [
+    {
+      "title": "普通形 + でしょうか (lịch sự)",
+      "structure": "普通形 + でしょうか",
+      "explanation": "Cách hỏi lịch sự, nhẹ nhàng hơn ですか, thường dùng khi hỏi ý kiến hoặc xin phép.",
+      "examples": [
+        {
+          "japanese": "これでよろしいでしょうか。",
+          "reading": "これで よろしいでしょうか。",
+          "meaning": "Như vậy có được không ạ?"
+        }
+      ]
+    },
+    {
+      "title": "～まま",
+      "structure": "Vた／Aい／Nの + まま",
+      "explanation": "Diễn tả trạng thái giữ nguyên không thay đổi trong khi làm việc khác.",
+      "examples": [
+        {
+          "japanese": "靴を履いたまま、部屋に入らないでください。",
+          "reading": "くつを はいたまま、へやに はいらないで ください。",
+          "meaning": "Xin đừng đi giày vào phòng."
+        }
+      ]
+    }
+  ],
+  "45": [
+    {
+      "title": "～ように します",
+      "structure": "V-辞書形／ないform + ように します",
+      "explanation": "Diễn tả nỗ lực cố gắng để đạt được thói quen hoặc mục tiêu nào đó.",
+      "examples": [
+        {
+          "japanese": "毎日運動するようにしています。",
+          "reading": "まいにち うんどうする ように して います。",
+          "meaning": "Tôi cố gắng tập thể dục mỗi ngày."
+        }
+      ]
+    },
+    {
+      "title": "～ように なります",
+      "structure": "V-辞書形／可能形 + ように なります",
+      "explanation": "Diễn tả sự thay đổi dần dần: trở nên có thể làm gì đó theo thời gian.",
+      "examples": [
+        {
+          "japanese": "ひらがなが読めるようになりました。",
+          "reading": "ひらがなが よめる ように なりました。",
+          "meaning": "Tôi đã đọc được hiragana rồi (trước đây thì không)."
+        }
+      ]
+    }
+  ],
+  "46": [
+    {
+      "title": "Vた + まま／Vて + いく／くる",
+      "structure": "Vて いきます／きます",
+      "explanation": "ていきます/てきます diễn tả sự thay đổi hoặc di chuyển theo thời gian, hướng ra xa/lại gần.",
+      "examples": [
+        {
+          "japanese": "これからも日本語を勉強していきます。",
+          "reading": "これからも にほんごを べんきょうして いきます。",
+          "meaning": "Từ giờ tôi sẽ tiếp tục học tiếng Nhật."
+        }
+      ]
+    },
+    {
+      "title": "使役形 + もらう／くれる",
+      "structure": "V-使役形て もらいます",
+      "explanation": "Xin ai đó cho phép mình làm gì (khiêm tốn xin sự đồng ý).",
+      "examples": [
+        {
+          "japanese": "会社を休ませてもらいました。",
+          "reading": "かいしゃを やすませて もらいました。",
+          "meaning": "Tôi đã được cho phép nghỉ làm."
+        }
+      ]
+    }
+  ],
+  "47": [
+    {
+      "title": "～らしい (nghe đồn/vẻ như)",
+      "structure": "普通形 + らしい",
+      "explanation": "Diễn tả suy đoán dựa trên thông tin nghe được, có căn cứ khách quan.",
+      "examples": [
+        {
+          "japanese": "田中さんは来月結婚するらしいです。",
+          "reading": "たなかさんは らいげつ けっこんする らしいです。",
+          "meaning": "Nghe nói anh Tanaka sẽ kết hôn vào tháng sau."
+        }
+      ]
+    },
+    {
+      "title": "～に よると ～そうです",
+      "structure": "N によると、普通形 + そうです",
+      "explanation": "Trích dẫn nguồn thông tin: theo ... thì nghe nói rằng...",
+      "examples": [
+        {
+          "japanese": "ニュースによると、地震があったそうです。",
+          "reading": "ニュースに よると、じしんが あった そうです。",
+          "meaning": "Theo tin tức thì nghe nói đã có động đất."
+        }
+      ]
+    }
+  ],
+  "48": [
+    {
+      "title": "～ため（に）",
+      "structure": "N の／V-辞書形 + ため（に）",
+      "explanation": "Diễn tả mục đích (để làm gì) hoặc nguyên nhân (vì lý do gì đó).",
+      "examples": [
+        {
+          "japanese": "健康のために毎朝走っています。",
+          "reading": "けんこうの ために まいあさ はしって います。",
+          "meaning": "Tôi chạy bộ mỗi sáng vì sức khỏe."
+        }
+      ]
+    },
+    {
+      "title": "～ように (mục đích, không thể kiểm soát)",
+      "structure": "V-辞書形／ない-form + ように、～",
+      "explanation": "Diễn tả mục đích với động từ chỉ trạng thái/khả năng không tự chủ (khác ため với động từ ý chí).",
+      "examples": [
+        {
+          "japanese": "忘れないように、メモします。",
+          "reading": "わすれない ように、メモします。",
+          "meaning": "Tôi ghi chú lại để không quên."
+        }
+      ]
+    }
+  ],
+  "49": [
+    {
+      "title": "尊敬語（Tôn kính ngữ đặc biệt）",
+      "structure": "いらっしゃいます／おっしゃいます／召し上がります…",
+      "explanation": "Một số động từ có dạng tôn kính ngữ đặc biệt riêng, dùng khi nói về hành động của người trên, khách hàng.",
+      "examples": [
+        {
+          "japanese": "先生は今、研究室にいらっしゃいます。",
+          "reading": "せんせいは いま、けんきゅうしつに いらっしゃいます。",
+          "meaning": "Thầy giáo hiện đang ở phòng nghiên cứu."
+        }
+      ]
+    },
+    {
+      "title": "～と 言います (giới thiệu tên)",
+      "structure": "N と いいます",
+      "explanation": "Cách tự giới thiệu tên trang trọng: tôi tên là...",
+      "examples": [
+        {
+          "japanese": "はじめまして、田中と申します。",
+          "reading": "はじめまして、たなかと もうします。",
+          "meaning": "Rất hân hạnh, tôi tên là Tanaka."
+        }
+      ]
+    }
+  ],
+  "50": [
+    {
+      "title": "謙譲語（Khiêm nhường ngữ đặc biệt）",
+      "structure": "参ります／おります／いたします…",
+      "explanation": "Một số động từ có dạng khiêm nhường ngữ đặc biệt riêng, dùng khi hạ thấp hành động của bản thân trước người trên.",
+      "examples": [
+        {
+          "japanese": "わたしは田中と申します。あした3時に伺います。",
+          "reading": "わたしは たなかと もうします。あした さんじに うかがいます。",
+          "meaning": "Tôi tên là Tanaka. Ngày mai tôi sẽ đến thăm lúc 3 giờ."
+        }
+      ]
+    },
+    {
+      "title": "Ôn tập kính ngữ: 尊敬語・謙譲語・丁寧語",
+      "structure": "尊敬語（đối phương）／謙譲語（bản thân）／丁寧語（です・ます）",
+      "explanation": "Ba loại kính ngữ tổng hợp: nâng cao hành động người khác, hạ thấp hành động bản thân, và lời nói lịch sự chung.",
+      "examples": [
+        {
+          "japanese": "お荷物をお持ちいたします。",
+          "reading": "おにもつを おもち いたします。",
+          "meaning": "Để tôi mang hành lý giúp quý khách."
+        }
+      ]
+    }
+  ]
+}

@@ -20,11 +20,11 @@ export function KanaSettings({ typeFilter, onTypeFilterChange, onStart }: KanaSe
       >
         <option value="hiragana">Hiragana</option>
         <option value="katakana">Katakana</option>
-        <option value="both">Both</option>
+        <option value="both">Cả hai</option>
       </select>
 
       <label className="field-compact">
-        Cards
+        Số thẻ
         <input
           type="number"
           min={1}
@@ -35,7 +35,7 @@ export function KanaSettings({ typeFilter, onTypeFilterChange, onStart }: KanaSe
       </label>
 
       <label className="field-compact">
-        Speed
+        Tốc độ
         <input
           type="number"
           min={1}
@@ -44,10 +44,10 @@ export function KanaSettings({ typeFilter, onTypeFilterChange, onStart }: KanaSe
           value={settings.intervalMs / 1000}
           onChange={(e) => updateKanaSettings({ intervalMs: Number(e.target.value) * 1000 })}
         />
-        s
+        giây
       </label>
 
-      <button onClick={onStart}>New session</button>
+      <button onClick={onStart}>Phiên mới</button>
     </>
   );
 }

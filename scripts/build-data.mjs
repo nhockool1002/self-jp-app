@@ -2,20 +2,28 @@
 // whenever we want to refresh from upstream sources. Output is committed into
 // src/data/ and imported statically by the app — the shipped app never fetches
 // data at runtime.
-import { writeFileSync } from "node:fs";
+import { execFileSync } from "node:child_process";
+import { mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import * as yaml from "js-yaml";
+import { MNN_VI } from "./mnn-vi.mjs";
+import { MNN_GRAMMAR } from "./mnn-grammar.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataDir = join(__dirname, "..", "src", "data");
 
 const KANJI_URL =
   "https://raw.githubusercontent.com/davidluzgouveia/kanji-data/master/kanji.json";
-const VOCAB_URL =
-  "https://raw.githubusercontent.com/Bluskyo/JLPT_Vocabulary/main/data/vocab/results/JLPT_vocab_ALL.json";
 const MINNA_URL =
   "https://raw.githubusercontent.com/vitto4/MinnaNoDS/main/minna-no-ds.yaml";
+// Vietnamese Hán-Việt kanji dictionary (Yomichan/Yomitan format), derived from
+// KANJIDIC2 + hvdic.thivien.net. Code is MIT-licensed; the Hán-Việt readings
+// and meanings themselves belong to hvdic.thivien.net — used here for
+// personal, non-commercial study, same basis as the MinnaNoDS vocab data.
+const KANJIDICT_VN_URL =
+  "https://github.com/trungnt2910/KanjiDictVN/releases/download/trungnt2910.hannom.20251225-154650.kanjidic2.2025-345/trungnt2910.hannom.20251225-154650.kanjidic2.2025-345.zip";
 
 const JLPT_LEVEL_NAMES = { 5: "N5", 4: "N4", 3: "N3", 2: "N2", 1: "N1" };
 
@@ -31,40 +39,80 @@ async function fetchText(url) {
   return res.text();
 }
 
-async function buildKanji(vocabByWord) {
+// Downloads the KanjiDictVN Yomitan dictionary zip and parses its kanji_bank
+// files into char -> { hanviet, meanings } using system `curl`/`unzip` (dev-
+// only tooling, not shipped with the app).
+async function fetchKanjiVietnamese() {
+  const dir = mkdtempSync(join(tmpdir(), "kanjidict-vn-"));
+  try {
+    const zipPath = join(dir, "dict.zip");
+    execFileSync("curl", ["-sL", KANJIDICT_VN_URL, "-o", zipPath]);
+    execFileSync("unzip", ["-o", "-q", zipPath, "-d", dir]);
+
+    const byChar = new Map();
+    for (const bankFile of ["kanji_bank_1.json", "kanji_bank_2.json"]) {
+      const rows = JSON.parse(readFileSync(join(dir, bankFile), "utf8"));
+      for (const [char, hanviet, , , meanings] of rows) {
+        // Meanings look like "[nhất] một, 1" — strip the leading "[reading] ".
+        const cleaned = meanings
+          .map((m) => m.replace(/^\[[^\]]*\]\s*/, "").trim())
+          .filter(Boolean);
+        byChar.set(char, { hanviet: hanviet.split(" ")[0], meanings: cleaned });
+      }
+    }
+    return byChar;
+  } finally {
+    rmSync(dir, { recursive: true, force: true });
+  }
+}
+
+async function buildKanji(kanjiVietnamese, mnnExampleWordsByChar) {
   const raw = await fetchJson(KANJI_URL);
   const byLevel = { N5: [], N4: [], N3: [], N2: [], N1: [] };
 
   for (const [char, entry] of Object.entries(raw)) {
     if (!entry.jlpt_new || !JLPT_LEVEL_NAMES[entry.jlpt_new]) continue;
     const level = JLPT_LEVEL_NAMES[entry.jlpt_new];
-
-    const exampleWords = vocabByWord
-      .filter(([word]) => word.includes(char))
-      .slice(0, 3)
-      .map(([word, readings]) => ({
-        word,
-        reading: readings[0]?.reading ?? "",
-      }));
+    const vn = kanjiVietnamese.get(char);
 
     byLevel[level].push({
       kanji: char,
       jlpt: level,
       strokes: entry.strokes ?? null,
-      meanings: entry.meanings ?? [],
+      hanviet: vn?.hanviet ?? "",
+      meanings: vn?.meanings?.length ? vn.meanings : entry.meanings ?? [],
       onyomi: entry.readings_on ?? [],
       kunyomi: entry.readings_kun ?? [],
-      exampleWords,
+      exampleWords: mnnExampleWordsByChar.get(char) ?? [],
     });
   }
 
   return byLevel;
 }
 
-async function buildVocabLookup() {
-  const raw = await fetchJson(VOCAB_URL);
-  // Sort by shortest word first so example-word matching favors simpler vocab.
-  return Object.entries(raw).sort((a, b) => a[0].length - b[0].length);
+// Cross-references the (already Vietnamese-translated) MNN vocab list against
+// each kanji so example words come with a guaranteed-correct Vietnamese
+// meaning, reusing the MNN translations instead of a separate untranslated
+// source. Kanji outside MNN's beginner vocabulary (mostly N2/N1) simply get
+// no examples — an honest reflection of the textbook's scope.
+function buildMnnExampleWordsByChar(minna) {
+  const allWords = Object.values(minna)
+    .flat()
+    .filter((e) => e.kanji)
+    .sort((a, b) => a.kanji.length - b.kanji.length);
+
+  const byChar = new Map();
+  for (const word of allWords) {
+    for (const char of word.kanji) {
+      if (!/[一-鿿]/.test(char)) continue;
+      const list = byChar.get(char) ?? [];
+      if (list.length < 3 && !list.some((w) => w.word === word.kanji)) {
+        list.push({ word: word.kanji, reading: word.kana, meaning: word.meaning });
+      }
+      byChar.set(char, list);
+    }
+  }
+  return byChar;
 }
 
 // The upstream YAML spans flow mappings/sequences (`{...}`, `[...]`) across
@@ -123,14 +171,17 @@ async function buildMinna() {
     if (!match) continue;
     const lessonNumber = Number(match[1]);
 
-    byLesson[lessonNumber] = entries.map((e) => ({
-      id: e.id.join("-"),
-      editions: e.edition,
-      kanji: e.kanji ?? null,
-      kana: e.kana,
-      romaji: e.romaji,
-      meaning: e.meaning?.en ?? "",
-    }));
+    byLesson[lessonNumber] = entries.map((e) => {
+      const id = e.id.join("-");
+      return {
+        id,
+        editions: e.edition,
+        kanji: e.kanji ?? null,
+        kana: e.kana,
+        romaji: e.romaji,
+        meaning: MNN_VI[id] ?? e.meaning?.en ?? "",
+      };
+    });
   }
 
   return byLesson;
@@ -238,16 +289,6 @@ function buildKana() {
 }
 
 async function main() {
-  console.log("Fetching JLPT vocabulary (for kanji example words)...");
-  const vocabByWord = await buildVocabLookup();
-
-  console.log("Building kanji.json...");
-  const kanji = await buildKanji(vocabByWord);
-  writeFileSync(join(dataDir, "kanji.json"), JSON.stringify(kanji, null, 2));
-  for (const [level, entries] of Object.entries(kanji)) {
-    console.log(`  ${level}: ${entries.length} kanji`);
-  }
-
   console.log("Building vocab-mnn.json...");
   const minna = await buildMinna();
   writeFileSync(
@@ -256,10 +297,29 @@ async function main() {
   );
   console.log(`  ${Object.keys(minna).length} lessons`);
 
+  console.log("Fetching Vietnamese Hán-Việt kanji dictionary...");
+  const kanjiVietnamese = await fetchKanjiVietnamese();
+  console.log(`  ${kanjiVietnamese.size} kanji entries`);
+
+  console.log("Building kanji.json...");
+  const mnnExampleWordsByChar = buildMnnExampleWordsByChar(minna);
+  const kanji = await buildKanji(kanjiVietnamese, mnnExampleWordsByChar);
+  writeFileSync(join(dataDir, "kanji.json"), JSON.stringify(kanji, null, 2));
+  for (const [level, entries] of Object.entries(kanji)) {
+    console.log(`  ${level}: ${entries.length} kanji`);
+  }
+
   console.log("Building kana.json...");
   const kana = buildKana();
   writeFileSync(join(dataDir, "kana.json"), JSON.stringify(kana, null, 2));
   console.log(`  ${kana.length} kana entries`);
+
+  console.log("Building grammar-mnn.json...");
+  writeFileSync(
+    join(dataDir, "grammar-mnn.json"),
+    JSON.stringify(MNN_GRAMMAR, null, 2)
+  );
+  console.log(`  ${Object.keys(MNN_GRAMMAR).length} lessons`);
 
   console.log("Done.");
 }

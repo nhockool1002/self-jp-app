@@ -81,7 +81,7 @@ export function KanaMode({ compact }: { compact: boolean }) {
 
   if (compact) {
     if (!current) {
-      return <div className="mode-compact">Starting session…</div>;
+      return <div className="mode-compact">Đang bắt đầu phiên học…</div>;
     }
     return (
       <div className="mode-compact">
@@ -106,11 +106,11 @@ export function KanaMode({ compact }: { compact: boolean }) {
         {current && session && (
           <>
             <span className="control-divider" />
-            <button onClick={goPrev} disabled={index === 0} title="Previous">
+            <button onClick={goPrev} disabled={index === 0} title="Trước">
               ◀
             </button>
             <button onClick={() => setIsPlaying((v) => !v)}>{isPlaying ? "⏸" : "▶"}</button>
-            <button onClick={goNext} disabled={index === session.length - 1} title="Next">
+            <button onClick={goNext} disabled={index === session.length - 1} title="Tiếp">
               ▶
             </button>
             <span className="kana-progress">
