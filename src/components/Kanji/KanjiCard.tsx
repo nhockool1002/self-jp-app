@@ -29,47 +29,48 @@ export function KanjiCard({ entry, isStudied, onPlayAudio, onMarkStudied, compac
 
   return (
     <div className="kanji-card">
-      <div className="kanji-card-header">
-        <div className="kanji-char">{entry.kanji}</div>
-        <button className="kana-audio-btn" onClick={onPlayAudio} title="Phát âm">
-          🔊
-        </button>
-      </div>
-
-      {entry.hanviet && <div className="kanji-hanviet">Hán Việt: {entry.hanviet}</div>}
-      <div className="kanji-jlpt-badge">{entry.jlpt}</div>
-
-      <div className="kanji-detail">
-        <div className="kanji-detail-row">
-          <strong>Nghĩa:</strong> {entry.meanings.join(", ")}
+      <div className="kanji-card-columns">
+        <div className="kanji-card-left">
+          <div className="kanji-char">{entry.kanji}</div>
+          <button className="kana-audio-btn" onClick={onPlayAudio} title="Phát âm">
+            🔊
+          </button>
+          {entry.hanviet && <div className="kanji-hanviet">Hán Việt: {entry.hanviet}</div>}
+          <div className="kanji-jlpt-badge">{entry.jlpt}</div>
         </div>
-        {entry.onyomi.length > 0 && (
+
+        <div className="kanji-detail">
           <div className="kanji-detail-row">
-            <strong>Âm On:</strong> {entry.onyomi.join("、")}
+            <strong>Nghĩa:</strong> {entry.meanings.join(", ")}
           </div>
-        )}
-        {entry.kunyomi.length > 0 && (
-          <div className="kanji-detail-row">
-            <strong>Âm Kun:</strong> {entry.kunyomi.join("、")}
-          </div>
-        )}
-        {entry.strokes != null && (
-          <div className="kanji-detail-row">
-            <strong>Số nét:</strong> {entry.strokes}
-          </div>
-        )}
-        {entry.exampleWords.length > 0 && (
-          <div className="kanji-detail-row">
-            <strong>Ví dụ:</strong>
-            <ul className="kanji-examples">
-              {entry.exampleWords.map((w) => (
-                <li key={w.word}>
-                  {w.word} ({w.reading}) — {w.meaning}
-                </li>
-              ))}
-            </ul>
-          </div>
-        )}
+          {entry.onyomi.length > 0 && (
+            <div className="kanji-detail-row">
+              <strong>Âm On:</strong> {entry.onyomi.join("、")}
+            </div>
+          )}
+          {entry.kunyomi.length > 0 && (
+            <div className="kanji-detail-row">
+              <strong>Âm Kun:</strong> {entry.kunyomi.join("、")}
+            </div>
+          )}
+          {entry.strokes != null && (
+            <div className="kanji-detail-row">
+              <strong>Số nét:</strong> {entry.strokes}
+            </div>
+          )}
+          {entry.exampleWords.length > 0 && (
+            <div className="kanji-detail-row">
+              <strong>Ví dụ:</strong>
+              <ul className="kanji-examples">
+                {entry.exampleWords.map((w) => (
+                  <li key={w.word}>
+                    {w.word} ({w.reading}) — {w.meaning}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
       </div>
 
       <button className={isStudied ? "" : "primary"} onClick={onMarkStudied} disabled={isStudied}>

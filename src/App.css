@@ -259,12 +259,12 @@ button.primary {
 .kanji-card {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  padding: 5vh 4vw;
+  gap: 20px;
+  padding: 28px 36px;
   border-radius: 24px;
   background: #fff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  max-width: 560px;
+  max-width: 860px;
   width: 100%;
 }
 
@@ -275,15 +275,22 @@ button.primary {
   gap: 6px;
 }
 
-.kanji-card-header {
+.kanji-card-columns {
   display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.kanji-card-left {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 16px;
+  gap: 10px;
+  flex: 0 0 200px;
 }
 
 .kanji-char {
-  font-size: clamp(4rem, 11vw, 8rem);
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
   line-height: 1;
 }
 
@@ -298,7 +305,6 @@ button.primary {
 }
 
 .kanji-jlpt-badge {
-  align-self: center;
   font-size: 0.75em;
   font-weight: 600;
   color: #396cd8;
@@ -308,6 +314,8 @@ button.primary {
 }
 
 .kanji-detail {
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
