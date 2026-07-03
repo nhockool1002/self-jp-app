@@ -25,14 +25,13 @@ function speak(entry: KanaEntry) {
 
 export function KanaMode({ compact }: { compact: boolean }) {
   const intervalMs = useAppStore((s) => s.settings.kana.intervalMs);
-  const [typeFilter, setTypeFilter] = useState<KanaEntry["type"] | "both">("both");
+  const cardsPerSession = useAppStore((s) => s.settings.kana.cardsPerSession);
+  const [typeFilter, setTypeFilter] = useState<KanaEntry["type"] | "both">("hiragana");
   const [session, setSession] = useState<KanaEntry[] | null>(null);
   const [index, setIndex] = useState(0);
   const [showRomaji, setShowRomaji] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
-
-  const cardsPerSession = useAppStore((s) => s.settings.kana.cardsPerSession);
 
   function startSession() {
     const pool = typeFilter === "both" ? KANA : KANA.filter((k) => k.type === typeFilter);
@@ -42,6 +41,11 @@ export function KanaMode({ compact }: { compact: boolean }) {
     setShowRomaji(false);
     setIsPlaying(true);
   }
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    startSession();
+  }, []);
 
   const current = session ? session[index] : null;
 
@@ -77,7 +81,7 @@ export function KanaMode({ compact }: { compact: boolean }) {
 
   if (compact) {
     if (!current) {
-      return <div className="mode-compact">Start a kana session from the main window.</div>;
+      return <div className="mode-compact">Starting session…</div>;
     }
     return (
       <div className="mode-compact">
@@ -96,31 +100,36 @@ export function KanaMode({ compact }: { compact: boolean }) {
   }
 
   return (
-    <div className="mode kana-mode">
-      <KanaSettings typeFilter={typeFilter} onTypeFilterChange={setTypeFilter} onStart={startSession} />
+    <div className="mode-page">
+      <div className="mode-controls-bar">
+        <KanaSettings typeFilter={typeFilter} onTypeFilterChange={setTypeFilter} onStart={startSession} />
+        {current && session && (
+          <>
+            <span className="control-divider" />
+            <button onClick={goPrev} disabled={index === 0} title="Previous">
+              ◀
+            </button>
+            <button onClick={() => setIsPlaying((v) => !v)}>{isPlaying ? "⏸" : "▶"}</button>
+            <button onClick={goNext} disabled={index === session.length - 1} title="Next">
+              ▶
+            </button>
+            <span className="kana-progress">
+              {index + 1} / {session.length}
+            </span>
+          </>
+        )}
+      </div>
 
-      {current && (
-        <div className="kana-session">
+      <div className="mode-stage">
+        {current && (
           <KanaFlashcard
             entry={current}
             showRomaji={showRomaji}
             onReveal={() => setShowRomaji((v) => !v)}
             onPlayAudio={() => speak(current)}
           />
-          <div className="kana-progress">
-            {index + 1} / {session!.length}
-          </div>
-          <div className="kana-controls">
-            <button onClick={goPrev} disabled={index === 0}>
-              ◀ Prev
-            </button>
-            <button onClick={() => setIsPlaying((v) => !v)}>{isPlaying ? "Pause" : "Resume"}</button>
-            <button onClick={goNext} disabled={index === session!.length - 1}>
-              Next ▶
-            </button>
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

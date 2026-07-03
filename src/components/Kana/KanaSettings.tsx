@@ -12,20 +12,19 @@ export function KanaSettings({ typeFilter, onTypeFilterChange, onStart }: KanaSe
   const updateKanaSettings = useAppStore((s) => s.updateKanaSettings);
 
   return (
-    <div className="kana-settings">
-      <h2>Kana Flashcards</h2>
+    <>
+      <select
+        className="control-select"
+        value={typeFilter}
+        onChange={(e) => onTypeFilterChange(e.target.value as typeof typeFilter)}
+      >
+        <option value="hiragana">Hiragana</option>
+        <option value="katakana">Katakana</option>
+        <option value="both">Both</option>
+      </select>
 
-      <label className="field">
-        Character set
-        <select value={typeFilter} onChange={(e) => onTypeFilterChange(e.target.value as typeof typeFilter)}>
-          <option value="both">Hiragana + Katakana</option>
-          <option value="hiragana">Hiragana only</option>
-          <option value="katakana">Katakana only</option>
-        </select>
-      </label>
-
-      <label className="field">
-        Number of cards
+      <label className="field-compact">
+        Cards
         <input
           type="number"
           min={1}
@@ -35,8 +34,8 @@ export function KanaSettings({ typeFilter, onTypeFilterChange, onStart }: KanaSe
         />
       </label>
 
-      <label className="field">
-        Speed (seconds per card)
+      <label className="field-compact">
+        Speed
         <input
           type="number"
           min={1}
@@ -45,11 +44,10 @@ export function KanaSettings({ typeFilter, onTypeFilterChange, onStart }: KanaSe
           value={settings.intervalMs / 1000}
           onChange={(e) => updateKanaSettings({ intervalMs: Number(e.target.value) * 1000 })}
         />
+        s
       </label>
 
-      <button className="primary" onClick={onStart}>
-        Start session
-      </button>
-    </div>
+      <button onClick={onStart}>New session</button>
+    </>
   );
 }

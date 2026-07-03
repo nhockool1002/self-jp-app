@@ -49,13 +49,18 @@ export function VocabMode({ compact }: { compact: boolean }) {
   }
 
   return (
-    <div className="mode vocab-mode">
-      <h2>Minna no Nihongo Vocabulary</h2>
-      <LessonPicker lesson={lesson} lessonCount={LESSON_COUNT} onChange={changeLesson} />
-      <div className="vocab-word-list">
-        {words.map((entry) => (
-          <VocabWordCard key={entry.id} entry={entry} onPlayAudio={() => speak(entry)} />
-        ))}
+    <div className="mode-page">
+      <div className="mode-controls-bar">
+        <LessonPicker lesson={lesson} lessonCount={LESSON_COUNT} onChange={changeLesson} />
+        <span className="progress-count">{words.length} words</span>
+      </div>
+
+      <div className="mode-stage mode-stage-scroll">
+        <div className="vocab-word-list">
+          {words.map((entry) => (
+            <VocabWordCard key={entry.id} entry={entry} onPlayAudio={() => speak(entry)} />
+          ))}
+        </div>
       </div>
     </div>
   );

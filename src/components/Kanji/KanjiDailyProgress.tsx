@@ -9,9 +9,9 @@ export function KanjiDailyProgress({ studiedCount }: KanjiDailyProgressProps) {
   const updateKanjiSettings = useAppStore((s) => s.updateKanjiSettings);
 
   return (
-    <div className="kanji-daily-progress">
-      <label className="field field-inline">
-        Words per day
+    <>
+      <label className="field-compact">
+        Per day
         <input
           type="number"
           min={1}
@@ -21,8 +21,8 @@ export function KanjiDailyProgress({ studiedCount }: KanjiDailyProgressProps) {
         />
       </label>
       <span className="progress-count">
-        {studiedCount} / {wordsPerDay} studied today
+        {studiedCount}/{wordsPerDay} today
       </span>
-    </div>
+    </>
   );
 }

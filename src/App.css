@@ -101,7 +101,8 @@ button:hover {
 .mode-area {
   flex: 1;
   overflow: auto;
-  padding: 16px;
+  padding: 10px 16px 16px;
+  display: flex;
 }
 
 .mode-compact {
@@ -109,33 +110,71 @@ button:hover {
   text-align: center;
 }
 
-.kana-mode {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-}
+/* Shared layout: a slim controls bar tucked in the corner, and a big stage below it */
 
-.kana-settings {
+.mode-page {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
-  max-width: 320px;
+  min-height: 0;
 }
 
-.field {
+.mode-controls-bar {
   display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 0.9em;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 6px 12px;
+  flex-wrap: wrap;
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.04);
+  font-size: 0.82em;
 }
 
-.field select,
-.field input {
-  padding: 0.4em;
+.control-divider {
+  width: 1px;
+  align-self: stretch;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 2px 2px;
+}
+
+.mode-controls-bar button {
+  padding: 0.3em 0.7em;
+  font-size: 0.95em;
+}
+
+.control-select,
+.field-compact select,
+.field-compact input {
+  padding: 0.25em 0.45em;
   border-radius: 6px;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  font-size: 0.95em;
+  background: #fff;
+}
+
+.field-compact {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.field-compact input {
+  width: 48px;
+}
+
+.mode-stage {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+}
+
+.mode-stage-scroll {
+  align-items: flex-start;
+  overflow-y: auto;
 }
 
 button.primary {
@@ -143,33 +182,27 @@ button.primary {
   color: #fff;
 }
 
-.kana-session {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-
 .kana-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
-  padding: 32px 48px;
-  border-radius: 16px;
+  gap: 16px;
+  padding: 5vh 8vw;
+  border-radius: 24px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   cursor: pointer;
-  min-width: 200px;
+  min-width: 280px;
 }
 
 .kana-card-compact {
   padding: 12px 20px;
   min-width: 100px;
+  gap: 6px;
 }
 
 .kana-char {
-  font-size: 4rem;
+  font-size: clamp(6rem, 20vw, 14rem);
   line-height: 1;
 }
 
@@ -178,15 +211,20 @@ button.primary {
 }
 
 .kana-romaji {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: #666;
-  min-height: 1.4rem;
+  min-height: 1.9rem;
+}
+
+.kana-card-compact .kana-romaji {
+  font-size: 1.1rem;
+  min-height: 1.3rem;
 }
 
 .kana-audio-btn {
   background: transparent;
   box-shadow: none;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
 }
 
 .kana-progress {
@@ -200,56 +238,31 @@ button.primary {
   gap: 8px;
 }
 
-.kanji-mode {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-}
-
 .kanji-level-picker {
   display: flex;
-  gap: 6px;
+  gap: 4px;
 }
 
-.kanji-daily-progress {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.field-inline {
-  flex-direction: row;
-  align-items: center;
-  gap: 8px;
-}
-
-.field-inline input {
-  width: 60px;
+.kanji-level-picker .tab {
+  padding: 0.3em 0.65em;
+  font-size: 0.95em;
 }
 
 .progress-count {
   font-size: 0.9em;
   color: #666;
-}
-
-.kanji-session {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
+  white-space: nowrap;
 }
 
 .kanji-card {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 24px 32px;
-  border-radius: 16px;
+  gap: 16px;
+  padding: 5vh 4vw;
+  border-radius: 24px;
   background: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-  max-width: 420px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  max-width: 560px;
   width: 100%;
 }
 
@@ -257,13 +270,23 @@ button.primary {
   align-items: center;
   padding: 12px 20px;
   max-width: none;
+  gap: 6px;
 }
 
 .kanji-card-header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
+  gap: 16px;
+}
+
+.kanji-char {
+  font-size: clamp(4rem, 11vw, 8rem);
+  line-height: 1;
+}
+
+.kanji-card-compact .kanji-char {
+  font-size: 2.4rem;
 }
 
 .kanji-jlpt-badge {
@@ -279,8 +302,8 @@ button.primary {
 .kanji-detail {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  font-size: 0.95em;
+  gap: 10px;
+  font-size: 1.05em;
 }
 
 .kanji-detail-row {
@@ -303,27 +326,20 @@ button.primary {
   gap: 8px;
 }
 
-.vocab-mode {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  width: 100%;
-}
-
 .vocab-word-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
   width: 100%;
-  max-width: 480px;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .vocab-word-card {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 16px;
+  gap: 14px;
+  padding: 12px 18px;
   border-radius: 10px;
   background: #fff;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -332,21 +348,21 @@ button.primary {
 .vocab-word-main {
   display: flex;
   flex-direction: column;
-  min-width: 100px;
+  min-width: 120px;
 }
 
 .vocab-kanji {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
 }
 
 .vocab-kana {
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   color: #666;
 }
 
 .vocab-meaning {
   flex: 1;
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -364,11 +380,20 @@ button.primary {
     border-bottom-color: rgba(255, 255, 255, 0.1);
   }
 
-  .field select,
-  .field input {
+  .control-select,
+  .field-compact select,
+  .field-compact input {
     border-color: rgba(255, 255, 255, 0.2);
     background: #1f1f1f;
     color: #fff;
+  }
+
+  .mode-controls-bar {
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .control-divider {
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .kana-card,

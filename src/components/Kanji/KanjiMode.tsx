@@ -76,36 +76,43 @@ export function KanjiMode({ compact }: { compact: boolean }) {
   }
 
   return (
-    <div className="mode kanji-mode">
-      <KanjiLevelPicker />
-      <KanjiDailyProgress studiedCount={studiedCount} />
+    <div className="mode-page">
+      <div className="mode-controls-bar">
+        <KanjiLevelPicker />
+        <span className="control-divider" />
+        <KanjiDailyProgress studiedCount={studiedCount} />
+        {current && (
+          <>
+            <span className="control-divider" />
+            <button onClick={() => setIndex((i) => Math.max(i - 1, 0))} disabled={boundedIndex === 0} title="Previous">
+              ◀
+            </button>
+            <button
+              onClick={() => setIndex((i) => Math.min(i + 1, todaysList.length - 1))}
+              disabled={boundedIndex === todaysList.length - 1}
+              title="Next"
+            >
+              ▶
+            </button>
+            <span className="kana-progress">
+              {boundedIndex + 1} / {todaysList.length}
+            </span>
+          </>
+        )}
+      </div>
 
-      {current ? (
-        <div className="kanji-session">
+      <div className="mode-stage">
+        {current ? (
           <KanjiCard
             entry={current}
             isStudied={studiedToday.has(current.kanji)}
             onPlayAudio={() => speak(current)}
             onMarkStudied={() => markKanjiStudied(current.kanji)}
           />
-          <div className="kana-progress">
-            {boundedIndex + 1} / {todaysList.length}
-          </div>
-          <div className="kana-controls">
-            <button onClick={() => setIndex((i) => Math.max(i - 1, 0))} disabled={boundedIndex === 0}>
-              ◀ Prev
-            </button>
-            <button
-              onClick={() => setIndex((i) => Math.min(i + 1, todaysList.length - 1))}
-              disabled={boundedIndex === todaysList.length - 1}
-            >
-              Next ▶
-            </button>
-          </div>
-        </div>
-      ) : (
-        <p>No kanji available for this level.</p>
-      )}
+        ) : (
+          <p>No kanji available for this level.</p>
+        )}
+      </div>
     </div>
   );
 }
