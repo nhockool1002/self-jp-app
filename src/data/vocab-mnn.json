@@ -416,7 +416,7 @@
       "kanji": "IMC／パワー電気／ブラジルエアー",
       "kana": "IMC／パワーでんき／ブラジルエアー",
       "romaji": "IMC/pawādenki/burajirueā",
-      "meaning": "tên công ty hư cấu"
+      "meaning": "tên công ty"
     },
     {
       "id": "1-39",
@@ -427,7 +427,7 @@
       "kanji": null,
       "kana": "AKC",
       "romaji": "AKC",
-      "meaning": "tên viện hư cấu"
+      "meaning": "tên viện nghiên cứu"
     },
     {
       "id": "1-40",
@@ -438,7 +438,7 @@
       "kanji": "神戸病院",
       "kana": "こうべびょういん",
       "romaji": "kōbebyōin",
-      "meaning": "Bệnh viện Kobe (tên hư cấu)"
+      "meaning": "Bệnh viện Kobe"
     },
     {
       "id": "1-41",
@@ -449,7 +449,7 @@
       "kanji": "さくら大学／富士大学",
       "kana": "さくらだいがく／ふじだいがく",
       "romaji": "sakuradaigaku/fujidaigaku",
-      "meaning": "trường đại học Sakura / Fuji (tên hư cấu)"
+      "meaning": "trường đại học Sakura / Fuji"
     },
     {
       "id": "1-42",
@@ -1640,7 +1640,7 @@
       "kanji": null,
       "kana": "MT／ヨーネン／アキックス",
       "romaji": "MT/yōnen/akikkusu",
-      "meaning": "tên công ty hư cấu"
+      "meaning": "tên công ty"
     }
   ],
   "4": [
@@ -2264,7 +2264,7 @@
       "kanji": null,
       "kana": "あすか",
       "romaji": "asuka",
-      "meaning": "nhà hàng Nhật Bản (tên hư cấu)"
+      "meaning": "nhà hàng Nhật Bản"
     },
     {
       "id": "4-58",
@@ -2275,7 +2275,7 @@
       "kanji": "アップル銀行",
       "kana": "アップルぎんこう",
       "romaji": "appuruginkō",
-      "meaning": "Ngân hàng Apple (tên hư cấu)"
+      "meaning": "Ngân hàng Apple"
     },
     {
       "id": "4-59",
@@ -2286,7 +2286,7 @@
       "kanji": "みどり図書館",
       "kana": "みどりとしょかん",
       "romaji": "midoritoshokan",
-      "meaning": "Thư viện Midori (tên hư cấu)"
+      "meaning": "Thư viện Midori"
     },
     {
       "id": "4-60",
@@ -2297,7 +2297,7 @@
       "kanji": "やまと美術館",
       "kana": "やまとびじゅつかん",
       "romaji": "yamatobijutsukan",
-      "meaning": "Bảo tàng mỹ thuật Yamato (tên hư cấu)"
+      "meaning": "Bảo tàng mỹ thuật Yamato"
     },
     {
       "id": "4-61",
@@ -2377,7 +2377,7 @@
       "kanji": "大阪デパート",
       "kana": "おおさかデパート",
       "romaji": "ōsakadepāto",
-      "meaning": "Trung tâm thương mại Osaka (tên hư cấu)"
+      "meaning": "Trung tâm thương mại Osaka"
     }
   ],
   "5": [
@@ -3638,7 +3638,7 @@
       "kanji": "大阪デパート",
       "kana": "おおさかデパート",
       "romaji": "ōsakadepāto",
-      "meaning": "Trung tâm thương mại Osaka (tên hư cấu)"
+      "meaning": "Trung tâm thương mại Osaka"
     },
     {
       "id": "6-53",
@@ -3648,7 +3648,7 @@
       "kanji": null,
       "kana": "つるや",
       "romaji": "tsuruya",
-      "meaning": "nhà hàng Tsuruya (tên hư cấu)"
+      "meaning": "nhà hàng Tsuruya"
     },
     {
       "id": "6-54",
@@ -3658,7 +3658,7 @@
       "kanji": "フランス屋",
       "kana": "フランスや",
       "romaji": "furansuya",
-      "meaning": "siêu thị Furansuya (tên hư cấu)"
+      "meaning": "siêu thị Furansuya"
     },
     {
       "id": "6-55",
@@ -3668,7 +3668,7 @@
       "kanji": "毎日屋",
       "kana": "まいにちや",
       "romaji": "mainichiya",
-      "meaning": "siêu thị Mainichiya (tên hư cấu)"
+      "meaning": "siêu thị Mainichiya"
     },
     {
       "id": "6-56",
@@ -6128,7 +6128,7 @@
       "kanji": null,
       "kana": "アジアストア",
       "romaji": "ajiasutoa",
-      "meaning": "siêu thị Asia Store (tên hư cấu)"
+      "meaning": "siêu thị Asia Store"
     },
     {
       "id": "10-50",
@@ -6208,7 +6208,7 @@
       "kanji": null,
       "kana": "ユニューア・ストア",
       "romaji": "yunyūa sutoa",
-      "meaning": "siêu thị Yunyuua (tên hư cấu)"
+      "meaning": "siêu thị Yunyuua"
     }
   ],
   "11": [
@@ -7494,7 +7494,7 @@
       "kanji": null,
       "kana": "ABC ストア",
       "romaji": "ABC sutoa",
-      "meaning": "siêu thị ABC (tên hư cấu)"
+      "meaning": "siêu thị ABC"
     },
     {
       "id": "12-53",
@@ -7505,7 +7505,7 @@
       "kanji": null,
       "kana": "ジャパン",
       "romaji": "japan",
-      "meaning": "siêu thị Japan (tên hư cấu)"
+      "meaning": "siêu thị Japan"
     },
     {
       "id": "12-54",
@@ -7545,7 +7545,7 @@
       "kanji": "毎日屋",
       "kana": "まいにちや",
       "romaji": "mainichiya",
-      "meaning": "siêu thị Mainichiya (tên hư cấu)"
+      "meaning": "siêu thị Mainichiya"
     }
   ],
   "13": [
@@ -7897,7 +7897,7 @@
       "kanji": null,
       "kana": "アキックス",
       "romaji": "akikkusu",
-      "meaning": "công ty Akikkusu (tên hư cấu)"
+      "meaning": "công ty Akikkusu"
     },
     {
       "id": "13-33",
@@ -7908,7 +7908,7 @@
       "kanji": null,
       "kana": "おはようテレビ",
       "romaji": "ohayōterebi",
-      "meaning": "chương trình TV Ohayou (tên hư cấu)"
+      "meaning": "chương trình TV Ohayou"
     },
     {
       "id": "13-34",
@@ -8028,7 +8028,7 @@
       "kanji": null,
       "kana": "つるや",
       "romaji": "tsuruya",
-      "meaning": "nhà hàng Tsuruya (tên hư cấu)"
+      "meaning": "nhà hàng Tsuruya"
     }
   ],
   "14": [
@@ -8528,7 +8528,7 @@
       "kanji": "みどり 町",
       "kana": "みどり ちょう",
       "romaji": "midori chō",
-      "meaning": "thị trấn Midori (tên hư cấu)"
+      "meaning": "thị trấn Midori"
     },
     {
       "id": "14-47",
@@ -8828,7 +8828,7 @@
       "kanji": null,
       "kana": "みんなの インタビュー",
       "romaji": "minnano intabyū",
-      "meaning": "chương trình phỏng vấn (tên hư cấu)"
+      "meaning": "chương trình phỏng vấn"
     },
     {
       "id": "15-25",
@@ -9557,7 +9557,7 @@
       "kanji": "大学前",
       "kana": "だいがくまえ",
       "romaji": "daigakumae",
-      "meaning": "trạm xe buýt trước trường đại học (tên hư cấu)"
+      "meaning": "trạm xe buýt trước trường đại học"
     },
     {
       "id": "16-59",
@@ -11629,7 +11629,7 @@
       "kanji": null,
       "kana": "ヨーネン",
       "romaji": "yōnen",
-      "meaning": "công ty Younen (tên hư cấu)"
+      "meaning": "công ty Younen"
     },
     {
       "id": "21-52",
@@ -12093,7 +12093,7 @@
       "kanji": null,
       "kana": "みんなの アンケート",
       "romaji": "minnano ankēto",
-      "meaning": "khảo sát ý kiến (tên hư cấu)"
+      "meaning": "khảo sát ý kiến"
     },
     {
       "id": "22-32",
@@ -12123,7 +12123,7 @@
       "kanji": "余暇開発センター",
       "kana": "よかかいはつセンター",
       "romaji": "yokakaihatsu sentā",
-      "meaning": "Trung tâm phát triển hoạt động giải trí (tên hư cấu)"
+      "meaning": "Trung tâm phát triển hoạt động giải trí"
     },
     {
       "id": "22-35",
@@ -12418,7 +12418,7 @@
       "kanji": "元気茶",
       "kana": "げんきちゃ",
       "romaji": "genkicha",
-      "meaning": "trà Genki (tên hư cấu)"
+      "meaning": "trà Genki"
     },
     {
       "id": "23-27",
@@ -12429,7 +12429,7 @@
       "kanji": "本田駅",
       "kana": "ほんだえき",
       "romaji": "hondaeki",
-      "meaning": "ga Honda (tên hư cấu)"
+      "meaning": "ga Honda"
     },
     {
       "id": "23-28",
@@ -12440,7 +12440,7 @@
       "kanji": "図書館前",
       "kana": "としょかんまえ",
       "romaji": "toshokanmae",
-      "meaning": "trạm xe buýt trước thư viện (tên hư cấu)"
+      "meaning": "trạm xe buýt trước thư viện"
     },
     {
       "id": "23-29",
@@ -13338,7 +13338,7 @@
       "kanji": null,
       "kana": "エドアストア",
       "romaji": "edoasutoa",
-      "meaning": "cửa hàng Edoa (tên hư cấu)"
+      "meaning": "cửa hàng Edoa"
     },
     {
       "id": "26-31",
@@ -19346,7 +19346,7 @@
       "kanji": "みんなの 学校",
       "kana": "みんなの がっこう",
       "romaji": "minnano gakkō",
-      "meaning": "trường Nhật ngữ Minna (tên hư cấu)"
+      "meaning": "trường Nhật ngữ Minna"
     },
     {
       "id": "35-37",
@@ -19356,7 +19356,7 @@
       "kanji": "大黒ずし",
       "kana": "だいこくずし",
       "romaji": "daikokuzushi",
-      "meaning": "nhà hàng sushi Daikoku (tên hư cấu)"
+      "meaning": "nhà hàng sushi Daikoku"
     },
     {
       "id": "35-38",
@@ -19366,7 +19366,7 @@
       "kanji": "IMCパソコン教室",
       "kana": "IMCパソコンきょうしつ",
       "romaji": "IMCpasokonkyōshitsu",
-      "meaning": "lớp học máy tính IMC (tên hư cấu)"
+      "meaning": "lớp học máy tính IMC"
     },
     {
       "id": "35-39",
@@ -19376,7 +19376,7 @@
       "kanji": "母の 味",
       "kana": "ははの あじ",
       "romaji": "hahano aji",
-      "meaning": "'Hương vị mẹ' (sách hư cấu)"
+      "meaning": "'Hương vị mẹ' (tên sách)"
     },
     {
       "id": "35-40",
@@ -19386,7 +19386,7 @@
       "kanji": null,
       "kana": "はる",
       "romaji": "haru",
-      "meaning": "tiệm tóc Haru (tên hư cấu)"
+      "meaning": "tiệm tóc Haru"
     },
     {
       "id": "35-41",
@@ -19396,7 +19396,7 @@
       "kanji": "佐藤歯科",
       "kana": "さとうしか",
       "romaji": "satōshika",
-      "meaning": "phòng khám nha khoa Sato (tên hư cấu)"
+      "meaning": "phòng khám nha khoa Sato"
     },
     {
       "id": "35-42",
@@ -19406,7 +19406,7 @@
       "kanji": "毎日クッキング",
       "kana": "まいにちクッキング",
       "romaji": "mainichikukkingu",
-      "meaning": "lớp nấu ăn Mainichi Cooking (tên hư cấu)"
+      "meaning": "lớp nấu ăn Mainichi Cooking"
     },
     {
       "id": "35-43",
@@ -24472,7 +24472,7 @@
       "kanji": null,
       "kana": "こどもニュース",
       "romaji": "kodomonyūsu",
-      "meaning": "chương trình tin tức thiếu nhi (tên hư cấu)"
+      "meaning": "chương trình tin tức thiếu nhi"
     },
     {
       "id": "42-41",
@@ -25518,7 +25518,7 @@
       "kanji": null,
       "kana": "ホテルひろしま",
       "romaji": "hoteruhiroshima",
-      "meaning": "khách sạn Hiroshima (tên hư cấu)"
+      "meaning": "khách sạn Hiroshima"
     },
     {
       "id": "44-28",
@@ -27873,7 +27873,7 @@
       "kanji": "ひまわり小学校",
       "kana": "ひまわりしょうがっこう",
       "romaji": "himawarishōgakkō",
-      "meaning": "trường tiểu học Himawari (tên hư cấu)"
+      "meaning": "trường tiểu học Himawari"
     },
     {
       "id": "49-24",
