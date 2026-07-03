@@ -4,11 +4,32 @@
       "title": "N1 は N2 です",
       "structure": "N1 は N2 です",
       "explanation": "Mẫu câu khẳng định cơ bản nhất: N1 là N2. は đọc là 'wa' khi làm trợ từ chủ đề.",
+      "note": "は là trợ từ chủ đề nên viết bằng chữ hiragana は nhưng luôn đọc là 'wa', không đọc là 'ha'.",
       "examples": [
         {
           "japanese": "わたしは学生です。",
           "reading": "わたしは がくせいです。",
           "meaning": "Tôi là học sinh."
+        },
+        {
+          "japanese": "田中さんは先生です。",
+          "reading": "たなかさんは せんせいです。",
+          "meaning": "Anh Tanaka là giáo viên."
+        },
+        {
+          "japanese": "これは辞書です。",
+          "reading": "これは じしょです。",
+          "meaning": "Đây là từ điển."
+        },
+        {
+          "japanese": "わたしは会社員です。",
+          "reading": "わたしは かいしゃいんです。",
+          "meaning": "Tôi là nhân viên công ty."
+        },
+        {
+          "japanese": "あの人は医者です。",
+          "reading": "あの ひとは いしゃです。",
+          "meaning": "Người kia là bác sĩ."
         }
       ]
     },
@@ -21,6 +42,26 @@
           "japanese": "わたしは先生じゃありません。",
           "reading": "わたしは せんせいじゃ ありません。",
           "meaning": "Tôi không phải là giáo viên."
+        },
+        {
+          "japanese": "田中さんは学生じゃありません。",
+          "reading": "たなかさんは がくせいじゃ ありません。",
+          "meaning": "Anh Tanaka không phải là học sinh."
+        },
+        {
+          "japanese": "これは本ではありません。",
+          "reading": "これは ほんでは ありません。",
+          "meaning": "Đây không phải là sách."
+        },
+        {
+          "japanese": "わたしはアメリカ人じゃありません。",
+          "reading": "わたしは アメリカじんじゃ ありません。",
+          "meaning": "Tôi không phải là người Mỹ."
+        },
+        {
+          "japanese": "あの方は医者ではありません。",
+          "reading": "あの かたは いしゃでは ありません。",
+          "meaning": "Người kia không phải là bác sĩ."
         }
       ]
     },
@@ -33,6 +74,26 @@
           "japanese": "わたしも学生です。",
           "reading": "わたしも がくせいです。",
           "meaning": "Tôi cũng là học sinh."
+        },
+        {
+          "japanese": "田中さんも会社員です。",
+          "reading": "たなかさんも かいしゃいんです。",
+          "meaning": "Anh Tanaka cũng là nhân viên công ty."
+        },
+        {
+          "japanese": "これも辞書です。",
+          "reading": "これも じしょです。",
+          "meaning": "Cái này cũng là từ điển."
+        },
+        {
+          "japanese": "わたしも日本人です。",
+          "reading": "わたしも にほんじんです。",
+          "meaning": "Tôi cũng là người Nhật."
+        },
+        {
+          "japanese": "あの人も先生です。",
+          "reading": "あの ひとも せんせいです。",
+          "meaning": "Người kia cũng là giáo viên."
         }
       ]
     }
@@ -47,18 +108,58 @@
           "japanese": "これは辞書です。",
           "reading": "これは じしょです。",
           "meaning": "Đây là từ điển."
+        },
+        {
+          "japanese": "それは雑誌ですか。",
+          "reading": "それは ざっしですか。",
+          "meaning": "Đó có phải là tạp chí không?"
+        },
+        {
+          "japanese": "あれはわたしの傘です。",
+          "reading": "あれは わたしの かさです。",
+          "meaning": "Cái kia là ô của tôi."
+        },
+        {
+          "japanese": "これはノートじゃありません。",
+          "reading": "これは ノートじゃ ありません。",
+          "meaning": "Cái này không phải là vở."
+        },
+        {
+          "japanese": "それは何ですか。",
+          "reading": "それは なんですか。",
+          "meaning": "Đó là cái gì vậy?"
         }
       ]
     },
     {
       "title": "この／その／あの + N",
       "structure": "この／その／あの + N",
-      "explanation": "Khác với これ/それ/あれ, これらのから phải đi kèm danh từ ngay sau, không đứng một mình.",
+      "explanation": "Khác với これ/それ/あれ, これらの từ này phải đi kèm danh từ ngay sau, không đứng một mình.",
       "examples": [
         {
           "japanese": "その本はわたしのです。",
           "reading": "その ほんは わたしのです。",
           "meaning": "Quyển sách đó là của tôi."
+        },
+        {
+          "japanese": "この時計は高いです。",
+          "reading": "この とけいは たかいです。",
+          "meaning": "Cái đồng hồ này đắt."
+        },
+        {
+          "japanese": "あの人は田中さんです。",
+          "reading": "あの ひとは たなかさんです。",
+          "meaning": "Người kia là anh Tanaka."
+        },
+        {
+          "japanese": "この鉛筆をください。",
+          "reading": "この えんぴつを ください。",
+          "meaning": "Cho tôi cây bút chì này."
+        },
+        {
+          "japanese": "その辞書はいいですね。",
+          "reading": "その じしょは いいですね。",
+          "meaning": "Quyển từ điển đó tốt nhỉ."
         }
       ]
     }
@@ -73,6 +174,26 @@
           "japanese": "会議室はあそこです。",
           "reading": "かいぎしつは あそこです。",
           "meaning": "Phòng họp ở đằng kia."
+        },
+        {
+          "japanese": "トイレはそこです。",
+          "reading": "トイレは そこです。",
+          "meaning": "Nhà vệ sinh ở đó."
+        },
+        {
+          "japanese": "ここは事務所です。",
+          "reading": "ここは じむしょです。",
+          "meaning": "Đây là văn phòng."
+        },
+        {
+          "japanese": "エレベーターはどこですか。",
+          "reading": "エレベーターは どこですか。",
+          "meaning": "Thang máy ở đâu?"
+        },
+        {
+          "japanese": "受付はあちらです。",
+          "reading": "うけつけは あちらです。",
+          "meaning": "Quầy tiếp tân ở phía đó."
         }
       ]
     },
@@ -85,6 +206,26 @@
           "japanese": "このネクタイはいくらですか。",
           "reading": "この ネクタイは いくらですか。",
           "meaning": "Cái cà vạt này giá bao nhiêu?"
+        },
+        {
+          "japanese": "その靴はいくらですか。",
+          "reading": "その くつは いくらですか。",
+          "meaning": "Đôi giày đó giá bao nhiêu?"
+        },
+        {
+          "japanese": "このかばんは３０００円です。",
+          "reading": "この かばんは さんぜんえんです。",
+          "meaning": "Cái túi này giá 3000 yên."
+        },
+        {
+          "japanese": "全部でいくらですか。",
+          "reading": "ぜんぶで いくらですか。",
+          "meaning": "Tất cả bao nhiêu tiền?"
+        },
+        {
+          "japanese": "この時計は高いですね。",
+          "reading": "この とけいは たかいですね。",
+          "meaning": "Cái đồng hồ này đắt nhỉ."
         }
       ]
     }
@@ -99,6 +240,26 @@
           "japanese": "今、9時半です。",
           "reading": "いま、くじはんです。",
           "meaning": "Bây giờ là 9 giờ rưỡi."
+        },
+        {
+          "japanese": "今、何時ですか。",
+          "reading": "いま、なんじですか。",
+          "meaning": "Bây giờ là mấy giờ?"
+        },
+        {
+          "japanese": "今、7時15分です。",
+          "reading": "いま、しちじ じゅうごふんです。",
+          "meaning": "Bây giờ là 7 giờ 15 phút."
+        },
+        {
+          "japanese": "会議は10時からです。",
+          "reading": "かいぎは じゅうじからです。",
+          "meaning": "Cuộc họp bắt đầu từ 10 giờ."
+        },
+        {
+          "japanese": "今、午後3時です。",
+          "reading": "いま、ごご さんじです。",
+          "meaning": "Bây giờ là 3 giờ chiều."
         }
       ]
     },
@@ -111,6 +272,26 @@
           "japanese": "銀行は9時から3時までです。",
           "reading": "ぎんこうは くじから さんじまでです。",
           "meaning": "Ngân hàng mở cửa từ 9 giờ đến 3 giờ."
+        },
+        {
+          "japanese": "会社は月曜日から金曜日までです。",
+          "reading": "かいしゃは げつようびから きんようびまでです。",
+          "meaning": "Công ty làm việc từ thứ Hai đến thứ Sáu."
+        },
+        {
+          "japanese": "大阪から東京まで新幹線で行きます。",
+          "reading": "おおさかから とうきょうまで しんかんせんで いきます。",
+          "meaning": "Tôi đi từ Osaka đến Tokyo bằng tàu Shinkansen."
+        },
+        {
+          "japanese": "休みは土曜日から日曜日までです。",
+          "reading": "やすみは どようびから にちようびまでです。",
+          "meaning": "Nghỉ từ thứ Bảy đến Chủ nhật."
+        },
+        {
+          "japanese": "９時から始めます。",
+          "reading": "くじから はじめます。",
+          "meaning": "Tôi sẽ bắt đầu từ 9 giờ."
         }
       ]
     }
@@ -120,11 +301,32 @@
       "title": "場所へ 行きます／来ます／帰ります",
       "structure": "場所 へ 行きます／来ます／帰ります",
       "explanation": "へ (đọc là 'e') chỉ hướng di chuyển đến một nơi.",
+      "note": "へ khi làm trợ từ chỉ hướng được viết bằng chữ へ nhưng đọc là 'e', không đọc là 'he'.",
       "examples": [
         {
           "japanese": "わたしは日本へ行きます。",
           "reading": "わたしは にほんへ いきます。",
           "meaning": "Tôi đi Nhật Bản."
+        },
+        {
+          "japanese": "友達がわたしの国へ来ます。",
+          "reading": "ともだちが わたしの くにへ きます。",
+          "meaning": "Bạn tôi đến nước tôi."
+        },
+        {
+          "japanese": "毎日６時に家へ帰ります。",
+          "reading": "まいにち ろくじに いえへ かえります。",
+          "meaning": "Mỗi ngày tôi về nhà lúc 6 giờ."
+        },
+        {
+          "japanese": "来週、大阪へ行きます。",
+          "reading": "らいしゅう、おおさかへ いきます。",
+          "meaning": "Tuần sau tôi sẽ đi Osaka."
+        },
+        {
+          "japanese": "田中さんはアメリカへ行きました。",
+          "reading": "たなかさんは アメリカへ いきました。",
+          "meaning": "Anh Tanaka đã đi Mỹ."
         }
       ]
     },
@@ -137,6 +339,26 @@
           "japanese": "電車で会社へ行きます。",
           "reading": "でんしゃで かいしゃへ いきます。",
           "meaning": "Tôi đi làm bằng tàu điện."
+        },
+        {
+          "japanese": "バスで学校へ行きます。",
+          "reading": "バスで がっこうへ いきます。",
+          "meaning": "Tôi đi học bằng xe buýt."
+        },
+        {
+          "japanese": "飛行機で日本へ来ました。",
+          "reading": "ひこうきで にほんへ きました。",
+          "meaning": "Tôi đã đến Nhật bằng máy bay."
+        },
+        {
+          "japanese": "歩いて駅へ行きます。",
+          "reading": "あるいて えきへ いきます。",
+          "meaning": "Tôi đi bộ đến ga."
+        },
+        {
+          "japanese": "自転車で公園へ行きます。",
+          "reading": "じてんしゃで こうえんへ いきます。",
+          "meaning": "Tôi đi xe đạp đến công viên."
         }
       ]
     }
@@ -151,6 +373,26 @@
           "japanese": "毎朝新聞を読みます。",
           "reading": "まいあさ しんぶんを よみます。",
           "meaning": "Mỗi sáng tôi đọc báo."
+        },
+        {
+          "japanese": "晩ごはんを食べます。",
+          "reading": "ばんごはんを たべます。",
+          "meaning": "Tôi ăn cơm tối."
+        },
+        {
+          "japanese": "コーヒーを飲みます。",
+          "reading": "コーヒーを のみます。",
+          "meaning": "Tôi uống cà phê."
+        },
+        {
+          "japanese": "写真を撮ります。",
+          "reading": "しゃしんを とります。",
+          "meaning": "Tôi chụp ảnh."
+        },
+        {
+          "japanese": "手紙を書きます。",
+          "reading": "てがみを かきます。",
+          "meaning": "Tôi viết thư."
         }
       ]
     },
@@ -163,6 +405,26 @@
           "japanese": "いっしょに映画を見ませんか。",
           "reading": "いっしょに えいがを みませんか。",
           "meaning": "Chúng ta cùng xem phim nhé?"
+        },
+        {
+          "japanese": "少し休みませんか。",
+          "reading": "すこし やすみませんか。",
+          "meaning": "Chúng ta nghỉ một chút nhé?"
+        },
+        {
+          "japanese": "ちょっと待ちましょう。",
+          "reading": "ちょっと まちましょう。",
+          "meaning": "Chúng ta đợi một chút nào."
+        },
+        {
+          "japanese": "いっしょにコーヒーを飲みませんか。",
+          "reading": "いっしょに コーヒーを のみませんか。",
+          "meaning": "Chúng ta cùng uống cà phê nhé?"
+        },
+        {
+          "japanese": "また来ましょう。",
+          "reading": "また きましょう。",
+          "meaning": "Lần sau chúng ta lại đến nhé."
         }
       ]
     }
@@ -177,6 +439,26 @@
           "japanese": "はしでご飯を食べます。",
           "reading": "はしで ごはんを たべます。",
           "meaning": "Tôi ăn cơm bằng đũa."
+        },
+        {
+          "japanese": "ペンで名前を書きます。",
+          "reading": "ペンで なまえを かきます。",
+          "meaning": "Tôi viết tên bằng bút."
+        },
+        {
+          "japanese": "はさみで紙を切ります。",
+          "reading": "はさみで かみを きります。",
+          "meaning": "Tôi cắt giấy bằng kéo."
+        },
+        {
+          "japanese": "日本語で手紙を書きます。",
+          "reading": "にほんごで てがみを かきます。",
+          "meaning": "Tôi viết thư bằng tiếng Nhật."
+        },
+        {
+          "japanese": "カメラで写真を撮ります。",
+          "reading": "カメラで しゃしんを とります。",
+          "meaning": "Tôi chụp ảnh bằng máy ảnh."
         }
       ]
     },
@@ -184,11 +466,32 @@
       "title": "あげます／もらいます",
       "structure": "N1は N2に N3を あげます／もらいます",
       "explanation": "あげます: cho/tặng ai đó cái gì. もらいます: nhận cái gì từ ai đó.",
+      "note": "Khi nhận từ người trên/cấp cao hơn có thể dùng いただきます thay cho もらいます để lịch sự hơn.",
       "examples": [
         {
           "japanese": "わたしは友達に花をあげます。",
           "reading": "わたしは ともだちに はなを あげます。",
           "meaning": "Tôi tặng hoa cho bạn tôi."
+        },
+        {
+          "japanese": "田中さんに本をもらいました。",
+          "reading": "たなかさんに ほんを もらいました。",
+          "meaning": "Tôi được anh Tanaka tặng sách."
+        },
+        {
+          "japanese": "誕生日にプレゼントをあげます。",
+          "reading": "たんじょうびに プレゼントを あげます。",
+          "meaning": "Tôi tặng quà nhân dịp sinh nhật."
+        },
+        {
+          "japanese": "母にセーターをあげました。",
+          "reading": "ははに セーターを あげました。",
+          "meaning": "Tôi đã tặng mẹ một cái áo len."
+        },
+        {
+          "japanese": "先生にお土産をもらいました。",
+          "reading": "せんせいに おみやげを もらいました。",
+          "meaning": "Tôi được thầy giáo tặng quà lưu niệm."
         }
       ]
     }
@@ -198,11 +501,32 @@
       "title": "Tính từ đuôi い và な",
       "structure": "N は い形容詞です／な形容詞です",
       "explanation": "Hai loại tính từ trong tiếng Nhật: tính từ -i (kết thúc bằng い) và tính từ -na, chia câu khác nhau.",
+      "note": "Tính từ -na khi bổ nghĩa trực tiếp cho danh từ cần thêm な (vd: きれいな人), còn tính từ -i thì không cần (vd: 高い山).",
       "examples": [
         {
           "japanese": "この町はにぎやかです。",
           "reading": "この まちは にぎやかです。",
           "meaning": "Thị trấn này nhộn nhịp."
+        },
+        {
+          "japanese": "この本はおもしろいです。",
+          "reading": "この ほんは おもしろいです。",
+          "meaning": "Quyển sách này thú vị."
+        },
+        {
+          "japanese": "京都は静かな町です。",
+          "reading": "きょうとは しずかな まちです。",
+          "meaning": "Kyoto là thành phố yên tĩnh."
+        },
+        {
+          "japanese": "この料理はおいしいです。",
+          "reading": "この りょうりは おいしいです。",
+          "meaning": "Món ăn này ngon."
+        },
+        {
+          "japanese": "彼女は親切な人です。",
+          "reading": "かのじょは しんせつな ひとです。",
+          "meaning": "Cô ấy là người tốt bụng."
         }
       ]
     },
@@ -215,6 +539,26 @@
           "japanese": "大阪はどんな町ですか。",
           "reading": "おおさかは どんな まちですか。",
           "meaning": "Osaka là thành phố như thế nào?"
+        },
+        {
+          "japanese": "日本の生活はどうですか。",
+          "reading": "にほんの せいかつは どうですか。",
+          "meaning": "Cuộc sống ở Nhật thế nào?"
+        },
+        {
+          "japanese": "この映画はどうでしたか。",
+          "reading": "この えいがは どうでしたか。",
+          "meaning": "Bộ phim này thế nào?"
+        },
+        {
+          "japanese": "あなたの町はどんな所ですか。",
+          "reading": "あなたの まちは どんな ところですか。",
+          "meaning": "Thị trấn của bạn là nơi như thế nào?"
+        },
+        {
+          "japanese": "新しい仕事はどうですか。",
+          "reading": "あたらしい しごとは どうですか。",
+          "meaning": "Công việc mới thế nào?"
         }
       ]
     }
@@ -229,6 +573,26 @@
           "japanese": "わたしは料理が好きです。",
           "reading": "わたしは りょうりが すきです。",
           "meaning": "Tôi thích nấu ăn."
+        },
+        {
+          "japanese": "田中さんはピアノが上手です。",
+          "reading": "たなかさんは ピアノが じょうずです。",
+          "meaning": "Anh Tanaka chơi piano giỏi."
+        },
+        {
+          "japanese": "わたしは野菜が嫌いです。",
+          "reading": "わたしは やさいが きらいです。",
+          "meaning": "Tôi ghét rau."
+        },
+        {
+          "japanese": "わたしは歌が下手です。",
+          "reading": "わたしは うたが へたです。",
+          "meaning": "Tôi hát dở."
+        },
+        {
+          "japanese": "彼女はスポーツが好きです。",
+          "reading": "かのじょは スポーツが すきです。",
+          "meaning": "Cô ấy thích thể thao."
         }
       ]
     },
@@ -241,6 +605,26 @@
           "japanese": "忙しいから、行きません。",
           "reading": "いそがしいから、いきません。",
           "meaning": "Vì bận nên tôi không đi."
+        },
+        {
+          "japanese": "おいしいから、たくさん食べました。",
+          "reading": "おいしいから、たくさん たべました。",
+          "meaning": "Vì ngon nên tôi đã ăn nhiều."
+        },
+        {
+          "japanese": "危ないから、気をつけてください。",
+          "reading": "あぶないから、きを つけて ください。",
+          "meaning": "Vì nguy hiểm nên hãy cẩn thận."
+        },
+        {
+          "japanese": "雨が降っているから、傘を持って行きます。",
+          "reading": "あめが ふって いるから、かさを もって いきます。",
+          "meaning": "Vì trời đang mưa nên tôi mang ô đi."
+        },
+        {
+          "japanese": "時間がないから、急ぎましょう。",
+          "reading": "じかんが ないから、いそぎましょう。",
+          "meaning": "Vì không có thời gian nên chúng ta nhanh lên nào."
         }
       ]
     }
@@ -255,6 +639,26 @@
           "japanese": "机の上に本があります。",
           "reading": "つくえの うえに ほんが あります。",
           "meaning": "Trên bàn có sách."
+        },
+        {
+          "japanese": "教室に学生がいます。",
+          "reading": "きょうしつに がくせいが います。",
+          "meaning": "Trong lớp học có học sinh."
+        },
+        {
+          "japanese": "公園に猫がいます。",
+          "reading": "こうえんに ねこが います。",
+          "meaning": "Trong công viên có mèo."
+        },
+        {
+          "japanese": "冷蔵庫に卵があります。",
+          "reading": "れいぞうこに たまごが あります。",
+          "meaning": "Trong tủ lạnh có trứng."
+        },
+        {
+          "japanese": "部屋にテレビがあります。",
+          "reading": "へやに テレビが あります。",
+          "meaning": "Trong phòng có ti vi."
         }
       ]
     },
@@ -267,6 +671,26 @@
           "japanese": "猫はいすの下にいます。",
           "reading": "ねこは いすの したに います。",
           "meaning": "Con mèo ở dưới cái ghế."
+        },
+        {
+          "japanese": "銀行はデパートの前です。",
+          "reading": "ぎんこうは デパートの まえです。",
+          "meaning": "Ngân hàng ở trước trung tâm thương mại."
+        },
+        {
+          "japanese": "かばんの中に財布があります。",
+          "reading": "かばんの なかに さいふが あります。",
+          "meaning": "Trong túi có ví tiền."
+        },
+        {
+          "japanese": "駅の後ろに公園があります。",
+          "reading": "えきの うしろに こうえんが あります。",
+          "meaning": "Phía sau ga có công viên."
+        },
+        {
+          "japanese": "本は机の上にあります。",
+          "reading": "ほんは つくえの うえに あります。",
+          "meaning": "Sách ở trên bàn."
         }
       ]
     }
@@ -276,11 +700,32 @@
       "title": "Số đếm và lượng từ",
       "structure": "N を 数字＋lượng từ Vます",
       "explanation": "Tiếng Nhật dùng lượng từ riêng theo loại vật khi đếm (人, 枚, 台, つ...).",
+      "note": "Số đếm thuần Nhật (ひとつ、ふたつ...) dùng cho đồ vật chung chung khi không có lượng từ chuyên biệt.",
       "examples": [
         {
           "japanese": "りんごを三つ買います。",
           "reading": "りんごを みっつ かいます。",
           "meaning": "Tôi mua ba quả táo."
+        },
+        {
+          "japanese": "紙を二枚ください。",
+          "reading": "かみを にまい ください。",
+          "meaning": "Cho tôi hai tờ giấy."
+        },
+        {
+          "japanese": "車が三台あります。",
+          "reading": "くるまが さんだい あります。",
+          "meaning": "Có ba chiếc xe hơi."
+        },
+        {
+          "japanese": "学生が二十人います。",
+          "reading": "がくせいが にじゅうにん います。",
+          "meaning": "Có hai mươi học sinh."
+        },
+        {
+          "japanese": "切手を五枚買いました。",
+          "reading": "きってを ごまい かいました。",
+          "meaning": "Tôi đã mua năm con tem."
         }
       ]
     },
@@ -293,6 +738,26 @@
           "japanese": "空港まで一時間かかります。",
           "reading": "くうこうまで いちじかん かかります。",
           "meaning": "Đến sân bay mất một tiếng."
+        },
+        {
+          "japanese": "大阪から東京まで三時間かかります。",
+          "reading": "おおさかから とうきょうまで さんじかん かかります。",
+          "meaning": "Từ Osaka đến Tokyo mất ba tiếng."
+        },
+        {
+          "japanese": "旅行にお金がたくさんかかります。",
+          "reading": "りょこうに おかねが たくさん かかります。",
+          "meaning": "Chuyến du lịch tốn nhiều tiền."
+        },
+        {
+          "japanese": "駅まで十分ぐらいかかります。",
+          "reading": "えきまで じゅっぷんぐらい かかります。",
+          "meaning": "Đến ga mất khoảng mười phút."
+        },
+        {
+          "japanese": "この仕事は二日かかります。",
+          "reading": "この しごとは ふつか かかります。",
+          "meaning": "Công việc này mất hai ngày."
         }
       ]
     }
@@ -307,6 +772,26 @@
           "japanese": "冬は夏より寒いです。",
           "reading": "ふゆは なつより さむいです。",
           "meaning": "Mùa đông lạnh hơn mùa hè."
+        },
+        {
+          "japanese": "飛行機は電車より速いです。",
+          "reading": "ひこうきは でんしゃより はやいです。",
+          "meaning": "Máy bay nhanh hơn tàu điện."
+        },
+        {
+          "japanese": "このかばんはあのかばんより高いです。",
+          "reading": "この かばんは あの かばんより たかいです。",
+          "meaning": "Cái túi này đắt hơn cái túi kia."
+        },
+        {
+          "japanese": "兄は弟より背が高いです。",
+          "reading": "あには おとうとより せが たかいです。",
+          "meaning": "Anh cao hơn em trai."
+        },
+        {
+          "japanese": "日本語は英語より難しいです。",
+          "reading": "にほんごは えいごより むずかしいです。",
+          "meaning": "Tiếng Nhật khó hơn tiếng Anh."
         }
       ]
     },
@@ -319,6 +804,26 @@
           "japanese": "日本で富士山がいちばん高いです。",
           "reading": "にほんで ふじさんが いちばん たかいです。",
           "meaning": "Núi Phú Sĩ cao nhất Nhật Bản."
+        },
+        {
+          "japanese": "家族でだれがいちばん背が高いですか。",
+          "reading": "かぞくで だれが いちばん せが たかいですか。",
+          "meaning": "Trong gia đình ai cao nhất?"
+        },
+        {
+          "japanese": "一年でいちばん暑い月は八月です。",
+          "reading": "いちねんで いちばん あつい つきは はちがつです。",
+          "meaning": "Tháng nóng nhất trong năm là tháng Tám."
+        },
+        {
+          "japanese": "スポーツでサッカーがいちばん好きです。",
+          "reading": "スポーツで サッカーが いちばん すきです。",
+          "meaning": "Trong các môn thể thao tôi thích bóng đá nhất."
+        },
+        {
+          "japanese": "この店でこれがいちばん安いです。",
+          "reading": "この みせで これが いちばん やすいです。",
+          "meaning": "Ở cửa hàng này cái này rẻ nhất."
         }
       ]
     }
@@ -328,11 +833,32 @@
       "title": "～たいです",
       "structure": "Vます-stem + たいです",
       "explanation": "Diễn tả mong muốn của người nói (tôi muốn làm gì).",
+      "note": "たいです chỉ dùng cho mong muốn của bản thân người nói (hoặc hỏi người nghe); khi nói về mong muốn của người thứ ba cần dùng dạng khác (～たがっています).",
       "examples": [
         {
           "japanese": "沖縄へ行きたいです。",
           "reading": "おきなわへ いきたいです。",
           "meaning": "Tôi muốn đi Okinawa."
+        },
+        {
+          "japanese": "すしが食べたいです。",
+          "reading": "すしが たべたいです。",
+          "meaning": "Tôi muốn ăn sushi."
+        },
+        {
+          "japanese": "新しい車が買いたいです。",
+          "reading": "あたらしい くるまが かいたいです。",
+          "meaning": "Tôi muốn mua xe hơi mới."
+        },
+        {
+          "japanese": "少し休みたいです。",
+          "reading": "すこし やすみたいです。",
+          "meaning": "Tôi muốn nghỉ một chút."
+        },
+        {
+          "japanese": "日本語が上手になりたいです。",
+          "reading": "にほんごが じょうずに なりたいです。",
+          "meaning": "Tôi muốn giỏi tiếng Nhật."
         }
       ]
     },
@@ -345,6 +871,26 @@
           "japanese": "デパートへ買い物に行きます。",
           "reading": "デパートへ かいものに いきます。",
           "meaning": "Tôi đi mua sắm ở trung tâm thương mại."
+        },
+        {
+          "japanese": "図書館へ本を借りに行きます。",
+          "reading": "としょかんへ ほんを かりに いきます。",
+          "meaning": "Tôi đi mượn sách ở thư viện."
+        },
+        {
+          "japanese": "レストランへ食事に行きます。",
+          "reading": "レストランへ しょくじに いきます。",
+          "meaning": "Tôi đi ăn ở nhà hàng."
+        },
+        {
+          "japanese": "プールへ泳ぎに行きます。",
+          "reading": "プールへ およぎに いきます。",
+          "meaning": "Tôi đi bơi ở bể bơi."
+        },
+        {
+          "japanese": "公園へ散歩に行きます。",
+          "reading": "こうえんへ さんぽに いきます。",
+          "meaning": "Tôi đi dạo ở công viên."
         }
       ]
     }
@@ -359,6 +905,26 @@
           "japanese": "ここに名前を書いてください。",
           "reading": "ここに なまえを かいて ください。",
           "meaning": "Xin hãy viết tên vào đây."
+        },
+        {
+          "japanese": "窓を開けてください。",
+          "reading": "まどを あけて ください。",
+          "meaning": "Xin hãy mở cửa sổ."
+        },
+        {
+          "japanese": "この本を読んでください。",
+          "reading": "この ほんを よんで ください。",
+          "meaning": "Xin hãy đọc quyển sách này."
+        },
+        {
+          "japanese": "写真を撮って、送ってください。",
+          "reading": "しゃしんを とって、おくって ください。",
+          "meaning": "Hãy chụp ảnh rồi gửi cho tôi."
+        },
+        {
+          "japanese": "電気を消して、寝ます。",
+          "reading": "でんきを けして、ねます。",
+          "meaning": "Tôi tắt đèn rồi đi ngủ."
         }
       ]
     },
@@ -371,6 +937,26 @@
           "japanese": "少々お待ちください。",
           "reading": "しょうしょう おまち ください。",
           "meaning": "Xin vui lòng đợi một chút."
+        },
+        {
+          "japanese": "もう一度言ってください。",
+          "reading": "もう いちど いって ください。",
+          "meaning": "Xin hãy nói lại một lần nữa."
+        },
+        {
+          "japanese": "ゆっくり話してください。",
+          "reading": "ゆっくり はなして ください。",
+          "meaning": "Xin hãy nói chậm lại."
+        },
+        {
+          "japanese": "ここに座ってください。",
+          "reading": "ここに すわって ください。",
+          "meaning": "Xin mời ngồi ở đây."
+        },
+        {
+          "japanese": "パスポートを見せてください。",
+          "reading": "パスポートを みせて ください。",
+          "meaning": "Xin cho tôi xem hộ chiếu."
         }
       ]
     }
@@ -385,6 +971,26 @@
           "japanese": "今、新聞を読んでいます。",
           "reading": "いま、しんぶんを よんで います。",
           "meaning": "Bây giờ tôi đang đọc báo."
+        },
+        {
+          "japanese": "子どもが公園で遊んでいます。",
+          "reading": "こどもが こうえんで あそんで います。",
+          "meaning": "Đứa trẻ đang chơi ở công viên."
+        },
+        {
+          "japanese": "今、雨が降っています。",
+          "reading": "いま、あめが ふって います。",
+          "meaning": "Bây giờ trời đang mưa."
+        },
+        {
+          "japanese": "田中さんは今、電話をかけています。",
+          "reading": "たなかさんは いま、でんわを かけて います。",
+          "meaning": "Anh Tanaka đang gọi điện thoại."
+        },
+        {
+          "japanese": "みんなが待っています。",
+          "reading": "みんなが まって います。",
+          "meaning": "Mọi người đang chờ."
         }
       ]
     },
@@ -397,6 +1003,26 @@
           "japanese": "大阪に住んでいます。",
           "reading": "おおさかに すんで います。",
           "meaning": "Tôi đang sống ở Osaka."
+        },
+        {
+          "japanese": "銀行に勤めています。",
+          "reading": "ぎんこうに つとめて います。",
+          "meaning": "Tôi làm việc ở ngân hàng."
+        },
+        {
+          "japanese": "田中さんを知っています。",
+          "reading": "たなかさんを しって います。",
+          "meaning": "Tôi biết anh Tanaka."
+        },
+        {
+          "japanese": "結婚しています。",
+          "reading": "けっこんして います。",
+          "meaning": "Tôi đã kết hôn."
+        },
+        {
+          "japanese": "この会社で働いています。",
+          "reading": "この かいしゃで はたらいて います。",
+          "meaning": "Tôi đang làm việc ở công ty này."
         }
       ]
     }
@@ -411,6 +1037,26 @@
           "japanese": "手を洗ってから、食べます。",
           "reading": "てを あらってから、たべます。",
           "meaning": "Tôi rửa tay xong rồi mới ăn."
+        },
+        {
+          "japanese": "宿題をしてから、テレビを見ます。",
+          "reading": "しゅくだいを してから、テレビを みます。",
+          "meaning": "Tôi làm bài tập xong rồi mới xem ti vi."
+        },
+        {
+          "japanese": "シャワーを浴びてから、寝ます。",
+          "reading": "シャワーを あびてから、ねます。",
+          "meaning": "Tôi tắm xong rồi mới đi ngủ."
+        },
+        {
+          "japanese": "会議が終わってから、電話します。",
+          "reading": "かいぎが おわってから、でんわします。",
+          "meaning": "Sau khi họp xong tôi sẽ gọi điện."
+        },
+        {
+          "japanese": "日本に来てから、三年になります。",
+          "reading": "にほんに きてから、さんねんに なります。",
+          "meaning": "Đã ba năm kể từ khi tôi đến Nhật."
         }
       ]
     },
@@ -423,6 +1069,26 @@
           "japanese": "ここに車を止めないでください。",
           "reading": "ここに くるまを とめないで ください。",
           "meaning": "Xin đừng đỗ xe ở đây."
+        },
+        {
+          "japanese": "写真を撮らないでください。",
+          "reading": "しゃしんを とらないで ください。",
+          "meaning": "Xin đừng chụp ảnh."
+        },
+        {
+          "japanese": "ここでたばこを吸わないでください。",
+          "reading": "ここで たばこを すわないで ください。",
+          "meaning": "Xin đừng hút thuốc ở đây."
+        },
+        {
+          "japanese": "心配しないでください。",
+          "reading": "しんぱいしないで ください。",
+          "meaning": "Xin đừng lo lắng."
+        },
+        {
+          "japanese": "遅れないでください。",
+          "reading": "おくれないで ください。",
+          "meaning": "Xin đừng đến muộn."
         }
       ]
     }
@@ -437,6 +1103,26 @@
           "japanese": "薬を飲まなければなりません。",
           "reading": "くすりを のまなければ なりません。",
           "meaning": "Tôi phải uống thuốc."
+        },
+        {
+          "japanese": "毎日勉強しなければなりません。",
+          "reading": "まいにち べんきょうしなければ なりません。",
+          "meaning": "Tôi phải học mỗi ngày."
+        },
+        {
+          "japanese": "パスポートを見せなければなりません。",
+          "reading": "パスポートを みせなければ なりません。",
+          "meaning": "Tôi phải xuất trình hộ chiếu."
+        },
+        {
+          "japanese": "８時に会社へ行かなければなりません。",
+          "reading": "はちじに かいしゃへ いかなければ なりません。",
+          "meaning": "Tôi phải đến công ty lúc 8 giờ."
+        },
+        {
+          "japanese": "レポートを書かなければなりません。",
+          "reading": "レポートを かかなければ なりません。",
+          "meaning": "Tôi phải viết báo cáo."
         }
       ]
     },
@@ -449,6 +1135,26 @@
           "japanese": "あした来なくてもいいです。",
           "reading": "あした こなくても いいです。",
           "meaning": "Ngày mai bạn không cần đến cũng được."
+        },
+        {
+          "japanese": "心配しなくてもいいです。",
+          "reading": "しんぱいしなくても いいです。",
+          "meaning": "Bạn không cần lo lắng cũng được."
+        },
+        {
+          "japanese": "急がなくてもいいです。",
+          "reading": "いそがなくても いいです。",
+          "meaning": "Bạn không cần vội cũng được."
+        },
+        {
+          "japanese": "スーツを着なくてもいいです。",
+          "reading": "スーツを きなくても いいです。",
+          "meaning": "Bạn không cần mặc vest cũng được."
+        },
+        {
+          "japanese": "全部食べなくてもいいですよ。",
+          "reading": "ぜんぶ たべなくても いいですよ。",
+          "meaning": "Bạn không cần ăn hết cũng được đâu."
         }
       ]
     }
@@ -463,6 +1169,26 @@
           "japanese": "わたしはピアノが弾けます。",
           "reading": "わたしは ピアノが ひけます。",
           "meaning": "Tôi biết chơi piano."
+        },
+        {
+          "japanese": "毎朝、コーヒーを飲む。",
+          "reading": "まいあさ、コーヒーを のむ。",
+          "meaning": "Mỗi sáng tôi uống cà phê."
+        },
+        {
+          "japanese": "本を読むことが好きです。",
+          "reading": "ほんを よむことが すきです。",
+          "meaning": "Tôi thích đọc sách."
+        },
+        {
+          "japanese": "友達と話す時間があります。",
+          "reading": "ともだちと はなす じかんが あります。",
+          "meaning": "Tôi có thời gian nói chuyện với bạn."
+        },
+        {
+          "japanese": "毎日、走ります。",
+          "reading": "まいにち、はしります。",
+          "meaning": "Mỗi ngày tôi chạy bộ."
         }
       ]
     },
@@ -475,6 +1201,26 @@
           "japanese": "漢字を書くことができます。",
           "reading": "かんじを かくことが できます。",
           "meaning": "Tôi có thể viết kanji."
+        },
+        {
+          "japanese": "車を運転することができます。",
+          "reading": "くるまを うんてんすることが できます。",
+          "meaning": "Tôi có thể lái xe hơi."
+        },
+        {
+          "japanese": "英語を話すことができます。",
+          "reading": "えいごを はなすことが できます。",
+          "meaning": "Tôi có thể nói tiếng Anh."
+        },
+        {
+          "japanese": "ここで写真を撮ることができません。",
+          "reading": "ここで しゃしんを とることが できません。",
+          "meaning": "Ở đây tôi không thể chụp ảnh được."
+        },
+        {
+          "japanese": "泳ぐことができますか。",
+          "reading": "およぐことが できますか。",
+          "meaning": "Bạn có biết bơi không?"
         }
       ]
     }
@@ -489,6 +1235,26 @@
           "japanese": "去年、日本へ行った。",
           "reading": "きょねん、にほんへ いった。",
           "meaning": "Năm ngoái tôi đã đi Nhật."
+        },
+        {
+          "japanese": "きのう、映画を見た。",
+          "reading": "きのう、えいがを みた。",
+          "meaning": "Hôm qua tôi đã xem phim."
+        },
+        {
+          "japanese": "友達に会った。",
+          "reading": "ともだちに あった。",
+          "meaning": "Tôi đã gặp bạn."
+        },
+        {
+          "japanese": "宿題をした。",
+          "reading": "しゅくだいを した。",
+          "meaning": "Tôi đã làm bài tập."
+        },
+        {
+          "japanese": "たくさん食べた。",
+          "reading": "たくさん たべた。",
+          "meaning": "Tôi đã ăn nhiều."
         }
       ]
     },
@@ -501,6 +1267,26 @@
           "japanese": "富士山に登ったことがあります。",
           "reading": "ふじさんに のぼったことが あります。",
           "meaning": "Tôi đã từng leo núi Phú Sĩ."
+        },
+        {
+          "japanese": "すきやきを食べたことがあります。",
+          "reading": "すきやきを たべたことが あります。",
+          "meaning": "Tôi đã từng ăn sukiyaki."
+        },
+        {
+          "japanese": "外国へ行ったことがありません。",
+          "reading": "がいこくへ いったことが ありません。",
+          "meaning": "Tôi chưa từng đi nước ngoài."
+        },
+        {
+          "japanese": "着物を着たことがあります。",
+          "reading": "きものを きたことが あります。",
+          "meaning": "Tôi đã từng mặc kimono."
+        },
+        {
+          "japanese": "この映画を見たことがあります。",
+          "reading": "この えいがを みたことが あります。",
+          "meaning": "Tôi đã từng xem bộ phim này."
         }
       ]
     }
@@ -515,6 +1301,26 @@
           "japanese": "国へ帰るの？",
           "reading": "くにへ かえるの？",
           "meaning": "Bạn về nước à?"
+        },
+        {
+          "japanese": "これ、おいしい。",
+          "reading": "これ、おいしい。",
+          "meaning": "Cái này ngon."
+        },
+        {
+          "japanese": "あした、忙しい？",
+          "reading": "あした、いそがしい？",
+          "meaning": "Ngày mai bạn có bận không?"
+        },
+        {
+          "japanese": "きのう、勉強しなかった。",
+          "reading": "きのう、べんきょうしなかった。",
+          "meaning": "Hôm qua tôi đã không học."
+        },
+        {
+          "japanese": "これ、田中さんの本だ。",
+          "reading": "これ、たなかさんの ほんだ。",
+          "meaning": "Cái này là sách của anh Tanaka."
         }
       ]
     },
@@ -527,6 +1333,26 @@
           "japanese": "あした雨が降ると思います。",
           "reading": "あした あめが ふると おもいます。",
           "meaning": "Tôi nghĩ ngày mai trời sẽ mưa."
+        },
+        {
+          "japanese": "この映画はおもしろいと思います。",
+          "reading": "この えいがは おもしろいと おもいます。",
+          "meaning": "Tôi nghĩ bộ phim này thú vị."
+        },
+        {
+          "japanese": "田中さんは来ないと思います。",
+          "reading": "たなかさんは こないと おもいます。",
+          "meaning": "Tôi nghĩ anh Tanaka sẽ không đến."
+        },
+        {
+          "japanese": "彼は忙しいと思います。",
+          "reading": "かれは いそがしいと おもいます。",
+          "meaning": "Tôi nghĩ anh ấy bận."
+        },
+        {
+          "japanese": "これはいい考えだと思います。",
+          "reading": "これは いい かんがえだと おもいます。",
+          "meaning": "Tôi nghĩ đây là một ý kiến hay."
         }
       ]
     }
@@ -541,6 +1367,26 @@
           "japanese": "田中さんは来ないと言っていました。",
           "reading": "たなかさんは こないと いって いました。",
           "meaning": "Anh Tanaka nói là sẽ không đến."
+        },
+        {
+          "japanese": "彼女は忙しいと言っていました。",
+          "reading": "かのじょは いそがしいと いって いました。",
+          "meaning": "Cô ấy nói là cô ấy bận."
+        },
+        {
+          "japanese": "先生はあした休みだと言っていました。",
+          "reading": "せんせいは あした やすみだと いって いました。",
+          "meaning": "Thầy giáo nói ngày mai nghỉ."
+        },
+        {
+          "japanese": "友達は日本が好きだと言っていました。",
+          "reading": "ともだちは にほんが すきだと いって いました。",
+          "meaning": "Bạn tôi nói bạn ấy thích Nhật Bản."
+        },
+        {
+          "japanese": "母は元気だと言っていました。",
+          "reading": "ははは げんきだと いって いました。",
+          "meaning": "Mẹ nói mẹ khỏe."
         }
       ]
     },
@@ -553,6 +1399,26 @@
           "japanese": "きのう見た映画はおもしろかったです。",
           "reading": "きのう みた えいがは おもしろかったです。",
           "meaning": "Bộ phim tôi xem hôm qua rất thú vị."
+        },
+        {
+          "japanese": "田中さんが作った料理はおいしいです。",
+          "reading": "たなかさんが つくった りょうりは おいしいです。",
+          "meaning": "Món ăn anh Tanaka làm rất ngon."
+        },
+        {
+          "japanese": "わたしが住んでいる町は静かです。",
+          "reading": "わたしが すんで いる まちは しずかです。",
+          "meaning": "Thị trấn tôi đang sống rất yên tĩnh."
+        },
+        {
+          "japanese": "これはわたしが撮った写真です。",
+          "reading": "これは わたしが とった しゃしんです。",
+          "meaning": "Đây là ảnh tôi đã chụp."
+        },
+        {
+          "japanese": "去年買った車はまだきれいです。",
+          "reading": "きょねん かった くるまは まだ きれいです。",
+          "meaning": "Xe hơi tôi mua năm ngoái vẫn còn đẹp."
         }
       ]
     }
@@ -567,6 +1433,26 @@
           "japanese": "日本へ行くとき、パスポートが要ります。",
           "reading": "にほんへ いくとき、パスポートが いります。",
           "meaning": "Khi đi Nhật cần có hộ chiếu."
+        },
+        {
+          "japanese": "家を出るとき、電気を消します。",
+          "reading": "いえを でるとき、でんきを けします。",
+          "meaning": "Khi ra khỏi nhà tôi tắt đèn."
+        },
+        {
+          "japanese": "分からないとき、先生に聞きます。",
+          "reading": "わからないとき、せんせいに ききます。",
+          "meaning": "Khi không hiểu tôi hỏi thầy giáo."
+        },
+        {
+          "japanese": "暇なとき、映画を見ます。",
+          "reading": "ひまなとき、えいがを みます。",
+          "meaning": "Khi rảnh tôi xem phim."
+        },
+        {
+          "japanese": "子どものとき、よくここで遊びました。",
+          "reading": "こどもの とき、よく ここで あそびました。",
+          "meaning": "Khi còn nhỏ tôi thường chơi ở đây."
         }
       ]
     },
@@ -579,6 +1465,26 @@
           "japanese": "日本へ来たとき、日本語が下手でした。",
           "reading": "にほんへ きたとき、にほんごが へたでした。",
           "meaning": "Lúc mới đến Nhật, tiếng Nhật của tôi còn kém."
+        },
+        {
+          "japanese": "うちに帰ったとき、だれもいませんでした。",
+          "reading": "うちに かえったとき、だれも いませんでした。",
+          "meaning": "Lúc tôi về nhà thì không có ai cả."
+        },
+        {
+          "japanese": "この写真を見たとき、うれしかったです。",
+          "reading": "この しゃしんを みたとき、うれしかったです。",
+          "meaning": "Lúc xem bức ảnh này tôi đã rất vui."
+        },
+        {
+          "japanese": "空港に着いたとき、雨が降っていました。",
+          "reading": "くうこうに ついたとき、あめが ふって いました。",
+          "meaning": "Lúc đến sân bay trời đang mưa."
+        },
+        {
+          "japanese": "そのニュースを聞いたとき、驚きました。",
+          "reading": "その ニュースを きいたとき、おどろきました。",
+          "meaning": "Lúc nghe tin đó tôi đã rất bất ngờ."
         }
       ]
     }
@@ -593,6 +1499,26 @@
           "japanese": "まっすぐ行くと、右に銀行があります。",
           "reading": "まっすぐ いくと、みぎに ぎんこうが あります。",
           "meaning": "Đi thẳng thì sẽ thấy ngân hàng bên phải."
+        },
+        {
+          "japanese": "このボタンを押すと、ドアが開きます。",
+          "reading": "この ボタンを おすと、ドアが あきます。",
+          "meaning": "Bấm nút này thì cửa sẽ mở."
+        },
+        {
+          "japanese": "春になると、桜が咲きます。",
+          "reading": "はるに なると、さくらが さきます。",
+          "meaning": "Đến mùa xuân thì hoa anh đào nở."
+        },
+        {
+          "japanese": "この角を左へ曲がると、駅が見えます。",
+          "reading": "この かどを ひだりへ まがると、えきが みえます。",
+          "meaning": "Rẽ trái ở góc này thì sẽ thấy ga."
+        },
+        {
+          "japanese": "薬を飲むと、よくなります。",
+          "reading": "くすりを のむと、よく なります。",
+          "meaning": "Uống thuốc thì sẽ khỏe hơn."
         }
       ]
     },
@@ -605,6 +1531,26 @@
           "japanese": "このかばんは重すぎます。",
           "reading": "この かばんは おもすぎます。",
           "meaning": "Cái cặp này nặng quá."
+        },
+        {
+          "japanese": "きのう、お酒を飲みすぎました。",
+          "reading": "きのう、おさけを のみすぎました。",
+          "meaning": "Hôm qua tôi đã uống rượu quá nhiều."
+        },
+        {
+          "japanese": "この問題は難しすぎます。",
+          "reading": "この もんだいは むずかしすぎます。",
+          "meaning": "Câu hỏi này khó quá."
+        },
+        {
+          "japanese": "働きすぎるのはよくないです。",
+          "reading": "はたらきすぎるのは よくないです。",
+          "meaning": "Làm việc quá sức là không tốt."
+        },
+        {
+          "japanese": "このケーキは甘すぎます。",
+          "reading": "この ケーキは あますぎます。",
+          "meaning": "Cái bánh này ngọt quá."
         }
       ]
     }
@@ -619,6 +1565,26 @@
           "japanese": "友達に道を教えてもらいました。",
           "reading": "ともだちに みちを おしえて もらいました。",
           "meaning": "Tôi được bạn chỉ đường giúp."
+        },
+        {
+          "japanese": "わたしは友達に写真を撮ってあげました。",
+          "reading": "わたしは ともだちに しゃしんを とって あげました。",
+          "meaning": "Tôi đã chụp ảnh giúp bạn."
+        },
+        {
+          "japanese": "母が晩ごはんを作ってくれました。",
+          "reading": "ははが ばんごはんを つくって くれました。",
+          "meaning": "Mẹ đã nấu cơm tối giúp tôi."
+        },
+        {
+          "japanese": "先生に日本語を教えてもらいました。",
+          "reading": "せんせいに にほんごを おしえて もらいました。",
+          "meaning": "Tôi được thầy giáo dạy tiếng Nhật."
+        },
+        {
+          "japanese": "弟に宿題を手伝ってあげました。",
+          "reading": "おとうとに しゅくだいを てつだって あげました。",
+          "meaning": "Tôi đã giúp em trai làm bài tập."
         }
       ]
     },
@@ -631,6 +1597,26 @@
           "japanese": "あした雨が降るかもしれません。",
           "reading": "あした あめが ふるかもしれません。",
           "meaning": "Có lẽ ngày mai trời sẽ mưa."
+        },
+        {
+          "japanese": "田中さんはもう帰ったかもしれません。",
+          "reading": "たなかさんは もう かえったかもしれません。",
+          "meaning": "Có lẽ anh Tanaka đã về rồi."
+        },
+        {
+          "japanese": "彼は忙しいかもしれません。",
+          "reading": "かれは いそがしいかもしれません。",
+          "meaning": "Có lẽ anh ấy đang bận."
+        },
+        {
+          "japanese": "この話はうそかもしれません。",
+          "reading": "この はなしは うそかもしれません。",
+          "meaning": "Có lẽ câu chuyện này là giả."
+        },
+        {
+          "japanese": "遅れるかもしれません。",
+          "reading": "おくれるかもしれません。",
+          "meaning": "Có lẽ tôi sẽ đến muộn."
         }
       ]
     }
@@ -645,6 +1631,26 @@
           "japanese": "あしたは晴れるでしょう。",
           "reading": "あしたは はれるでしょう。",
           "meaning": "Ngày mai chắc trời sẽ nắng."
+        },
+        {
+          "japanese": "彼は来るでしょう。",
+          "reading": "かれは くるでしょう。",
+          "meaning": "Chắc anh ấy sẽ đến."
+        },
+        {
+          "japanese": "今夜は寒くなるでしょう。",
+          "reading": "こんやは さむく なるでしょう。",
+          "meaning": "Tối nay chắc sẽ lạnh hơn."
+        },
+        {
+          "japanese": "この試合は日本が勝つでしょう。",
+          "reading": "この しあいは にほんが かつでしょう。",
+          "meaning": "Trận đấu này chắc Nhật Bản sẽ thắng."
+        },
+        {
+          "japanese": "来年、景気はよくなるでしょう。",
+          "reading": "らいねん、けいきは よく なるでしょう。",
+          "meaning": "Năm sau chắc kinh tế sẽ tốt hơn."
         }
       ]
     },
@@ -657,6 +1663,26 @@
           "japanese": "もし宝くじが当たったら、旅行します。",
           "reading": "もし たからくじが あたったら、りょこうします。",
           "meaning": "Nếu trúng số thì tôi sẽ đi du lịch."
+        },
+        {
+          "japanese": "もし時間があったら、手伝ってください。",
+          "reading": "もし じかんが あったら、てつだって ください。",
+          "meaning": "Nếu có thời gian thì xin hãy giúp tôi."
+        },
+        {
+          "japanese": "もし雨が降ったら、行きません。",
+          "reading": "もし あめが ふったら、いきません。",
+          "meaning": "Nếu trời mưa thì tôi sẽ không đi."
+        },
+        {
+          "japanese": "もし分からなかったら、質問してください。",
+          "reading": "もし わからなかったら、しつもんして ください。",
+          "meaning": "Nếu không hiểu thì hãy hỏi."
+        },
+        {
+          "japanese": "もし安かったら、買います。",
+          "reading": "もし やすかったら、かいます。",
+          "meaning": "Nếu rẻ thì tôi sẽ mua."
         }
       ]
     }
@@ -671,6 +1697,26 @@
           "japanese": "顔色が悪いですね。 — 頭が痛いんです。",
           "reading": "かおいろが わるいですね。 — あたまが いたいんです。",
           "meaning": "Trông sắc mặt bạn không tốt nhỉ. — Vì tôi bị đau đầu."
+        },
+        {
+          "japanese": "どうして遅れたんですか。",
+          "reading": "どうして おくれたんですか。",
+          "meaning": "Tại sao bạn lại đến muộn vậy?"
+        },
+        {
+          "japanese": "きのう、休んだんです。",
+          "reading": "きのう、やすんだんです。",
+          "meaning": "Hôm qua tôi đã nghỉ."
+        },
+        {
+          "japanese": "田中さんは来ないんですか。",
+          "reading": "たなかさんは こないんですか。",
+          "meaning": "Anh Tanaka không đến à?"
+        },
+        {
+          "japanese": "実は、財布をなくしたんです。",
+          "reading": "じつは、さいふを なくしたんです。",
+          "meaning": "Thật ra là tôi đã làm mất ví."
         }
       ]
     },
@@ -683,6 +1729,26 @@
           "japanese": "荷物が重いんですが、手伝っていただけませんか。",
           "reading": "にもつが おもいんですが、てつだって いただけませんか。",
           "meaning": "Hành lý nặng quá, anh/chị giúp tôi được không ạ?"
+        },
+        {
+          "japanese": "道が分からないんですが、教えていただけませんか。",
+          "reading": "みちが わからないんですが、おしえて いただけませんか。",
+          "meaning": "Tôi không biết đường, anh/chị chỉ giúp được không ạ?"
+        },
+        {
+          "japanese": "時間がないんですが、急いでいただけませんか。",
+          "reading": "じかんが ないんですが、いそいで いただけませんか。",
+          "meaning": "Tôi không có nhiều thời gian, anh/chị nhanh giúp được không ạ?"
+        },
+        {
+          "japanese": "パソコンが壊れたんですが、見ていただけませんか。",
+          "reading": "パソコンが こわれたんですが、みて いただけませんか。",
+          "meaning": "Máy tính bị hỏng, anh/chị xem giúp được không ạ?"
+        },
+        {
+          "japanese": "よく聞こえないんですが、もう一度言っていただけませんか。",
+          "reading": "よく きこえないんですが、もう いちど いって いただけませんか。",
+          "meaning": "Tôi nghe không rõ, anh/chị nói lại giúp được không ạ?"
         }
       ]
     }
@@ -697,6 +1763,26 @@
           "japanese": "彼が来るかどうかわかりません。",
           "reading": "かれが くるかどうか わかりません。",
           "meaning": "Tôi không biết anh ấy có đến hay không."
+        },
+        {
+          "japanese": "この答えが正しいかどうか確認してください。",
+          "reading": "この こたえが ただしいかどうか かくにんして ください。",
+          "meaning": "Xin hãy xác nhận câu trả lời này có đúng hay không."
+        },
+        {
+          "japanese": "あした晴れるかどうかわかりません。",
+          "reading": "あした はれるかどうか わかりません。",
+          "meaning": "Tôi không biết ngày mai có nắng hay không."
+        },
+        {
+          "japanese": "彼が結婚しているかどうか知りません。",
+          "reading": "かれが けっこんして いるかどうか しりません。",
+          "meaning": "Tôi không biết anh ấy đã kết hôn hay chưa."
+        },
+        {
+          "japanese": "この情報が本当かどうか調べます。",
+          "reading": "この じょうほうが ほんとうかどうか しらべます。",
+          "meaning": "Tôi sẽ kiểm tra xem thông tin này có đúng hay không."
         }
       ]
     },
@@ -709,6 +1795,26 @@
           "japanese": "どこで買ったか覚えていません。",
           "reading": "どこで かったか おぼえて いません。",
           "meaning": "Tôi không nhớ đã mua ở đâu."
+        },
+        {
+          "japanese": "だれが来るか知りません。",
+          "reading": "だれが くるか しりません。",
+          "meaning": "Tôi không biết ai sẽ đến."
+        },
+        {
+          "japanese": "何を食べたいか教えてください。",
+          "reading": "なにを たべたいか おしえて ください。",
+          "meaning": "Hãy cho tôi biết bạn muốn ăn gì."
+        },
+        {
+          "japanese": "いつ始まるかまだ分かりません。",
+          "reading": "いつ はじまるか まだ わかりません。",
+          "meaning": "Tôi vẫn chưa biết khi nào bắt đầu."
+        },
+        {
+          "japanese": "どうやって行くか調べておきます。",
+          "reading": "どうやって いくか しらべて おきます。",
+          "meaning": "Tôi sẽ tìm hiểu trước xem đi bằng cách nào."
         }
       ]
     }
@@ -723,6 +1829,26 @@
           "japanese": "道が濡れています。雨が降ったようです。",
           "reading": "みちが ぬれて います。あめが ふった ようです。",
           "meaning": "Đường bị ướt. Có vẻ như trời đã mưa."
+        },
+        {
+          "japanese": "田中さんは元気がないようです。",
+          "reading": "たなかさんは げんきが ないようです。",
+          "meaning": "Anh Tanaka có vẻ không được khỏe."
+        },
+        {
+          "japanese": "この店はおいしいようです。",
+          "reading": "この みせは おいしいようです。",
+          "meaning": "Cửa hàng này có vẻ ngon."
+        },
+        {
+          "japanese": "彼はもう帰ったようです。",
+          "reading": "かれは もう かえったようです。",
+          "meaning": "Anh ấy có vẻ đã về rồi."
+        },
+        {
+          "japanese": "今日は寒いようですね。",
+          "reading": "きょうは さむいようですね。",
+          "meaning": "Hôm nay có vẻ lạnh nhỉ."
         }
       ]
     },
@@ -735,6 +1861,26 @@
           "japanese": "この店は何でもあります。",
           "reading": "この みせは なんでも あります。",
           "meaning": "Cửa hàng này có bất cứ thứ gì."
+        },
+        {
+          "japanese": "だれでも参加できます。",
+          "reading": "だれでも さんかできます。",
+          "meaning": "Bất cứ ai cũng có thể tham gia."
+        },
+        {
+          "japanese": "いつでも遊びに来てください。",
+          "reading": "いつでも あそびに きて ください。",
+          "meaning": "Bất cứ lúc nào cũng có thể đến chơi."
+        },
+        {
+          "japanese": "どこでも売っています。",
+          "reading": "どこでも うって います。",
+          "meaning": "Bán ở bất cứ đâu."
+        },
+        {
+          "japanese": "どれでも好きなのを選んでください。",
+          "reading": "どれでも すきなのを えらんで ください。",
+          "meaning": "Hãy chọn cái nào bạn thích cũng được."
         }
       ]
     }
@@ -749,6 +1895,26 @@
           "japanese": "この本は多くの人に読まれています。",
           "reading": "この ほんは おおくの ひとに よまれて います。",
           "meaning": "Quyển sách này được nhiều người đọc."
+        },
+        {
+          "japanese": "このビルは有名な建築家に建てられました。",
+          "reading": "この ビルは ゆうめいな けんちくかに たてられました。",
+          "meaning": "Tòa nhà này được xây bởi một kiến trúc sư nổi tiếng."
+        },
+        {
+          "japanese": "この歌はみんなに知られています。",
+          "reading": "この うたは みんなに しられて います。",
+          "meaning": "Bài hát này được mọi người biết đến."
+        },
+        {
+          "japanese": "英語は世界中で話されています。",
+          "reading": "えいごは せかいじゅうで はなされて います。",
+          "meaning": "Tiếng Anh được nói trên khắp thế giới."
+        },
+        {
+          "japanese": "そのニュースはすぐに伝えられました。",
+          "reading": "その ニュースは すぐに つたえられました。",
+          "meaning": "Tin đó đã được truyền đi ngay lập tức."
         }
       ]
     },
@@ -761,6 +1927,26 @@
           "japanese": "電車で足を踏まれました。",
           "reading": "でんしゃで あしを ふまれました。",
           "meaning": "Tôi bị dẫm chân trên tàu điện."
+        },
+        {
+          "japanese": "子どもに時計を壊されました。",
+          "reading": "こどもに とけいを こわされました。",
+          "meaning": "Con tôi đã làm hỏng mất đồng hồ của tôi."
+        },
+        {
+          "japanese": "夜、隣の人に騒がれました。",
+          "reading": "よる、となりの ひとに さわがれました。",
+          "meaning": "Tối qua tôi bị người hàng xóm làm ồn."
+        },
+        {
+          "japanese": "雨に降られて、ぬれました。",
+          "reading": "あめに ふられて、ぬれました。",
+          "meaning": "Tôi bị mưa làm cho ướt."
+        },
+        {
+          "japanese": "友達に急に来られて、困りました。",
+          "reading": "ともだちに きゅうに こられて、こまりました。",
+          "meaning": "Tôi bối rối vì bạn đột nhiên đến chơi."
         }
       ]
     }
@@ -775,6 +1961,26 @@
           "japanese": "母は子どもに野菜を食べさせます。",
           "reading": "ははは こどもに やさいを たべさせます。",
           "meaning": "Người mẹ bắt con ăn rau."
+        },
+        {
+          "japanese": "先生は学生に本を読ませました。",
+          "reading": "せんせいは がくせいに ほんを よませました。",
+          "meaning": "Thầy giáo bắt học sinh đọc sách."
+        },
+        {
+          "japanese": "部長は田中さんを出張させました。",
+          "reading": "ぶちょうは たなかさんを しゅっちょうさせました。",
+          "meaning": "Trưởng phòng đã cử anh Tanaka đi công tác."
+        },
+        {
+          "japanese": "子どもを一人で買い物に行かせました。",
+          "reading": "こどもを ひとりで かいものに いかせました。",
+          "meaning": "Tôi đã để con một mình đi mua sắm."
+        },
+        {
+          "japanese": "彼を笑わせました。",
+          "reading": "かれを わらわせました。",
+          "meaning": "Tôi đã làm anh ấy cười."
         }
       ]
     },
@@ -787,6 +1993,26 @@
           "japanese": "すみません、写真を撮らせてください。",
           "reading": "すみません、しゃしんを とらせて ください。",
           "meaning": "Xin lỗi, cho tôi chụp ảnh nhé."
+        },
+        {
+          "japanese": "少し考えさせてください。",
+          "reading": "すこし かんがえさせて ください。",
+          "meaning": "Cho tôi suy nghĩ một chút."
+        },
+        {
+          "japanese": "きょうは早く帰らせてください。",
+          "reading": "きょうは はやく かえらせて ください。",
+          "meaning": "Hôm nay cho tôi về sớm."
+        },
+        {
+          "japanese": "わたしにやらせてください。",
+          "reading": "わたしに やらせて ください。",
+          "meaning": "Hãy để tôi làm."
+        },
+        {
+          "japanese": "電話を使わせてください。",
+          "reading": "でんわを つかわせて ください。",
+          "meaning": "Cho tôi dùng nhờ điện thoại."
         }
       ]
     }
@@ -801,6 +2027,26 @@
           "japanese": "旅行の前に資料を調べておきます。",
           "reading": "りょこうの まえに しりょうを しらべて おきます。",
           "meaning": "Trước chuyến đi tôi sẽ tìm hiểu tài liệu trước."
+        },
+        {
+          "japanese": "会議の前に部屋を掃除しておきます。",
+          "reading": "かいぎの まえに へやを そうじして おきます。",
+          "meaning": "Trước cuộc họp tôi sẽ dọn phòng trước."
+        },
+        {
+          "japanese": "飲み物を買っておきます。",
+          "reading": "のみものを かって おきます。",
+          "meaning": "Tôi sẽ mua sẵn đồ uống."
+        },
+        {
+          "japanese": "レポートを読んでおいてください。",
+          "reading": "レポートを よんで おいて ください。",
+          "meaning": "Xin hãy đọc trước báo cáo."
+        },
+        {
+          "japanese": "ホテルを予約しておきました。",
+          "reading": "ホテルを よやくして おきました。",
+          "meaning": "Tôi đã đặt phòng khách sạn trước."
         }
       ]
     },
@@ -813,6 +2059,26 @@
           "japanese": "宿題を全部忘れてしまいました。",
           "reading": "しゅくだいを ぜんぶ わすれて しまいました。",
           "meaning": "Tôi đã quên hết bài tập về nhà mất rồi."
+        },
+        {
+          "japanese": "電車の中で財布をなくしてしまいました。",
+          "reading": "でんしゃの なかで さいふを なくして しまいました。",
+          "meaning": "Tôi đã làm mất ví trên tàu điện mất rồi."
+        },
+        {
+          "japanese": "この本はもう読んでしまいました。",
+          "reading": "この ほんは もう よんで しまいました。",
+          "meaning": "Quyển sách này tôi đã đọc xong hết rồi."
+        },
+        {
+          "japanese": "ケーキを一人で食べてしまいました。",
+          "reading": "ケーキを ひとりで たべて しまいました。",
+          "meaning": "Tôi đã ăn hết cái bánh một mình mất rồi."
+        },
+        {
+          "japanese": "約束の時間に遅れてしまいました。",
+          "reading": "やくそくの じかんに おくれて しまいました。",
+          "meaning": "Tôi đã đến muộn giờ hẹn mất rồi."
         }
       ]
     }
@@ -827,6 +2093,26 @@
           "japanese": "このケーキはおいしそうです。",
           "reading": "この ケーキは おいしそうです。",
           "meaning": "Cái bánh này trông có vẻ ngon."
+        },
+        {
+          "japanese": "雨が降りそうです。",
+          "reading": "あめが ふりそうです。",
+          "meaning": "Trời có vẻ sắp mưa."
+        },
+        {
+          "japanese": "その荷物は重そうです。",
+          "reading": "その にもつは おもそうです。",
+          "meaning": "Kiện hàng đó trông có vẻ nặng."
+        },
+        {
+          "japanese": "田中さんは元気そうです。",
+          "reading": "たなかさんは げんきそうです。",
+          "meaning": "Anh Tanaka trông có vẻ khỏe."
+        },
+        {
+          "japanese": "この箱は今にも壊れそうです。",
+          "reading": "この はこは いまにも こわれそうです。",
+          "meaning": "Cái hộp này trông như sắp vỡ đến nơi."
         }
       ]
     },
@@ -839,6 +2125,26 @@
           "japanese": "天気予報によると、あした雨だそうです。",
           "reading": "てんきよほうに よると、あした あめだ そうです。",
           "meaning": "Theo dự báo thời tiết, nghe nói ngày mai trời mưa."
+        },
+        {
+          "japanese": "田中さんは来月結婚するそうです。",
+          "reading": "たなかさんは らいげつ けっこんする そうです。",
+          "meaning": "Nghe nói anh Tanaka tháng sau kết hôn."
+        },
+        {
+          "japanese": "あの店の料理はおいしいそうです。",
+          "reading": "あの みせの りょうりは おいしい そうです。",
+          "meaning": "Nghe nói món ăn ở quán đó ngon."
+        },
+        {
+          "japanese": "彼はもう国へ帰ったそうです。",
+          "reading": "かれは もう くにへ かえった そうです。",
+          "meaning": "Nghe nói anh ấy đã về nước rồi."
+        },
+        {
+          "japanese": "この町は昔、静かだったそうです。",
+          "reading": "この まちは むかし、しずかだった そうです。",
+          "meaning": "Nghe nói ngày xưa thị trấn này yên tĩnh."
         }
       ]
     }
@@ -853,6 +2159,26 @@
           "japanese": "薬を飲めば、すぐ治りますよ。",
           "reading": "くすりを のめば、すぐ なおりますよ。",
           "meaning": "Nếu uống thuốc thì sẽ khỏi ngay thôi."
+        },
+        {
+          "japanese": "早く寝れば、元気になります。",
+          "reading": "はやく ねれば、げんきに なります。",
+          "meaning": "Nếu ngủ sớm thì sẽ khỏe hơn."
+        },
+        {
+          "japanese": "このボタンを押せば、電気がつきます。",
+          "reading": "この ボタンを おせば、でんきが つきます。",
+          "meaning": "Nếu bấm nút này thì đèn sẽ sáng."
+        },
+        {
+          "japanese": "安ければ、買います。",
+          "reading": "やすければ、かいます。",
+          "meaning": "Nếu rẻ thì tôi sẽ mua."
+        },
+        {
+          "japanese": "天気がよければ、出かけましょう。",
+          "reading": "てんきが よければ、でかけましょう。",
+          "meaning": "Nếu trời đẹp thì chúng ta ra ngoài nhé."
         }
       ]
     },
@@ -860,11 +2186,32 @@
       "title": "命令形／禁止形",
       "structure": "V-命令形／V-禁止形",
       "explanation": "Dạng mệnh lệnh mạnh (thường dùng trong biển báo, trích lời người khác), và dạng cấm đoán.",
+      "note": "Đây là dạng mệnh lệnh khá mạnh và thô, người học không nên dùng trực tiếp với người khác — chủ yếu gặp trong biển báo, trích dẫn lời nói, hoặc khi tường thuật.",
       "examples": [
         {
           "japanese": "危ない！　止まれ！",
           "reading": "あぶない！　とまれ！",
           "meaning": "Nguy hiểm! Dừng lại!"
+        },
+        {
+          "japanese": "ここに入るな。",
+          "reading": "ここに はいるな。",
+          "meaning": "Không được vào đây."
+        },
+        {
+          "japanese": "早く行け。",
+          "reading": "はやく いけ。",
+          "meaning": "Đi nhanh lên."
+        },
+        {
+          "japanese": "芝生に入るな。",
+          "reading": "しばふに はいるな。",
+          "meaning": "Không được đi vào bãi cỏ."
+        },
+        {
+          "japanese": "静かにしろ。",
+          "reading": "しずかに しろ。",
+          "meaning": "Hãy im lặng."
         }
       ]
     }
@@ -879,6 +2226,26 @@
           "japanese": "わたしがお荷物をお持ちします。",
           "reading": "わたしが おにもつを おもちします。",
           "meaning": "Để tôi mang hành lý giúp anh/chị."
+        },
+        {
+          "japanese": "資料をお送りします。",
+          "reading": "しりょうを おおくりします。",
+          "meaning": "Tôi sẽ gửi tài liệu."
+        },
+        {
+          "japanese": "後ほどお電話します。",
+          "reading": "のちほど おでんわします。",
+          "meaning": "Lát nữa tôi sẽ gọi điện."
+        },
+        {
+          "japanese": "ご案内します。",
+          "reading": "ごあんないします。",
+          "meaning": "Tôi sẽ hướng dẫn quý khách."
+        },
+        {
+          "japanese": "駅までお送りしましょうか。",
+          "reading": "えきまで おおくりしましょうか。",
+          "meaning": "Để tôi đưa anh/chị đến ga nhé?"
         }
       ]
     },
@@ -891,6 +2258,26 @@
           "japanese": "作り方がわかるかどうか聞いてみます。",
           "reading": "つくりかたが わかるかどうか きいて みます。",
           "meaning": "Tôi sẽ thử hỏi xem có biết cách làm không."
+        },
+        {
+          "japanese": "おいしいかどうか食べてみます。",
+          "reading": "おいしいかどうか たべて みます。",
+          "meaning": "Tôi sẽ thử ăn xem có ngon không."
+        },
+        {
+          "japanese": "動くかどうか試してみます。",
+          "reading": "うごくかどうか ためして みます。",
+          "meaning": "Tôi sẽ thử xem nó có chạy không."
+        },
+        {
+          "japanese": "似合うかどうか着てみます。",
+          "reading": "にあうかどうか きて みます。",
+          "meaning": "Tôi sẽ thử mặc xem có hợp không."
+        },
+        {
+          "japanese": "何時に開くか調べてみます。",
+          "reading": "なんじに あくか しらべて みます。",
+          "meaning": "Tôi sẽ thử tìm hiểu xem mấy giờ mở cửa."
         }
       ]
     }
@@ -905,6 +2292,26 @@
           "japanese": "先生はもうお帰りになりました。",
           "reading": "せんせいは もう おかえりに なりました。",
           "meaning": "Thầy giáo đã về rồi."
+        },
+        {
+          "japanese": "部長は何時にお戻りになりますか。",
+          "reading": "ぶちょうは なんじに おもどりに なりますか。",
+          "meaning": "Trưởng phòng mấy giờ sẽ quay lại ạ?"
+        },
+        {
+          "japanese": "お客様がお待ちになっています。",
+          "reading": "おきゃくさまが おまちに なって います。",
+          "meaning": "Quý khách đang đợi."
+        },
+        {
+          "japanese": "社長は新聞をお読みになります。",
+          "reading": "しゃちょうは しんぶんを およみに なります。",
+          "meaning": "Giám đốc đọc báo."
+        },
+        {
+          "japanese": "何をお探しになっていますか。",
+          "reading": "なにを おさがしに なって いますか。",
+          "meaning": "Quý khách đang tìm gì ạ?"
         }
       ]
     },
@@ -917,6 +2324,26 @@
           "japanese": "もう少しゆっくり話してくださいませんか。",
           "reading": "もう すこし ゆっくり はなして くださいませんか。",
           "meaning": "Anh/chị nói chậm hơn một chút được không ạ?"
+        },
+        {
+          "japanese": "写真を撮ってくださいませんか。",
+          "reading": "しゃしんを とって くださいませんか。",
+          "meaning": "Anh/chị chụp ảnh giúp tôi được không ạ?"
+        },
+        {
+          "japanese": "資料を送ってくださいませんか。",
+          "reading": "しりょうを おくって くださいませんか。",
+          "meaning": "Anh/chị gửi tài liệu giúp tôi được không ạ?"
+        },
+        {
+          "japanese": "もう一度説明してくださいませんか。",
+          "reading": "もう いちど せつめいして くださいませんか。",
+          "meaning": "Anh/chị giải thích lại giúp tôi được không ạ?"
+        },
+        {
+          "japanese": "少々お待ちくださいませんか。",
+          "reading": "しょうしょう おまち くださいませんか。",
+          "meaning": "Anh/chị vui lòng đợi một chút được không ạ?"
         }
       ]
     }
@@ -931,6 +2358,26 @@
           "japanese": "ドアが開いています。（自動詞）",
           "reading": "ドアが あいて います。",
           "meaning": "Cửa đang mở (tự nó mở)."
+        },
+        {
+          "japanese": "だれかがドアを開けました。（他動詞）",
+          "reading": "だれかが ドアを あけました。",
+          "meaning": "Ai đó đã mở cửa."
+        },
+        {
+          "japanese": "電気が消えています。",
+          "reading": "でんきが きえて います。",
+          "meaning": "Đèn đang tắt."
+        },
+        {
+          "japanese": "会議が始まりました。",
+          "reading": "かいぎが はじまりました。",
+          "meaning": "Cuộc họp đã bắt đầu."
+        },
+        {
+          "japanese": "車が止まりました。",
+          "reading": "くるまが とまりました。",
+          "meaning": "Xe hơi đã dừng lại."
         }
       ]
     },
@@ -943,6 +2390,26 @@
           "japanese": "壁に絵が掛けてあります。",
           "reading": "かべに えが かけて あります。",
           "meaning": "Trên tường có treo sẵn một bức tranh."
+        },
+        {
+          "japanese": "テーブルの上に花が飾ってあります。",
+          "reading": "テーブルの うえに はなが かざって あります。",
+          "meaning": "Trên bàn có cắm sẵn hoa."
+        },
+        {
+          "japanese": "窓が開けてあります。",
+          "reading": "まどが あけて あります。",
+          "meaning": "Cửa sổ đã được mở sẵn."
+        },
+        {
+          "japanese": "メモが置いてあります。",
+          "reading": "メモが おいて あります。",
+          "meaning": "Có sẵn một tờ ghi chú."
+        },
+        {
+          "japanese": "資料がコピーしてあります。",
+          "reading": "しりょうが コピーして あります。",
+          "meaning": "Tài liệu đã được sao chụp sẵn."
         }
       ]
     }
@@ -957,6 +2424,26 @@
           "japanese": "この寺は８世紀に建てられました。",
           "reading": "この てらは はっせいきに たてられました。",
           "meaning": "Ngôi chùa này được xây vào thế kỷ thứ 8."
+        },
+        {
+          "japanese": "電話は１９世紀に発明されました。",
+          "reading": "でんわは じゅうきゅうせいきに はつめいされました。",
+          "meaning": "Điện thoại được phát minh vào thế kỷ 19."
+        },
+        {
+          "japanese": "この本は多くの言語に翻訳されています。",
+          "reading": "この ほんは おおくの げんごに ほんやくされて います。",
+          "meaning": "Quyển sách này được dịch ra nhiều thứ tiếng."
+        },
+        {
+          "japanese": "この製品は世界中で使われています。",
+          "reading": "この せいひんは せかいじゅうで つかわれて います。",
+          "meaning": "Sản phẩm này được sử dụng khắp thế giới."
+        },
+        {
+          "japanese": "米は日本でよく食べられています。",
+          "reading": "こめは にほんで よく たべられて います。",
+          "meaning": "Gạo được ăn nhiều ở Nhật Bản."
         }
       ]
     },
@@ -969,6 +2456,26 @@
           "japanese": "電話はベルによって発明されました。",
           "reading": "でんわは ベルに よって はつめいされました。",
           "meaning": "Điện thoại được phát minh bởi Bell."
+        },
+        {
+          "japanese": "この城は徳川家康によって建てられました。",
+          "reading": "この しろは とくがわいえやすに よって たてられました。",
+          "meaning": "Lâu đài này được xây bởi Tokugawa Ieyasu."
+        },
+        {
+          "japanese": "この絵はピカソによって描かれました。",
+          "reading": "この えは ピカソに よって えがかれました。",
+          "meaning": "Bức tranh này được vẽ bởi Picasso."
+        },
+        {
+          "japanese": "結果は天気によって変わります。",
+          "reading": "けっかは てんきに よって かわります。",
+          "meaning": "Kết quả thay đổi tùy theo thời tiết."
+        },
+        {
+          "japanese": "人によって考え方が違います。",
+          "reading": "ひとに よって かんがえかたが ちがいます。",
+          "meaning": "Cách suy nghĩ khác nhau tùy theo mỗi người."
         }
       ]
     }
@@ -983,6 +2490,26 @@
           "japanese": "大きな声で話してください。",
           "reading": "おおきな こえで はなして ください。",
           "meaning": "Xin hãy nói to lên."
+        },
+        {
+          "japanese": "小さな子どもがいます。",
+          "reading": "ちいさな こどもが います。",
+          "meaning": "Có một đứa trẻ nhỏ."
+        },
+        {
+          "japanese": "大きな問題があります。",
+          "reading": "おおきな もんだいが あります。",
+          "meaning": "Có một vấn đề lớn."
+        },
+        {
+          "japanese": "小さな町に住んでいます。",
+          "reading": "ちいさな まちに すんで います。",
+          "meaning": "Tôi sống ở một thị trấn nhỏ."
+        },
+        {
+          "japanese": "大きな夢を持っています。",
+          "reading": "おおきな ゆめを もって います。",
+          "meaning": "Tôi có một ước mơ lớn."
         }
       ]
     },
@@ -995,6 +2522,26 @@
           "japanese": "「ドラえもん」という漫画を知っていますか。",
           "reading": "「ドラえもん」という まんがを しって いますか。",
           "meaning": "Bạn có biết bộ truyện tranh tên là 'Doraemon' không?"
+        },
+        {
+          "japanese": "田中さんという人から電話がありました。",
+          "reading": "たなかさんという ひとから でんわが ありました。",
+          "meaning": "Có một người tên là Tanaka gọi điện đến."
+        },
+        {
+          "japanese": "「みんなの日本語」という教科書を使っています。",
+          "reading": "「みんなの にほんご」という きょうかしょを つかって います。",
+          "meaning": "Tôi đang dùng giáo trình tên là 'Minna no Nihongo'."
+        },
+        {
+          "japanese": "富士山という山を知っていますか。",
+          "reading": "ふじさんという やまを しって いますか。",
+          "meaning": "Bạn có biết ngọn núi tên là Phú Sĩ không?"
+        },
+        {
+          "japanese": "これは何という料理ですか。",
+          "reading": "これは なんという りょうりですか。",
+          "meaning": "Đây là món ăn tên là gì vậy?"
         }
       ]
     }
@@ -1009,6 +2556,26 @@
           "japanese": "週末は本を読んだり、映画を見たりします。",
           "reading": "しゅうまつは ほんを よんだり、えいがを みたり します。",
           "meaning": "Cuối tuần tôi thường đọc sách, xem phim..."
+        },
+        {
+          "japanese": "休みの日は掃除をしたり、洗濯をしたりします。",
+          "reading": "やすみの ひは そうじを したり、せんたくを したり します。",
+          "meaning": "Ngày nghỉ tôi thường dọn dẹp, giặt giũ..."
+        },
+        {
+          "japanese": "公園で歩いたり、走ったりしました。",
+          "reading": "こうえんで あるいたり、はしったり しました。",
+          "meaning": "Tôi đã đi bộ, chạy bộ ở công viên..."
+        },
+        {
+          "japanese": "パーティーで歌ったり、踊ったりしました。",
+          "reading": "パーティーで うたったり、おどったり しました。",
+          "meaning": "Ở bữa tiệc tôi đã hát, nhảy múa..."
+        },
+        {
+          "japanese": "旅行で写真を撮ったり、買い物したりしました。",
+          "reading": "りょこうで しゃしんを とったり、かいものしたり しました。",
+          "meaning": "Trong chuyến du lịch tôi đã chụp ảnh, mua sắm..."
         }
       ]
     },
@@ -1021,6 +2588,26 @@
           "japanese": "日本語が上手になりました。",
           "reading": "にほんごが じょうずに なりました。",
           "meaning": "Tiếng Nhật của tôi đã giỏi lên."
+        },
+        {
+          "japanese": "だんだん寒くなりました。",
+          "reading": "だんだん さむく なりました。",
+          "meaning": "Trời đã dần trở lạnh."
+        },
+        {
+          "japanese": "町がにぎやかになりました。",
+          "reading": "まちが にぎやかに なりました。",
+          "meaning": "Thị trấn đã trở nên nhộn nhịp."
+        },
+        {
+          "japanese": "子どもは大学生になりました。",
+          "reading": "こどもは だいがくせいに なりました。",
+          "meaning": "Con tôi đã trở thành sinh viên đại học."
+        },
+        {
+          "japanese": "最近、忙しくなりました。",
+          "reading": "さいきん、いそがしく なりました。",
+          "meaning": "Gần đây tôi đã trở nên bận rộn."
         }
       ]
     }
@@ -1035,6 +2622,26 @@
           "japanese": "この靴は歩きやすいです。",
           "reading": "この くつは あるきやすいです。",
           "meaning": "Đôi giày này đi dễ chịu."
+        },
+        {
+          "japanese": "この字は読みにくいです。",
+          "reading": "この じは よみにくいです。",
+          "meaning": "Chữ này khó đọc."
+        },
+        {
+          "japanese": "このペンは書きやすいです。",
+          "reading": "この ペンは かきやすいです。",
+          "meaning": "Cây bút này viết dễ dàng."
+        },
+        {
+          "japanese": "この魚は骨が多くて食べにくいです。",
+          "reading": "この さかなは ほねが おおくて たべにくいです。",
+          "meaning": "Con cá này nhiều xương nên khó ăn."
+        },
+        {
+          "japanese": "この薬は苦くて飲みにくいです。",
+          "reading": "この くすりは にがくて のみにくいです。",
+          "meaning": "Thuốc này đắng nên khó uống."
         }
       ]
     },
@@ -1047,6 +2654,26 @@
           "japanese": "日本の歴史について調べています。",
           "reading": "にほんの れきしに ついて しらべて います。",
           "meaning": "Tôi đang tìm hiểu về lịch sử Nhật Bản."
+        },
+        {
+          "japanese": "その問題について話しましょう。",
+          "reading": "その もんだいに ついて はなしましょう。",
+          "meaning": "Chúng ta hãy nói về vấn đề đó."
+        },
+        {
+          "japanese": "経済についてのレポートを書きました。",
+          "reading": "けいざいに ついての レポートを かきました。",
+          "meaning": "Tôi đã viết báo cáo về kinh tế."
+        },
+        {
+          "japanese": "彼について何も知りません。",
+          "reading": "かれに ついて なにも しりません。",
+          "meaning": "Tôi không biết gì về anh ấy."
+        },
+        {
+          "japanese": "日本の文化について興味があります。",
+          "reading": "にほんの ぶんかに ついて きょうみが あります。",
+          "meaning": "Tôi quan tâm đến văn hóa Nhật Bản."
         }
       ]
     }
@@ -1061,6 +2688,26 @@
           "japanese": "友達がプレゼントをくれました。",
           "reading": "ともだちが プレゼントを くれました。",
           "meaning": "Bạn tôi đã tặng tôi một món quà."
+        },
+        {
+          "japanese": "田中さんが本をくれました。",
+          "reading": "たなかさんが ほんを くれました。",
+          "meaning": "Anh Tanaka đã tặng tôi một quyển sách."
+        },
+        {
+          "japanese": "祖母がお年玉をくれました。",
+          "reading": "そぼが おとしだまを くれました。",
+          "meaning": "Bà đã cho tôi tiền mừng tuổi."
+        },
+        {
+          "japanese": "会社が新しいパソコンをくれました。",
+          "reading": "かいしゃが あたらしい パソコンを くれました。",
+          "meaning": "Công ty đã cấp cho tôi một máy tính mới."
+        },
+        {
+          "japanese": "母がセーターをくれました。",
+          "reading": "ははが セーターを くれました。",
+          "meaning": "Mẹ đã cho tôi một cái áo len."
         }
       ]
     },
@@ -1073,6 +2720,26 @@
           "japanese": "先生が漢字を教えてくれました。",
           "reading": "せんせいが かんじを おしえて くれました。",
           "meaning": "Thầy giáo đã dạy tôi kanji."
+        },
+        {
+          "japanese": "友達が駅まで送ってくれました。",
+          "reading": "ともだちが えきまで おくって くれました。",
+          "meaning": "Bạn tôi đã đưa tôi đến ga."
+        },
+        {
+          "japanese": "隣の人が荷物を持ってくれました。",
+          "reading": "となりの ひとが にもつを もって くれました。",
+          "meaning": "Người bên cạnh đã cầm đồ giúp tôi."
+        },
+        {
+          "japanese": "母が晩ごはんを作ってくれました。",
+          "reading": "ははが ばんごはんを つくって くれました。",
+          "meaning": "Mẹ đã nấu cơm tối cho tôi."
+        },
+        {
+          "japanese": "同僚が仕事を手伝ってくれました。",
+          "reading": "どうりょうが しごとを てつだって くれました。",
+          "meaning": "Đồng nghiệp đã giúp tôi công việc."
         }
       ]
     }
@@ -1087,6 +2754,26 @@
           "japanese": "早く帰らせていただけませんか。",
           "reading": "はやく かえらせて いただけませんか。",
           "meaning": "Cho tôi về sớm được không ạ?"
+        },
+        {
+          "japanese": "少し休ませていただけませんか。",
+          "reading": "すこし やすませて いただけませんか。",
+          "meaning": "Cho tôi nghỉ một chút được không ạ?"
+        },
+        {
+          "japanese": "説明させていただけませんか。",
+          "reading": "せつめいさせて いただけませんか。",
+          "meaning": "Cho tôi giải thích được không ạ?"
+        },
+        {
+          "japanese": "この電話を使わせていただけませんか。",
+          "reading": "この でんわを つかわせて いただけませんか。",
+          "meaning": "Cho tôi dùng nhờ điện thoại này được không ạ?"
+        },
+        {
+          "japanese": "写真を撮らせていただけませんか。",
+          "reading": "しゃしんを とらせて いただけませんか。",
+          "meaning": "Cho tôi chụp ảnh được không ạ?"
         }
       ]
     },
@@ -1099,6 +2786,26 @@
           "japanese": "漢字は勉強すればするほど、覚えます。",
           "reading": "かんじは べんきょうすれば するほど、おぼえます。",
           "meaning": "Kanji càng học càng nhớ."
+        },
+        {
+          "japanese": "野菜は新しければ新しいほど、おいしいです。",
+          "reading": "やさいは あたらしければ あたらしいほど、おいしいです。",
+          "meaning": "Rau càng tươi càng ngon."
+        },
+        {
+          "japanese": "早ければ早いほど、いいです。",
+          "reading": "はやければ はやいほど、いいです。",
+          "meaning": "Càng sớm càng tốt."
+        },
+        {
+          "japanese": "練習すればするほど、上手になります。",
+          "reading": "れんしゅうすれば するほど、じょうずに なります。",
+          "meaning": "Càng luyện tập càng giỏi."
+        },
+        {
+          "japanese": "考えれば考えるほど、分からなくなります。",
+          "reading": "かんがえれば かんがえるほど、わからなく なります。",
+          "meaning": "Càng nghĩ càng không hiểu."
         }
       ]
     }
@@ -1113,6 +2820,26 @@
           "japanese": "頑張ったのに、試験に落ちました。",
           "reading": "がんばったのに、しけんに おちました。",
           "meaning": "Mặc dù đã cố gắng nhưng tôi vẫn trượt kỳ thi."
+        },
+        {
+          "japanese": "薬を飲んだのに、治りません。",
+          "reading": "くすりを のんだのに、なおりません。",
+          "meaning": "Mặc dù đã uống thuốc nhưng vẫn không khỏi."
+        },
+        {
+          "japanese": "約束したのに、来ませんでした。",
+          "reading": "やくそくしたのに、きませんでした。",
+          "meaning": "Mặc dù đã hứa nhưng anh ấy đã không đến."
+        },
+        {
+          "japanese": "安いのに、質がいいです。",
+          "reading": "やすいのに、しつが いいです。",
+          "meaning": "Mặc dù rẻ nhưng chất lượng tốt."
+        },
+        {
+          "japanese": "夏なのに、寒いです。",
+          "reading": "なつなのに、さむいです。",
+          "meaning": "Mặc dù là mùa hè nhưng trời lạnh."
         }
       ]
     },
@@ -1125,6 +2852,26 @@
           "japanese": "もっと早く来ればよかったです。",
           "reading": "もっと はやく くれば よかったです。",
           "meaning": "Giá mà tôi đến sớm hơn."
+        },
+        {
+          "japanese": "もっと勉強すればよかったです。",
+          "reading": "もっと べんきょうすれば よかったです。",
+          "meaning": "Giá mà tôi học nhiều hơn."
+        },
+        {
+          "japanese": "傘を持って来ればよかったです。",
+          "reading": "かさを もって くれば よかったです。",
+          "meaning": "Giá mà tôi mang theo ô."
+        },
+        {
+          "japanese": "彼に聞けばよかったです。",
+          "reading": "かれに きけば よかったです。",
+          "meaning": "Giá mà tôi đã hỏi anh ấy."
+        },
+        {
+          "japanese": "もっと写真を撮ればよかったです。",
+          "reading": "もっと しゃしんを とれば よかったです。",
+          "meaning": "Giá mà tôi chụp thêm ảnh."
         }
       ]
     }
@@ -1139,6 +2886,26 @@
           "japanese": "これでよろしいでしょうか。",
           "reading": "これで よろしいでしょうか。",
           "meaning": "Như vậy có được không ạ?"
+        },
+        {
+          "japanese": "何時ごろお伺いすればよろしいでしょうか。",
+          "reading": "なんじごろ おうかがいすれば よろしいでしょうか。",
+          "meaning": "Tôi nên đến khoảng mấy giờ ạ?"
+        },
+        {
+          "japanese": "お名前を伺ってもよろしいでしょうか。",
+          "reading": "おなまえを うかがっても よろしいでしょうか。",
+          "meaning": "Tôi có thể hỏi tên quý khách được không ạ?"
+        },
+        {
+          "japanese": "少々お待ちいただけますでしょうか。",
+          "reading": "しょうしょう おまちいただけますでしょうか。",
+          "meaning": "Quý khách vui lòng đợi một chút được không ạ?"
+        },
+        {
+          "japanese": "この席は空いているでしょうか。",
+          "reading": "この せきは あいて いるでしょうか。",
+          "meaning": "Không biết chỗ này còn trống không ạ?"
         }
       ]
     },
@@ -1151,6 +2918,26 @@
           "japanese": "靴を履いたまま、部屋に入らないでください。",
           "reading": "くつを はいたまま、へやに はいらないで ください。",
           "meaning": "Xin đừng đi giày vào phòng."
+        },
+        {
+          "japanese": "テレビをつけたまま、寝てしまいました。",
+          "reading": "テレビを つけたまま、ねて しまいました。",
+          "meaning": "Tôi đã ngủ quên trong khi ti vi vẫn đang bật."
+        },
+        {
+          "japanese": "窓を開けたまま、出かけました。",
+          "reading": "まどを あけたまま、でかけました。",
+          "meaning": "Tôi đã ra ngoài trong khi cửa sổ vẫn để mở."
+        },
+        {
+          "japanese": "この町は昔のままです。",
+          "reading": "この まちは むかしの ままです。",
+          "meaning": "Thị trấn này vẫn như xưa."
+        },
+        {
+          "japanese": "冷たいままで食べてください。",
+          "reading": "つめたい ままで たべて ください。",
+          "meaning": "Xin hãy ăn khi còn lạnh."
         }
       ]
     }
@@ -1165,6 +2952,26 @@
           "japanese": "毎日運動するようにしています。",
           "reading": "まいにち うんどうする ように して います。",
           "meaning": "Tôi cố gắng tập thể dục mỗi ngày."
+        },
+        {
+          "japanese": "野菜をたくさん食べるようにしています。",
+          "reading": "やさいを たくさん たべる ように して います。",
+          "meaning": "Tôi cố gắng ăn nhiều rau."
+        },
+        {
+          "japanese": "遅刻しないようにしています。",
+          "reading": "ちこくしない ように して います。",
+          "meaning": "Tôi cố gắng không đi trễ."
+        },
+        {
+          "japanese": "毎日日本語で日記を書くようにしています。",
+          "reading": "まいにち にほんごで にっきを かく ように して います。",
+          "meaning": "Tôi cố gắng viết nhật ký bằng tiếng Nhật mỗi ngày."
+        },
+        {
+          "japanese": "夜遅く食べないようにしています。",
+          "reading": "よる おそく たべない ように して います。",
+          "meaning": "Tôi cố gắng không ăn khuya."
         }
       ]
     },
@@ -1177,6 +2984,26 @@
           "japanese": "ひらがなが読めるようになりました。",
           "reading": "ひらがなが よめる ように なりました。",
           "meaning": "Tôi đã đọc được hiragana rồi (trước đây thì không)."
+        },
+        {
+          "japanese": "一人で料理ができるようになりました。",
+          "reading": "ひとりで りょうりが できる ように なりました。",
+          "meaning": "Tôi đã có thể tự nấu ăn một mình."
+        },
+        {
+          "japanese": "日本語で話せるようになりました。",
+          "reading": "にほんごで はなせる ように なりました。",
+          "meaning": "Tôi đã có thể nói chuyện bằng tiếng Nhật."
+        },
+        {
+          "japanese": "自転車に乗れるようになりました。",
+          "reading": "じてんしゃに のれる ように なりました。",
+          "meaning": "Tôi đã biết đi xe đạp."
+        },
+        {
+          "japanese": "早く起きられるようになりました。",
+          "reading": "はやく おきられる ように なりました。",
+          "meaning": "Tôi đã có thể dậy sớm."
         }
       ]
     }
@@ -1191,6 +3018,26 @@
           "japanese": "これからも日本語を勉強していきます。",
           "reading": "これからも にほんごを べんきょうして いきます。",
           "meaning": "Từ giờ tôi sẽ tiếp tục học tiếng Nhật."
+        },
+        {
+          "japanese": "人口はだんだん増えてきました。",
+          "reading": "じんこうは だんだん ふえて きました。",
+          "meaning": "Dân số đã tăng dần."
+        },
+        {
+          "japanese": "これからも頑張っていきます。",
+          "reading": "これからも がんばって いきます。",
+          "meaning": "Từ giờ tôi sẽ tiếp tục cố gắng."
+        },
+        {
+          "japanese": "空が明るくなってきました。",
+          "reading": "そらが あかるく なって きました。",
+          "meaning": "Bầu trời đã sáng dần lên."
+        },
+        {
+          "japanese": "これから寒くなっていくでしょう。",
+          "reading": "これから さむく なって いくでしょう。",
+          "meaning": "Từ giờ trời sẽ dần lạnh hơn."
         }
       ]
     },
@@ -1203,6 +3050,26 @@
           "japanese": "会社を休ませてもらいました。",
           "reading": "かいしゃを やすませて もらいました。",
           "meaning": "Tôi đã được cho phép nghỉ làm."
+        },
+        {
+          "japanese": "先に帰らせてもらいました。",
+          "reading": "さきに かえらせて もらいました。",
+          "meaning": "Tôi đã được cho phép về trước."
+        },
+        {
+          "japanese": "パソコンを使わせてもらいました。",
+          "reading": "パソコンを つかわせて もらいました。",
+          "meaning": "Tôi đã được cho phép dùng máy tính."
+        },
+        {
+          "japanese": "意見を言わせてもらいました。",
+          "reading": "いけんを いわせて もらいました。",
+          "meaning": "Tôi đã được cho phép nêu ý kiến."
+        },
+        {
+          "japanese": "少し考えさせてもらいました。",
+          "reading": "すこし かんがえさせて もらいました。",
+          "meaning": "Tôi đã được cho phép suy nghĩ một chút."
         }
       ]
     }
@@ -1217,6 +3084,26 @@
           "japanese": "田中さんは来月結婚するらしいです。",
           "reading": "たなかさんは らいげつ けっこんする らしいです。",
           "meaning": "Nghe nói anh Tanaka sẽ kết hôn vào tháng sau."
+        },
+        {
+          "japanese": "あの映画はとてもおもしろいらしいです。",
+          "reading": "あの えいがは とても おもしろい らしいです。",
+          "meaning": "Nghe nói bộ phim đó rất thú vị."
+        },
+        {
+          "japanese": "今年の冬は寒いらしいです。",
+          "reading": "ことしの ふゆは さむい らしいです。",
+          "meaning": "Nghe nói mùa đông năm nay sẽ lạnh."
+        },
+        {
+          "japanese": "彼はもう会社を辞めたらしいです。",
+          "reading": "かれは もう かいしゃを やめた らしいです。",
+          "meaning": "Nghe nói anh ấy đã nghỉ việc rồi."
+        },
+        {
+          "japanese": "この辺は昔、静かだったらしいです。",
+          "reading": "この へんは むかし、しずかだった らしいです。",
+          "meaning": "Nghe nói khu này ngày xưa yên tĩnh."
         }
       ]
     },
@@ -1229,6 +3116,26 @@
           "japanese": "ニュースによると、地震があったそうです。",
           "reading": "ニュースに よると、じしんが あった そうです。",
           "meaning": "Theo tin tức thì nghe nói đã có động đất."
+        },
+        {
+          "japanese": "新聞によると、来年、景気がよくなるそうです。",
+          "reading": "しんぶんに よると、らいねん、けいきが よく なる そうです。",
+          "meaning": "Theo báo thì nghe nói năm sau kinh tế sẽ tốt hơn."
+        },
+        {
+          "japanese": "天気予報によると、台風が来るそうです。",
+          "reading": "てんきよほうに よると、たいふうが くる そうです。",
+          "meaning": "Theo dự báo thì nghe nói bão sắp đến."
+        },
+        {
+          "japanese": "田中さんの話によると、その店はもう閉まったそうです。",
+          "reading": "たなかさんの はなしに よると、その みせは もう しまった そうです。",
+          "meaning": "Theo lời anh Tanaka thì nghe nói cửa hàng đó đã đóng cửa rồi."
+        },
+        {
+          "japanese": "調査によると、若者の読書量が減っているそうです。",
+          "reading": "ちょうさに よると、わかものの どくしょりょうが へって いる そうです。",
+          "meaning": "Theo khảo sát thì nghe nói lượng đọc sách của giới trẻ đang giảm."
         }
       ]
     }
@@ -1243,6 +3150,26 @@
           "japanese": "健康のために毎朝走っています。",
           "reading": "けんこうの ために まいあさ はしって います。",
           "meaning": "Tôi chạy bộ mỗi sáng vì sức khỏe."
+        },
+        {
+          "japanese": "家族のために働いています。",
+          "reading": "かぞくの ために はたらいて います。",
+          "meaning": "Tôi làm việc vì gia đình."
+        },
+        {
+          "japanese": "台風のために、電車が止まりました。",
+          "reading": "たいふうの ために、でんしゃが とまりました。",
+          "meaning": "Vì bão nên tàu điện đã dừng chạy."
+        },
+        {
+          "japanese": "留学するために、お金をためています。",
+          "reading": "りゅうがくする ために、おかねを ためて います。",
+          "meaning": "Tôi đang để dành tiền để đi du học."
+        },
+        {
+          "japanese": "試験に合格するために、毎日勉強しています。",
+          "reading": "しけんに ごうかくする ために、まいにち べんきょうして います。",
+          "meaning": "Tôi học mỗi ngày để thi đậu."
         }
       ]
     },
@@ -1255,6 +3182,26 @@
           "japanese": "忘れないように、メモします。",
           "reading": "わすれない ように、メモします。",
           "meaning": "Tôi ghi chú lại để không quên."
+        },
+        {
+          "japanese": "遅れないように、早く出かけます。",
+          "reading": "おくれない ように、はやく でかけます。",
+          "meaning": "Tôi đi sớm để không bị trễ."
+        },
+        {
+          "japanese": "風邪をひかないように、気をつけています。",
+          "reading": "かぜを ひかない ように、きを つけて います。",
+          "meaning": "Tôi cẩn thận để không bị cảm."
+        },
+        {
+          "japanese": "みんなに聞こえるように、大きい声で話しました。",
+          "reading": "みんなに きこえる ように、おおきい こえで はなしました。",
+          "meaning": "Tôi nói to để mọi người nghe được."
+        },
+        {
+          "japanese": "子どもにも分かるように、簡単に説明しました。",
+          "reading": "こどもにも わかる ように、かんたんに せつめいしました。",
+          "meaning": "Tôi giải thích đơn giản để trẻ con cũng hiểu được."
         }
       ]
     }
@@ -1269,6 +3216,26 @@
           "japanese": "先生は今、研究室にいらっしゃいます。",
           "reading": "せんせいは いま、けんきゅうしつに いらっしゃいます。",
           "meaning": "Thầy giáo hiện đang ở phòng nghiên cứu."
+        },
+        {
+          "japanese": "お名前は何とおっしゃいますか。",
+          "reading": "おなまえは なんと おっしゃいますか。",
+          "meaning": "Quý khách tên là gì ạ?"
+        },
+        {
+          "japanese": "何を召し上がりますか。",
+          "reading": "なにを めしあがりますか。",
+          "meaning": "Quý khách dùng món gì ạ?"
+        },
+        {
+          "japanese": "社長はもうご存じです。",
+          "reading": "しゃちょうは もう ごぞんじです。",
+          "meaning": "Giám đốc đã biết rồi."
+        },
+        {
+          "japanese": "こちらをご覧になりますか。",
+          "reading": "こちらを ごらんに なりますか。",
+          "meaning": "Quý khách xem cái này chứ ạ?"
         }
       ]
     },
@@ -1281,6 +3248,26 @@
           "japanese": "はじめまして、田中と申します。",
           "reading": "はじめまして、たなかと もうします。",
           "meaning": "Rất hân hạnh, tôi tên là Tanaka."
+        },
+        {
+          "japanese": "わたしはグエンと言います。",
+          "reading": "わたしは グエンと いいます。",
+          "meaning": "Tôi tên là Nguyễn."
+        },
+        {
+          "japanese": "この花は何と言いますか。",
+          "reading": "この はなは なんと いいますか。",
+          "meaning": "Bông hoa này gọi là gì?"
+        },
+        {
+          "japanese": "彼はミンさんと言います。",
+          "reading": "かれは ミンさんと いいます。",
+          "meaning": "Anh ấy tên là Minh."
+        },
+        {
+          "japanese": "この料理はフォーと言います。",
+          "reading": "この りょうりは フォーと いいます。",
+          "meaning": "Món ăn này gọi là phở."
         }
       ]
     }
@@ -1295,6 +3282,26 @@
           "japanese": "わたしは田中と申します。あした3時に伺います。",
           "reading": "わたしは たなかと もうします。あした さんじに うかがいます。",
           "meaning": "Tôi tên là Tanaka. Ngày mai tôi sẽ đến thăm lúc 3 giờ."
+        },
+        {
+          "japanese": "会議室におります。",
+          "reading": "かいぎしつに おります。",
+          "meaning": "Tôi đang ở phòng họp."
+        },
+        {
+          "japanese": "資料はわたしがいたします。",
+          "reading": "しりょうは わたしが いたします。",
+          "meaning": "Tài liệu để tôi làm."
+        },
+        {
+          "japanese": "その件は存じております。",
+          "reading": "その けんは ぞんじて おります。",
+          "meaning": "Tôi đã biết về việc đó."
+        },
+        {
+          "japanese": "明日、御社に参ります。",
+          "reading": "あした、おんしゃに まいります。",
+          "meaning": "Ngày mai tôi sẽ đến quý công ty."
         }
       ]
     },
@@ -1302,11 +3309,32 @@
       "title": "Ôn tập kính ngữ: 尊敬語・謙譲語・丁寧語",
       "structure": "尊敬語（đối phương）／謙譲語（bản thân）／丁寧語（です・ます）",
       "explanation": "Ba loại kính ngữ tổng hợp: nâng cao hành động người khác, hạ thấp hành động bản thân, và lời nói lịch sự chung.",
+      "note": "Không trộn lẫn tôn kính ngữ và khiêm nhường ngữ cho cùng một chủ thể — tôn kính ngữ dùng cho người khác, khiêm nhường ngữ dùng cho bản thân mình.",
       "examples": [
         {
           "japanese": "お荷物をお持ちいたします。",
           "reading": "おにもつを おもち いたします。",
           "meaning": "Để tôi mang hành lý giúp quý khách."
+        },
+        {
+          "japanese": "先生がいらっしゃいました。",
+          "reading": "せんせいが いらっしゃいました。",
+          "meaning": "Thầy giáo đã đến."
+        },
+        {
+          "japanese": "わたしがご案内いたします。",
+          "reading": "わたしが ごあんない いたします。",
+          "meaning": "Để tôi hướng dẫn quý khách."
+        },
+        {
+          "japanese": "部長はもうお帰りになりました。",
+          "reading": "ぶちょうは もう おかえりに なりました。",
+          "meaning": "Trưởng phòng đã về rồi."
+        },
+        {
+          "japanese": "資料を拝見しました。",
+          "reading": "しりょうを はいけんしました。",
+          "meaning": "Tôi đã xem tài liệu rồi."
         }
       ]
     }

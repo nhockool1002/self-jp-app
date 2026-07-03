@@ -31,6 +31,7 @@ function App() {
         {mode === "vocab" && <VocabMode compact={isCompact} />}
         {mode === "grammar" && <GrammarMode compact={isCompact} />}
       </main>
+      {!isCompact && <footer className="app-footer">NhutNguyen © 2026</footer>}
     </div>
   );
 }

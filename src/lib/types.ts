@@ -50,6 +50,7 @@ export interface GrammarPoint {
   structure: string;
   explanation: string;
   examples: GrammarExample[];
+  note?: string;
 }
 
 export type GrammarDataset = Record<string, GrammarPoint[]>;
