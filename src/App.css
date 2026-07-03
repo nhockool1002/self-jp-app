@@ -71,6 +71,12 @@ button:hover {
   gap: 6px;
 }
 
+.main-menu-tools {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
 .tab {
   background: transparent;
   box-shadow: none;
@@ -516,6 +522,93 @@ button.primary {
 
 .grammar-example-meaning {
   font-size: 0.9em;
+}
+
+.alphabet-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.alphabet-section-title {
+  margin: 0 0 8px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.alphabet-grid {
+  display: grid;
+  gap: 6px;
+}
+
+.alphabet-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px 4px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  min-height: 56px;
+}
+
+.alphabet-cell-empty {
+  box-shadow: none;
+  background: transparent;
+}
+
+.alphabet-cell-char {
+  font-size: 1.3rem;
+}
+
+.alphabet-cell-romaji {
+  font-size: 0.68em;
+  color: #888;
+}
+
+.about-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+  padding: 28px 32px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.about-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.about-version {
+  font-size: 0.85em;
+  color: #888;
+}
+
+.about-desc {
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+.about-row {
+  font-size: 0.88em;
+  text-align: left;
+}
+
+.about-note {
+  font-size: 0.78em;
+  color: #999;
+  line-height: 1.4;
+  margin-top: 10px;
 }
 
 /* The app always renders in light mode for maximum contrast/readability,

@@ -6,6 +6,7 @@ const MODES: { id: AppMode; label: string }[] = [
   { id: "kanji", label: "Kanji" },
   { id: "vocab", label: "Từ vựng" },
   { id: "grammar", label: "Ngữ pháp" },
+  { id: "alphabet", label: "Alphabet" },
 ];
 
 export function MainMenu() {
@@ -26,9 +27,18 @@ export function MainMenu() {
           </button>
         ))}
       </div>
-      <button className="compact-toggle" onClick={() => setCompact(true)} title="Chế độ thu nhỏ">
-        ⤡
-      </button>
+      <div className="main-menu-tools">
+        <button
+          className={mode === "about" ? "tab tab-active" : "tab"}
+          onClick={() => setMode("about")}
+          title="Giới thiệu"
+        >
+          ⓘ
+        </button>
+        <button className="compact-toggle" onClick={() => setCompact(true)} title="Chế độ thu nhỏ">
+          ⤡
+        </button>
+      </div>
     </nav>
   );
 }
