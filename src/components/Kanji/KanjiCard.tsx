@@ -1,4 +1,5 @@
 import type { KanjiEntry } from "../../lib/types";
+import { StrokeOrderDiagram } from "../Strokes/StrokeOrderDiagram";
 
 interface KanjiCardProps {
   entry: KanjiEntry;
@@ -37,6 +38,7 @@ export function KanjiCard({ entry, isStudied, onPlayAudio, onMarkStudied, compac
           </button>
           {entry.hanviet && <div className="kanji-hanviet">Hán Việt: {entry.hanviet}</div>}
           <div className="kanji-jlpt-badge">{entry.jlpt}</div>
+          <StrokeOrderDiagram char={entry.kanji} size={120} />
         </div>
 
         <div className="kanji-detail">

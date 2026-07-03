@@ -119,6 +119,32 @@ button:hover {
   text-align: center;
 }
 
+.stroke-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.stroke-diagram-svg {
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.stroke-diagram-number {
+  font-size: 7px;
+  fill: #a8a8a8;
+}
+
+.stroke-diagram-replay {
+  padding: 0.2em 0.6em;
+  font-size: 0.8em;
+  background: transparent;
+  box-shadow: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
 /* Shared layout: a slim controls bar tucked in the corner, and a big stage below it */
 
 .mode-page {
