@@ -59,11 +59,12 @@ Tauri doesn't cross-compile installers — a Windows build must run on Windows (
 
 #### Building via CI (no Windows machine needed)
 
-[.github/workflows/build-windows.yml](.github/workflows/build-windows.yml) builds the `.msi`/`.exe` on a `windows-latest` GitHub Actions runner. Once this repo is pushed to GitHub:
-- Trigger it manually from the Actions tab (`workflow_dispatch`), or
-- Push a tag matching `v*` (e.g. `git tag v0.1.0 && git push --tags`).
+[.github/workflows/build.yml](.github/workflows/build.yml) builds the app on both `macos-latest` and `windows-latest` GitHub Actions runners (Tauri can't cross-compile installers, so each platform builds natively). It runs on:
+- Every push to `main`,
+- A manual trigger from the Actions tab (`workflow_dispatch`), or
+- A tag matching `v*` (e.g. `git tag v0.1.0 && git push --tags`).
 
-The installers are uploaded as a workflow artifact (`self-jp-app-windows`), not published as a release automatically.
+The `.app`/`.dmg` and `.msi`/`.exe` are uploaded as workflow artifacts (`self-jp-app-macos`, `self-jp-app-windows`), not published as a release automatically.
 
 ## Known MVP gaps / fast-follows
 
