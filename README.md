@@ -55,7 +55,15 @@ npm run tauri dev
 
 Production build: `npm run tauri build` → `.msi` and/or NSIS `.exe` installer under `src-tauri\target\release\bundle\`.
 
-Tauri doesn't cross-compile installers — a Windows build must run on Windows (or CI); this hasn't been verified on Windows yet.
+Tauri doesn't cross-compile installers — a Windows build must run on Windows (or CI); this hasn't been verified on a physical Windows machine yet.
+
+#### Building via CI (no Windows machine needed)
+
+[.github/workflows/build-windows.yml](.github/workflows/build-windows.yml) builds the `.msi`/`.exe` on a `windows-latest` GitHub Actions runner. Once this repo is pushed to GitHub:
+- Trigger it manually from the Actions tab (`workflow_dispatch`), or
+- Push a tag matching `v*` (e.g. `git tag v0.1.0 && git push --tags`).
+
+The installers are uploaded as a workflow artifact (`self-jp-app-windows`), not published as a release automatically.
 
 ## Known MVP gaps / fast-follows
 
