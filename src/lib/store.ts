@@ -38,12 +38,18 @@ export const useAppStore = create<AppState>((set, get) => ({
   progress: DEFAULT_PROGRESS,
 
   hydrate: async () => {
-    const [settings, progress] = await Promise.all([loadSettings(), loadProgress()]);
-    set({
-      settings: settings ?? DEFAULT_SETTINGS,
-      progress: progress ?? DEFAULT_PROGRESS,
-      hydrated: true,
-    });
+    try {
+      const [settings, progress] = await Promise.all([loadSettings(), loadProgress()]);
+      set({
+        settings: settings ?? DEFAULT_SETTINGS,
+        progress: progress ?? DEFAULT_PROGRESS,
+        hydrated: true,
+      });
+    } catch {
+      // Persisted store unavailable (e.g. running outside Tauri) — fall back
+      // to in-memory defaults rather than leaving the app stuck on "loading".
+      set({ hydrated: true });
+    }
   },
 
   setMode: (mode) => set({ mode }),

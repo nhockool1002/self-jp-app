@@ -115,7 +115,7 @@ button:hover {
 .mode-page {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 16px;
   width: 100%;
   min-height: 0;
 }
@@ -124,31 +124,33 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 6px 12px;
+  flex-shrink: 0;
+  gap: 4px 8px;
   flex-wrap: wrap;
-  padding: 6px 10px;
-  border-radius: 10px;
-  background: rgba(0, 0, 0, 0.04);
-  font-size: 0.82em;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.035);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  font-size: 0.75em;
 }
 
 .control-divider {
   width: 1px;
   align-self: stretch;
   background: rgba(0, 0, 0, 0.12);
-  margin: 2px 2px;
+  margin: 1px;
 }
 
 .mode-controls-bar button {
-  padding: 0.3em 0.7em;
+  padding: 0.2em 0.55em;
   font-size: 0.95em;
 }
 
 .control-select,
 .field-compact select,
 .field-compact input {
-  padding: 0.25em 0.45em;
-  border-radius: 6px;
+  padding: 0.15em 0.35em;
+  border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   font-size: 0.95em;
   background: #fff;
@@ -157,11 +159,11 @@ button:hover {
 .field-compact {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 4px;
 }
 
 .field-compact input {
-  width: 48px;
+  width: 40px;
 }
 
 .mode-stage {
@@ -244,7 +246,7 @@ button.primary {
 }
 
 .kanji-level-picker .tab {
-  padding: 0.3em 0.65em;
+  padding: 0.2em 0.5em;
   font-size: 0.95em;
 }
 
@@ -433,58 +435,6 @@ button.primary {
   font-size: 0.9em;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    color: #f6f6f6;
-    background-color: #2f2f2f;
-  }
-
-  button {
-    color: #ffffff;
-    background-color: #0f0f0f98;
-  }
-
-  .main-menu {
-    border-bottom-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .control-select,
-  .field-compact select,
-  .field-compact input {
-    border-color: rgba(255, 255, 255, 0.2);
-    background: #1f1f1f;
-    color: #fff;
-  }
-
-  .mode-controls-bar {
-    background: rgba(255, 255, 255, 0.06);
-  }
-
-  .control-divider {
-    background: rgba(255, 255, 255, 0.15);
-  }
-
-  .kana-card,
-  .kanji-card,
-  .vocab-word-card,
-  .grammar-card {
-    background: #1f1f1f;
-  }
-
-  .grammar-example {
-    border-top-color: rgba(255, 255, 255, 0.1);
-  }
-
-  .vocab-kana {
-    color: #aaa;
-  }
-
-  .kana-romaji,
-  .kana-progress,
-  .progress-count,
-  .kanji-meaning,
-  .kanji-hanviet,
-  .grammar-example-reading {
-    color: #aaa;
-  }
-}
+/* The app always renders in light mode for maximum contrast/readability,
+   regardless of OS theme — the compact floating bubble is the one exception
+   (kept dark/translucent so it stays unobtrusive over other windows). */
