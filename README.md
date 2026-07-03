@@ -82,9 +82,21 @@ Production build: `npm run tauri build` → `.deb` and/or `.AppImage` under `src
 
 The `.app`/`.dmg`, `.msi`/`.exe`, and `.deb`/`.AppImage` are always uploaded as workflow artifacts (`self-jp-app-macos`, `self-jp-app-windows`, `self-jp-app-linux`, under the run's **Artifacts** section, expire after 90 days). Pushing a **`v*` tag** additionally publishes those same installers as assets on a GitHub Release for that tag (body copied from [RELEASE_NOTES.md](RELEASE_NOTES.md)) — plain pushes to `main` or manual runs do not create a release, to avoid a release per commit.
 
+### Mobile (iOS & Android)
+
+[.github/workflows/mobile.yml](.github/workflows/mobile.yml) builds an **unsigned** iOS app and an unsigned **debug** Android APK, on a `v*` tag or manual trigger only (not every push, since mobile toolchain setup is newer/heavier). No Apple Developer account or Android keystore is configured yet:
+
+- **iOS** (`macos-latest` runner): `tauri ios build --no-sign` — verifies the app still compiles/archives for iOS, but the result can't be installed on a real device without a signing certificate + provisioning profile.
+- **Android** (`ubuntu-latest` runner): `tauri android build --apk --debug` — a debug APK, auto-signed by Gradle's debug keystore, directly installable on any device/emulator with "install unknown apps" allowed.
+
+Both are uploaded as workflow artifacts (`self-jp-app-ios-unsigned`, `self-jp-app-android-debug`), not attached to GitHub Releases yet. To get real, distributable builds: add an `APPLE_DEVELOPMENT_TEAM` secret + signing certificate for iOS, or a release keystore for Android, then drop `--no-sign`/`--debug` in the workflow.
+
+`src-tauri/gen/` (the generated Xcode/Android Studio projects) is gitignored and regenerated fresh by `tauri ios/android init` on every run, both locally and in CI.
+
 ## Known MVP gaps / fast-follows
 
 - Bundled kana audio (currently TTS-only pending a properly licensed dataset).
 - Full example sentences (not just isolated example words) for kanji.
 - Grammar content covers 1-2 core points per lesson, not exhaustive textbook coverage.
 - Windows build verification (needs a Windows machine or CI).
+- iOS/Android builds are unsigned/debug-only (see [Mobile](#mobile-ios--android) above) — need Apple/Android signing credentials for real distribution.

@@ -1,0 +1,112 @@
+name: Mobile
+
+# Builds the iOS and Android versions of the app. These are separate from
+# build.yml because they need a very different toolchain per platform and
+# produce UNSIGNED builds (no Apple Developer account or Android keystore
+# is configured yet):
+#   - iOS:     `tauri ios build --no-sign` — compiles and archives, but the
+#              result can't be installed on a real device without a dev
+#              team + certificate. Good for verifying the app still builds
+#              for iOS; not distributable yet.
+#   - Android: `tauri android build --apk --debug` — a debug APK, auto-signed
+#              by Gradle's built-in debug keystore. This one IS directly
+#              installable on any Android device/emulator with "install
+#              unknown apps" allowed.
+#
+# To get real, distributable builds later:
+#   - iOS: add an Apple Developer Team ID as the APPLE_DEVELOPMENT_TEAM repo
+#     secret (plus a signing certificate + provisioning profile in the
+#     keychain), then drop --no-sign.
+#   - Android: add a release signingConfig (keystore + passwords as repo
+#     secrets) to src-tauri/gen/android, then build without --debug.
+#
+# Only runs on workflow_dispatch or a v* tag (not every push to main) since
+# mobile toolchain setup is heavier and newer than the desktop pipeline.
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+jobs:
+  ios:
+    name: Build (iOS)
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-apple-ios,aarch64-apple-ios-sim,x86_64-apple-ios
+
+      - name: Install frontend dependencies
+        run: npm install
+
+      - name: Init iOS project
+        run: npm run tauri ios init -- --ci
+
+      - name: Build unsigned iOS app
+        run: npm run tauri ios build -- --ci --no-sign
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: self-jp-app-ios-unsigned
+          path: |
+            src-tauri/gen/apple/build/**/*.ipa
+            src-tauri/gen/apple/build/**/*.app
+          if-no-files-found: warn
+
+  android:
+    name: Build (Android)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: aarch64-linux-android,armv7-linux-androideabi,i686-linux-android,x86_64-linux-android
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: zulu
+          java-version: "17"
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Setup Android NDK
+        id: setup-ndk
+        uses: nttld/setup-ndk@v1
+        with:
+          ndk-version: r26d
+          add-to-path: false
+
+      - name: Set NDK env vars
+        run: |
+          echo "NDK_HOME=${{ steps.setup-ndk.outputs.ndk-path }}" >> "$GITHUB_ENV"
+          echo "ANDROID_NDK_HOME=${{ steps.setup-ndk.outputs.ndk-path }}" >> "$GITHUB_ENV"
+
+      - name: Install frontend dependencies
+        run: npm install
+
+      - name: Init Android project
+        run: npm run tauri android init -- --ci
+
+      - name: Build unsigned debug APK
+        run: npm run tauri android build -- --ci --apk --debug
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: self-jp-app-android-debug
+          path: src-tauri/gen/android/app/build/outputs/apk/**/*.apk
+          if-no-files-found: warn

@@ -23,3 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 .claude/
+
+# Tauri mobile: generated Xcode/Android Studio projects, regenerated fresh
+# by `tauri ios/android init` (also done automatically in CI, see
+# .github/workflows/mobile.yml)
+src-tauri/gen/
