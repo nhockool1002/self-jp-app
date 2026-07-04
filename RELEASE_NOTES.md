@@ -42,6 +42,8 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 
 ## Fixes since initial implementation
 
+- **Mobile**: fixed the layout overlapping the notch/Dynamic Island (iOS) and status-bar cutout (Android) — the app now insets itself using `env(safe-area-inset-*)` on all four sides
+- **Mobile**: added a branded splash/intro screen shown while the app loads on startup, instead of a plain "Đang tải..." text flash
 - Kana mode no longer auto-plays audio on every card change — audio now only plays on click, matching Kanji/Vocab/Grammar behavior
 - Fixed a crash (infinite render loop) when opening Kanji mode, caused by a zustand selector that allocated a new object on every render
 - Fixed the Kanji card visually overlapping the controls bar on smaller windows, by redesigning it as two columns (also uses ~87% of window width instead of ~62%)
