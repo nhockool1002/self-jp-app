@@ -128,6 +128,24 @@ button:hover {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+.topbar-brand {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.topbar-logo {
+  width: 26px;
+  height: 26px;
+  border-radius: 8px;
+}
+
+.bottom-nav {
+  display: none;
+}
+
 .main-menu-tabs {
   display: flex;
   gap: 6px;
@@ -689,3 +707,143 @@ button.primary {
 /* The app always renders in light mode for maximum contrast/readability,
    regardless of OS theme — the compact floating bubble is the one exception
    (kept dark/translucent so it stays unobtrusive over other windows). */
+
+/* ---------------------------------------------------------------------
+   Mobile layout (phones — iOS/Android): swaps the desktop top-tab bar
+   for a fixed bottom tab bar (thumb-reachable, matches native app
+   conventions) and gives the shell a softer, more modern visual style.
+   Scoped to this breakpoint so the Tauri desktop window is unaffected.
+   --------------------------------------------------------------------- */
+@media (max-width: 700px) {
+  body {
+    background: linear-gradient(180deg, #f2f5fb 0%, #e9edf7 100%);
+  }
+
+  .app {
+    background: transparent;
+  }
+
+  .main-menu {
+    justify-content: center;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .topbar-brand {
+    display: flex;
+  }
+
+  .main-menu-tabs,
+  .main-menu-tools {
+    display: none;
+  }
+
+  .mode-area {
+    padding: 12px 14px calc(84px + env(safe-area-inset-bottom));
+  }
+
+  .app-footer {
+    display: none;
+  }
+
+  .bottom-nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    position: fixed;
+    left: env(safe-area-inset-left);
+    right: env(safe-area-inset-right);
+    bottom: 0;
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom));
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 0 -4px 20px rgba(30, 40, 80, 0.08);
+    z-index: 30;
+  }
+
+  .bottom-nav-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    padding: 6px 2px;
+    border-radius: 14px;
+    background: transparent;
+    box-shadow: none;
+    color: #767a86;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.1s ease;
+  }
+
+  .bottom-nav-item:hover {
+    border-color: transparent;
+  }
+
+  .bottom-nav-item:active {
+    transform: scale(0.94);
+  }
+
+  .bottom-nav-icon {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+
+  .bottom-nav-label {
+    font-size: 0.66rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  .bottom-nav-item-active {
+    color: #396cd8;
+    background: rgba(57, 108, 216, 0.1);
+  }
+
+  /* Softer, more tactile cards — brand-tinted shadow instead of flat black */
+  .kana-card,
+  .kanji-card,
+  .about-card {
+    border-radius: 26px;
+    box-shadow: 0 10px 34px rgba(40, 70, 160, 0.14), 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+
+  /* The two-column Kanji layout needs desktop width to breathe — stack it
+     on phones so the detail column isn't squeezed to ~120px. */
+  .kanji-card-columns {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .kanji-card-left {
+    flex: none;
+  }
+
+  .vocab-word-card,
+  .grammar-card,
+  .alphabet-cell {
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(40, 70, 160, 0.1);
+  }
+
+  .mode-controls-bar {
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.7);
+  }
+
+  button {
+    transition: transform 0.1s ease;
+  }
+
+  button:active {
+    transform: scale(0.96);
+  }
+
+  button.primary {
+    background: linear-gradient(135deg, #4b7bef, #396cd8);
+  }
+}
