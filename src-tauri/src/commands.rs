@@ -11,17 +11,24 @@ pub fn toggle_compact_window(window: tauri::Window, compact: bool) -> Result<(),
         .set_size(LogicalSize::new(w, h))
         .map_err(|e| e.to_string())?;
     window
-        .set_always_on_top(compact)
-        .map_err(|e| e.to_string())?;
-    window
-        .set_decorations(!compact)
-        .map_err(|e| e.to_string())?;
-    window
         .set_resizable(!compact)
         .map_err(|e| e.to_string())?;
-    window
-        .set_skip_taskbar(compact)
-        .map_err(|e| e.to_string())?;
+
+    // These window chrome APIs only exist on desktop targets — iOS/Android
+    // windows are always fullscreen/undecorated, so there's nothing to toggle.
+    #[cfg(desktop)]
+    {
+        window
+            .set_always_on_top(compact)
+            .map_err(|e| e.to_string())?;
+        window
+            .set_decorations(!compact)
+            .map_err(|e| e.to_string())?;
+        window
+            .set_skip_taskbar(compact)
+            .map_err(|e| e.to_string())?;
+    }
+
     Ok(())
 }
 
