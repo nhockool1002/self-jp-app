@@ -44,12 +44,74 @@ button:hover {
   align-items: center;
   justify-content: center;
   height: 100vh;
+  height: 100dvh;
+}
+
+.splash-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100vh;
+  height: 100dvh;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+  background: linear-gradient(160deg, #396cd8, #1f3f8a);
+  color: #fff;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.splash-screen-fade {
+  opacity: 0;
+}
+
+.splash-logo {
+  width: 96px;
+  height: 96px;
+  border-radius: 22px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.splash-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.splash-subtitle {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+.splash-spinner {
+  margin-top: 12px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #fff;
+  animation: splash-spin 0.8s linear infinite;
+}
+
+@keyframes splash-spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .app {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  height: 100dvh;
+  /* Keep content clear of the notch/Dynamic Island and home-indicator area
+     on iOS/Android — safe-area-inset-* is 0 on desktop, so this is a no-op
+     there. Requires viewport-fit=cover in index.html to be non-zero. */
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
 }
 
 .app-compact {
