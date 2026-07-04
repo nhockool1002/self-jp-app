@@ -89,7 +89,7 @@ The `.app`/`.dmg`, `.msi`/`.exe`, and `.deb`/`.AppImage` are always uploaded as 
 - **iOS** (`macos-latest` runner): `tauri ios build --no-sign` — verifies the app still compiles/archives for iOS, but the result can't be installed on a real device without a signing certificate + provisioning profile.
 - **Android** (`ubuntu-latest` runner): `tauri android build --apk --debug` — a debug APK, auto-signed by Gradle's debug keystore, directly installable on any device/emulator with "install unknown apps" allowed.
 
-Both are uploaded as workflow artifacts (`self-jp-app-ios-unsigned`, `self-jp-app-android-debug`), not attached to GitHub Releases yet. To get real, distributable builds: add an `APPLE_DEVELOPMENT_TEAM` secret + signing certificate for iOS, or a release keystore for Android, then drop `--no-sign`/`--debug` in the workflow.
+Both are uploaded as workflow artifacts (`self-jp-app-ios-unsigned`, `self-jp-app-android-debug`) on every run, and — like the desktop builds — additionally attached to the GitHub Release when triggered by a `v*` tag. To get real, distributable builds: add an `APPLE_DEVELOPMENT_TEAM` secret + signing certificate for iOS, or a release keystore for Android, then drop `--no-sign`/`--debug` in the workflow.
 
 `src-tauri/gen/` (the generated Xcode/Android Studio projects) is gitignored and regenerated fresh by `tauri ios/android init` on every run, both locally and in CI.
 

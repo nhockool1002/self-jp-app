@@ -22,11 +22,16 @@ name: Mobile
 #
 # Only runs on workflow_dispatch or a v* tag (not every push to main) since
 # mobile toolchain setup is heavier and newer than the desktop pipeline.
+# Pushing a v* tag also attaches both builds to that tag's GitHub Release,
+# same as the desktop installers in build.yml.
 on:
   push:
     tags:
       - "v*"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   ios:
@@ -60,6 +65,13 @@ jobs:
             src-tauri/gen/apple/build/**/*.ipa
             src-tauri/gen/apple/build/**/*.app
           if-no-files-found: warn
+
+      - name: Publish to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: src-tauri/gen/apple/build/**/*.ipa
+          fail_on_unmatched_files: false
 
   android:
     name: Build (Android)
@@ -110,3 +122,10 @@ jobs:
           name: self-jp-app-android-debug
           path: src-tauri/gen/android/app/build/outputs/apk/**/*.apk
           if-no-files-found: warn
+
+      - name: Publish to GitHub Release
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: src-tauri/gen/android/app/build/outputs/apk/**/*.apk
+          fail_on_unmatched_files: true
