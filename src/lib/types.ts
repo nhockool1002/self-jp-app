@@ -1,4 +1,4 @@
-export type AppMode = "kana" | "kanji" | "vocab" | "grammar" | "about";
+export type AppMode = "kana" | "kanji" | "vocab" | "grammar" | "radicals" | "about";
 
 export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 
@@ -74,4 +74,13 @@ export interface ProgressRecord {
 
 export interface AppProgress {
   kanji: ProgressRecord[];
+}
+
+export interface RadicalEntry {
+  no: number;
+  char: string;
+  strokes: number;
+  hanviet: string;
+  meaning: string;
+  variants: string | null;
 }

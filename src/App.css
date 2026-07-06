@@ -664,6 +664,45 @@ button.primary {
   color: #888;
 }
 
+.radicals-table {
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.radicals-table th,
+.radicals-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.radicals-table th {
+  font-size: 0.8em;
+  color: #666;
+  font-weight: 600;
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.radicals-no {
+  color: #999;
+  font-size: 0.85em;
+}
+
+.radicals-char {
+  font-size: 1.4rem;
+}
+
+.radicals-variants {
+  font-size: 0.75em;
+  color: #888;
+}
+
 .about-card {
   display: flex;
   flex-direction: column;
