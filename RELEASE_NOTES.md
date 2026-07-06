@@ -1,16 +1,17 @@
-# Self JP App — v0.1.0 Release Notes
+# Self JP App — v0.1.2 Release Notes
 
-**Date:** 2026-07-03
-**Platform:** macOS (Apple Silicon, built & verified) · Windows & Linux (build pipeline ready via CI, not yet verified on physical hardware — see [README.md](README.md#development))
+**Date:** 2026-07-06
+**Platform:** macOS (Apple Silicon, built & verified) · Windows & Linux (built via CI, not yet verified on physical hardware) · iOS & Android (unsigned/debug builds via CI — see [README.md](README.md#mobile-ios--android))
 
-First release. A Tauri v2 + React desktop app for daily Japanese study, built for Vietnamese speakers — all learning content and UI text is in Vietnamese.
+A Tauri v2 + React desktop app for daily Japanese study, built for Vietnamese speakers — all learning content and UI text is in Vietnamese.
 
 ## Highlights
 
-- **4 learning modes**: Kana, Kanji (N5–N1), Từ vựng (Minna no Nihongo), Ngữ pháp (grammar)
+- **5 learning modes**: Kana, Kanji (N5–N1), Từ vựng (Minna no Nihongo), Ngữ pháp (grammar), Bộ thủ (214 Kangxi radicals)
 - **Fully Vietnamese**: Hán-Việt kanji readings, hand-translated vocabulary, original grammar explanations
 - **Animated stroke order** for every kana and kanji in the app
 - **Compact floating window** for studying alongside other work
+- **Mobile builds**: unsigned iOS + debug Android via CI, with a branded splash screen and safe-area-aware layout
 
 ## Modes
 
@@ -25,6 +26,9 @@ The complete Minna no Nihongo Shokyū I & II vocabulary — 2,692 words across 5
 
 ### Ngữ pháp (Grammar)
 101 grammar points across all 50 MNN lessons, each with its structure pattern, a Vietnamese explanation, 5 example sentences with audio, and a usage note for points with a common pitfall or exception.
+
+### Bộ thủ (Radicals)
+Reference table of all 214 Kangxi radicals, with Hán-Việt name and Vietnamese meaning for each, filterable by stroke count (1–17 nét).
 
 ### About
 App name, version, author, and tech stack, via the ⓘ icon.
@@ -42,6 +46,8 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 
 ## Fixes since initial implementation
 
+- **New**: Bộ thủ (radicals) mode — full 214-radical reference table with stroke-count filter
+- **New**: CI now builds an unsigned iOS app and a debug Android APK on every tagged release (see [README.md](README.md#mobile-ios--android))
 - **Mobile**: fixed the layout overlapping the notch/Dynamic Island (iOS) and status-bar cutout (Android) — the app now insets itself using `env(safe-area-inset-*)` on all four sides
 - **Mobile**: added a branded splash/intro screen shown while the app loads on startup, instead of a plain "Đang tải..." text flash
 - Kana mode no longer auto-plays audio on every card change — audio now only plays on click, matching Kanji/Vocab/Grammar behavior
@@ -62,4 +68,5 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 - **macOS**: `npm run tauri build` → `.app` + `.dmg` (see [README.md](README.md#macos))
 - **Windows**: `npm run tauri build` on a Windows machine → `.msi`/`.exe` (see [README.md](README.md#windows))
 - **Linux**: `npm run tauri build` on a Linux machine → `.deb`/`.AppImage` (see [README.md](README.md#linux))
-- **CI**: [.github/workflows/build.yml](.github/workflows/build.yml) builds macOS, Windows, and Linux on every push to `main`, on manual trigger, or on a `v*` tag (see [README.md](README.md#building-via-ci-no-macoswindowslinux-machine-needed))
+- **CI (desktop)**: [.github/workflows/build.yml](.github/workflows/build.yml) builds macOS, Windows, and Linux on every push to `main`, on manual trigger, or on a `v*` tag (see [README.md](README.md#building-via-ci-no-macoswindowslinux-machine-needed))
+- **CI (mobile)**: [.github/workflows/mobile.yml](.github/workflows/mobile.yml) builds an unsigned iOS app and a debug Android APK on a `v*` tag or manual trigger (see [README.md](README.md#mobile-ios--android))
