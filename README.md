@@ -2,15 +2,14 @@
 
 A desktop app for daily Japanese study, built with [Tauri v2](https://tauri.app) + React + TypeScript. Single window with a mode switcher and a compact "bubble" window mode for studying alongside other work.
 
-The UI and all learning content (kanji meanings, vocabulary, grammar explanations) are in Vietnamese, aimed at Vietnamese speakers learning Japanese.
+The UI and all learning content (kanji meanings, vocabulary, grammar explanations) are in Vietnamese, aimed at Vietnamese speakers learning Japanese. Japanese text renders in the OS's native Japanese font (Hiragino Sans / Yu Gothic / Meiryo / Noto Sans JP, per platform — see `--font-jp` in [src/App.css](src/App.css)), kept separate from the Latin font used for Vietnamese so diacritics stay crisp.
 
 ## Modes
 
 - **Kana** — random Hiragana/Katakana flashcards (seion + dakuten + handakuten + yōon, 208 entries) with configurable session length and speed, TTS audio on click, animated stroke-order popover next to the audio button. A "📖 Bảng chữ cái" toggle (first control in the bar) swaps the flashcard view for the full gojuon reference chart (seion/dakuten/handakuten/yōon grid, Hiragana/Katakana toggle) in place.
-- **Kanji (N5–N1)** — daily kanji list sized by a configurable words-per-day setting, per-level browsing, Hán-Việt reading + Vietnamese meanings, example words (from the MNN vocab list, with Vietnamese meanings), animated stroke-order popover, daily progress tracking, TTS audio.
+- **Kanji (N5–N1)** — daily kanji list sized by a configurable words-per-day setting, per-level browsing, Hán-Việt reading + Vietnamese meanings, example words (from the MNN vocab list, with Vietnamese meanings), animated stroke-order popover, daily progress tracking, TTS audio. A "部 Bộ thủ" toggle in the controls bar swaps the kanji card for a full 214-radical reference chart (grouped 1–5 nét + "Nhiều nét", card grid with Hán-Việt name and meaning) in place.
 - **Từ vựng (Vocab)** — Minna no Nihongo Shokyū I & II vocabulary, browsable lesson by lesson (1–50), Vietnamese meanings, TTS audio.
 - **Ngữ pháp (Grammar)** — MNN grammar points by lesson (1–50), each with structure, Vietnamese explanation, 5 example sentences with audio, and a usage note where relevant.
-- **Bộ thủ (Radicals)** — reference table of all 214 Kangxi radicals, with Hán-Việt name and Vietnamese meaning for each, filterable by stroke count (1–17 nét).
 - **About** (ⓘ icon, top right) — app name, version, author, tech stack.
 
 ## Data sources

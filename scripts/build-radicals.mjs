@@ -86,6 +86,21 @@ const MEANING_VI = {
   211: "răng", 212: "rồng", 213: "rùa", 214: "ống sáo",
 };
 
+// The upstream variants field mixes in Mandarin pinyin annotations (e.g.
+// "乀(fu2), 乁(yi2)") and English left/right notes — strip the former and
+// translate the latter so nothing non-Vietnamese/Japanese leaks into the UI.
+function cleanVariants(raw) {
+  if (!raw) return null;
+  const cleaned = raw
+    .replace(/\([a-z]+\d\)/gi, "")
+    .replace(/\(right\)/i, "(bên phải)")
+    .replace(/\(left\)/i, "(bên trái)")
+    .replace(/\s+,/g, ",")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+  return cleaned || null;
+}
+
 async function main() {
   const res = await fetch(SOURCE_URL);
   if (!res.ok) throw new Error(`Failed to fetch radicals source: ${res.status}`);
@@ -101,7 +116,7 @@ async function main() {
       strokes: r.strokes,
       hanviet,
       meaning,
-      variants: r.variants || null,
+      variants: cleanVariants(r.variants),
     };
   });
 

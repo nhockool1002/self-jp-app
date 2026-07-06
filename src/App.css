@@ -1,5 +1,10 @@
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  /* Native Japanese UI fonts per platform, for kana/kanji text — kept
+     separate from the base font since Vietnamese diacritics render better
+     in the Latin stack above than in most CJK-oriented fonts. */
+  --font-jp: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic UI", "Yu Gothic", "Meiryo",
+    "Noto Sans JP", "MS PGothic", sans-serif;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -356,6 +361,7 @@ button.primary {
 }
 
 .kana-char {
+  font-family: var(--font-jp);
   font-size: clamp(6rem, 20vw, 14rem);
   line-height: 1;
 }
@@ -442,6 +448,7 @@ button.primary {
 }
 
 .kanji-char {
+  font-family: var(--font-jp);
   font-size: clamp(3.5rem, 9vw, 6.5rem);
   line-height: 1;
 }
@@ -476,6 +483,10 @@ button.primary {
 
 .kanji-detail-row {
   line-height: 1.4;
+}
+
+.jp-text {
+  font-family: var(--font-jp);
 }
 
 .kanji-examples {
@@ -520,10 +531,12 @@ button.primary {
 }
 
 .vocab-kanji {
+  font-family: var(--font-jp);
   font-size: 1.3rem;
 }
 
 .vocab-kana {
+  font-family: var(--font-jp);
   font-size: 0.9rem;
   color: #666;
 }
@@ -563,7 +576,7 @@ button.primary {
 }
 
 .grammar-structure {
-  font-family: ui-monospace, Menlo, monospace;
+  font-family: var(--font-jp);
   font-size: 0.9em;
   color: #396cd8;
 }
@@ -592,10 +605,12 @@ button.primary {
   display: flex;
   align-items: center;
   gap: 6px;
+  font-family: var(--font-jp);
   font-size: 1.1em;
 }
 
 .grammar-example-reading {
+  font-family: var(--font-jp);
   font-size: 0.85em;
   color: #666;
 }
@@ -656,6 +671,7 @@ button.primary {
 }
 
 .alphabet-cell-char {
+  font-family: var(--font-jp);
   font-size: 1.3rem;
 }
 
@@ -664,38 +680,94 @@ button.primary {
   color: #888;
 }
 
-.radicals-table {
+.radicals-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   width: 100%;
-  max-width: 720px;
-  margin: 0 auto;
-  border-collapse: collapse;
-  background: #fff;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
-.radicals-table th,
-.radicals-table td {
-  padding: 8px 12px;
-  text-align: left;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+.radicals-chart-toggle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
 }
 
-.radicals-table th {
-  font-size: 0.8em;
-  color: #666;
-  font-weight: 600;
-  background: rgba(0, 0, 0, 0.02);
+.radicals-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
-.radicals-no {
+.radicals-group-title {
+  margin: 0 0 10px;
+  font-size: 0.95em;
+  font-weight: 700;
+  color: #396cd8;
+  border-bottom: 2px solid rgba(57, 108, 216, 0.2);
+  padding-bottom: 4px;
+}
+
+.radicals-group-count {
+  font-weight: 400;
   color: #999;
-  font-size: 0.85em;
 }
 
-.radicals-char {
-  font-size: 1.4rem;
+.radicals-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 10px;
+}
+
+.radical-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 14px 8px 10px;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.radical-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(57, 108, 216, 0.25);
+}
+
+.radical-card-strokes {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  font-size: 0.65em;
+  color: #bbb;
+}
+
+.radical-card-char {
+  font-family: var(--font-jp);
+  font-size: 1.8rem;
+  line-height: 1.2;
+}
+
+.radical-card-variants {
+  font-size: 0.6em;
+  color: #999;
+}
+
+.radical-card-hanviet {
+  font-weight: 700;
+  color: #396cd8;
+  font-size: 0.9em;
+}
+
+.radical-card-meaning {
+  font-size: 0.72em;
+  color: #888;
+  text-align: center;
+  line-height: 1.25;
 }
 
 .radicals-variants {

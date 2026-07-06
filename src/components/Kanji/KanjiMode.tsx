@@ -6,6 +6,7 @@ import type { KanjiDataset, KanjiEntry } from "../../lib/types";
 import { KanjiCard } from "./KanjiCard";
 import { KanjiDailyProgress } from "./KanjiDailyProgress";
 import { KanjiLevelPicker } from "./KanjiLevelPicker";
+import { RadicalsChart } from "../Radicals/RadicalsChart";
 
 const KANJI: KanjiDataset = kanjiData as KanjiDataset;
 
@@ -20,6 +21,7 @@ export function KanjiMode({ compact }: { compact: boolean }) {
   const progress = useAppStore((s) => s.progress.kanji);
   const markKanjiStudied = useAppStore((s) => s.markKanjiStudied);
   const [index, setIndex] = useState(0);
+  const [showRadicals, setShowRadicals] = useState(false);
 
   const studiedToday = useMemo(() => {
     const date = todayDateString();
@@ -78,31 +80,48 @@ export function KanjiMode({ compact }: { compact: boolean }) {
   return (
     <div className="mode-page">
       <div className="mode-controls-bar">
-        <KanjiLevelPicker />
-        <span className="control-divider" />
-        <KanjiDailyProgress studiedCount={studiedCount} />
-        {current && (
+        <button
+          className={showRadicals ? "tab tab-active" : "tab"}
+          onClick={() => setShowRadicals((v) => !v)}
+        >
+          {showRadicals ? "✕ Đóng bộ thủ" : "部 Bộ thủ"}
+        </button>
+        {!showRadicals && (
           <>
             <span className="control-divider" />
-            <button onClick={() => setIndex((i) => Math.max(i - 1, 0))} disabled={boundedIndex === 0} title="Trước">
-              ◀
-            </button>
-            <button
-              onClick={() => setIndex((i) => Math.min(i + 1, todaysList.length - 1))}
-              disabled={boundedIndex === todaysList.length - 1}
-              title="Tiếp"
-            >
-              ▶
-            </button>
-            <span className="kana-progress">
-              {boundedIndex + 1} / {todaysList.length}
-            </span>
+            <KanjiLevelPicker />
+            <span className="control-divider" />
+            <KanjiDailyProgress studiedCount={studiedCount} />
+            {current && (
+              <>
+                <span className="control-divider" />
+                <button
+                  onClick={() => setIndex((i) => Math.max(i - 1, 0))}
+                  disabled={boundedIndex === 0}
+                  title="Trước"
+                >
+                  ◀
+                </button>
+                <button
+                  onClick={() => setIndex((i) => Math.min(i + 1, todaysList.length - 1))}
+                  disabled={boundedIndex === todaysList.length - 1}
+                  title="Tiếp"
+                >
+                  ▶
+                </button>
+                <span className="kana-progress">
+                  {boundedIndex + 1} / {todaysList.length}
+                </span>
+              </>
+            )}
           </>
         )}
       </div>
 
-      <div className="mode-stage">
-        {current ? (
+      <div className={showRadicals ? "mode-stage mode-stage-scroll" : "mode-stage"}>
+        {showRadicals ? (
+          <RadicalsChart />
+        ) : current ? (
           <KanjiCard
             entry={current}
             isStudied={studiedToday.has(current.kanji)}

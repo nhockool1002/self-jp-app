@@ -49,12 +49,12 @@ export function KanjiCard({ entry, isStudied, onPlayAudio, onMarkStudied, compac
           </div>
           {entry.onyomi.length > 0 && (
             <div className="kanji-detail-row">
-              <strong>Âm On:</strong> {entry.onyomi.join("、")}
+              <strong>Âm On:</strong> <span className="jp-text">{entry.onyomi.join("、")}</span>
             </div>
           )}
           {entry.kunyomi.length > 0 && (
             <div className="kanji-detail-row">
-              <strong>Âm Kun:</strong> {entry.kunyomi.join("、")}
+              <strong>Âm Kun:</strong> <span className="jp-text">{entry.kunyomi.join("、")}</span>
             </div>
           )}
           {entry.strokes != null && (
@@ -68,7 +68,10 @@ export function KanjiCard({ entry, isStudied, onPlayAudio, onMarkStudied, compac
               <ul className="kanji-examples">
                 {entry.exampleWords.map((w) => (
                   <li key={w.word}>
-                    {w.word} ({w.reading}) — {w.meaning}
+                    <span className="jp-text">
+                      {w.word} ({w.reading})
+                    </span>{" "}
+                    — {w.meaning}
                   </li>
                 ))}
               </ul>

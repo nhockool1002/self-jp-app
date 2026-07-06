@@ -6,7 +6,6 @@ const MODES: { id: AppMode; label: string; icon: string }[] = [
   { id: "kanji", label: "Kanji", icon: "字" },
   { id: "vocab", label: "Từ vựng", icon: "📚" },
   { id: "grammar", label: "Ngữ pháp", icon: "📝" },
-  { id: "radicals", label: "Bộ thủ", icon: "部" },
 ];
 
 const ABOUT_TAB = { id: "about" as const, label: "Giới thiệu", icon: "ℹ️" };

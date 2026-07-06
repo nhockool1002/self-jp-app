@@ -1,4 +1,4 @@
-export type AppMode = "kana" | "kanji" | "vocab" | "grammar" | "radicals" | "about";
+export type AppMode = "kana" | "kanji" | "vocab" | "grammar" | "about";
 
 export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 
