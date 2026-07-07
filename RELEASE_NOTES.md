@@ -1,6 +1,6 @@
-# Self JP App — v0.1.3 Release Notes
+# Self JP App — v0.1.4 Release Notes
 
-**Date:** 2026-07-06
+**Date:** 2026-07-07
 **Platform:** macOS (Apple Silicon, built & verified) · Windows & Linux (built via CI, not yet verified on physical hardware) · iOS & Android (unsigned/debug builds via CI — see [README.md](README.md#mobile-ios--android))
 
 A Tauri v2 + React desktop app for daily Japanese study, built for Vietnamese speakers — all learning content and UI text is in Vietnamese.
@@ -44,6 +44,7 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 
 ## Fixes since initial implementation
 
+- **Fix**: macOS build showed "‘self-jp-app’ is damaged and can’t be opened" after downloading from a Release — the linker's default ad-hoc signature claimed the bundle's resources were sealed but never actually sealed them, which Gatekeeper treats as tampering once the quarantine attribute is applied. `tauri.conf.json`'s `bundle.macOS.signingIdentity: "-"` now makes Tauri properly re-sign the bundle. The app still isn't notarized (needs a paid Apple Developer account), so first launch will show the normal, bypassable "unidentified developer" Gatekeeper prompt — see [README.md](README.md#macos).
 - **New**: native Japanese font for all kana/kanji text (Hiragino Sans / Yu Gothic / Meiryo / Noto Sans JP by platform), separate from the Vietnamese Latin font
 - **New**: 214-radical reference, now built into Kanji mode as a "部 Bộ thủ" toggle — grouped by stroke-count bucket (1–5 nét, "Nhiều nét") and shown as a card grid instead of a table
 - **New**: CI now builds an unsigned iOS app and a debug Android APK on every tagged release (see [README.md](README.md#mobile-ios--android))

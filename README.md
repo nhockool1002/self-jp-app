@@ -42,6 +42,8 @@ npm run tauri dev
 
 Production build: `npm run tauri build` → `.app` + `.dmg` under `src-tauri/target/release/bundle/`.
 
+The app is ad-hoc signed (`bundle.macOS.signingIdentity: "-"` in `tauri.conf.json`) but not notarized with an Apple Developer ID (that needs a paid Apple Developer account). After downloading the `.dmg` from a Release, macOS Gatekeeper will show an "unidentified developer" warning on first launch — right-click the app → **Open**, or allow it via **System Settings → Privacy & Security**. This is expected for any app distributed outside the App Store without notarization.
+
 ### Windows
 
 Prerequisites:
