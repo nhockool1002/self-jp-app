@@ -775,6 +775,121 @@ button.primary {
   color: #888;
 }
 
+.audio-direction-toggle {
+  display: flex;
+  gap: 4px;
+}
+
+.audio-direction-toggle .tab {
+  padding: 0.2em 0.5em;
+  font-size: 0.95em;
+  white-space: nowrap;
+}
+
+.audio-word-prompt {
+  font-size: 1.4rem;
+  text-align: center;
+  max-width: 34ch;
+}
+
+.audio-word-card-compact .audio-word-prompt {
+  font-size: 1.05rem;
+}
+
+.audio-lesson-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.audio-lesson-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.audio-lesson-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(44px, 1fr));
+  gap: 6px;
+}
+
+.audio-lesson-btn {
+  padding: 0.4em;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.audio-lesson-btn-active {
+  background: #396cd8;
+  color: #fff;
+}
+
+.audio-word-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 5vh 8vw;
+  border-radius: 24px;
+  background: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  min-width: 280px;
+}
+
+.audio-word-card-compact {
+  padding: 12px 20px;
+  min-width: 100px;
+  gap: 6px;
+}
+
+.audio-word-lesson {
+  font-size: 0.8em;
+  color: #999;
+}
+
+.audio-word-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.audio-word-kanji {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  line-height: 1.1;
+}
+
+.audio-word-kana {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  color: #666;
+}
+
+.audio-word-card-compact .audio-word-kanji {
+  font-size: 1.6rem;
+}
+
+.audio-word-card-compact .audio-word-kana {
+  font-size: 1.05rem;
+}
+
+.audio-word-meaning {
+  font-size: 1.2rem;
+  min-height: 1.5em;
+  text-align: center;
+}
+
+.audio-word-meaning-hidden {
+  color: #bbb;
+  font-style: italic;
+  font-size: 0.95rem;
+}
+
 .about-card {
   display: flex;
   flex-direction: column;
@@ -917,6 +1032,7 @@ button.primary {
   /* Softer, more tactile cards — brand-tinted shadow instead of flat black */
   .kana-card,
   .kanji-card,
+  .audio-word-card,
   .about-card {
     border-radius: 26px;
     box-shadow: 0 10px 34px rgba(40, 70, 160, 0.14), 0 2px 8px rgba(0, 0, 0, 0.05);

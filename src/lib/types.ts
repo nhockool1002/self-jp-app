@@ -1,4 +1,4 @@
-export type AppMode = "kana" | "kanji" | "vocab" | "grammar" | "about";
+export type AppMode = "kana" | "kanji" | "vocab" | "grammar" | "audio" | "about";
 
 export type JlptLevel = "N5" | "N4" | "N3" | "N2" | "N1";
 
@@ -39,6 +39,12 @@ export interface VocabEntry {
 
 export type VocabDataset = Record<string, VocabEntry[]>;
 
+// jp-to-vi: play the Japanese audio first, then reveal the Vietnamese meaning
+// (listening practice). vi-to-jp: show the Vietnamese meaning first and give
+// the learner a pause to attempt saying the Japanese aloud, then reveal/play
+// the Japanese as the answer (speaking-recall practice).
+export type AudioDirection = "jp-to-vi" | "vi-to-jp";
+
 export interface GrammarExample {
   japanese: string;
   reading: string;
@@ -63,6 +69,12 @@ export interface AppSettings {
   kanji: {
     wordsPerDay: number;
     currentLevel: JlptLevel;
+  };
+  audio: {
+    selectedLessons: number[];
+    pauseSec: number;
+    speed: number;
+    direction: AudioDirection;
   };
 }
 

@@ -6,6 +6,7 @@ import type { AppMode, AppProgress, AppSettings } from "./types";
 const DEFAULT_SETTINGS: AppSettings = {
   kana: { cardsPerSession: 20, intervalMs: 3000 },
   kanji: { wordsPerDay: 5, currentLevel: "N5" },
+  audio: { selectedLessons: [1], pauseSec: 4, speed: 1, direction: "jp-to-vi" },
 };
 
 const DEFAULT_PROGRESS: AppProgress = {
@@ -27,6 +28,7 @@ interface AppState {
   setCompact: (compact: boolean) => Promise<void>;
   updateKanaSettings: (partial: Partial<AppSettings["kana"]>) => void;
   updateKanjiSettings: (partial: Partial<AppSettings["kanji"]>) => void;
+  updateAudioSettings: (partial: Partial<AppSettings["audio"]>) => void;
   markKanjiStudied: (kanjiId: string) => void;
 }
 
@@ -41,7 +43,11 @@ export const useAppStore = create<AppState>((set, get) => ({
     try {
       const [settings, progress] = await Promise.all([loadSettings(), loadProgress()]);
       set({
-        settings: settings ?? DEFAULT_SETTINGS,
+        // Spread over defaults so settings persisted by an older app version
+        // (missing newer keys like `audio`) don't crash on read.
+        settings: settings
+          ? { ...DEFAULT_SETTINGS, ...settings, audio: { ...DEFAULT_SETTINGS.audio, ...settings.audio } }
+          : DEFAULT_SETTINGS,
         progress: progress ?? DEFAULT_PROGRESS,
         hydrated: true,
       });
@@ -67,6 +73,12 @@ export const useAppStore = create<AppState>((set, get) => ({
 
   updateKanjiSettings: (partial) => {
     const settings = { ...get().settings, kanji: { ...get().settings.kanji, ...partial } };
+    set({ settings });
+    void saveSettings(settings);
+  },
+
+  updateAudioSettings: (partial) => {
+    const settings = { ...get().settings, audio: { ...get().settings.audio, ...partial } };
     set({ settings });
     void saveSettings(settings);
   },

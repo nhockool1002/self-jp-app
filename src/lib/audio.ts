@@ -2,7 +2,7 @@ import { invoke } from "@tauri-apps/api/core";
 
 export type AudioSource =
   | { type: "file"; path: string }
-  | { type: "tts"; text: string };
+  | { type: "tts"; text: string; rate?: number };
 
 export async function playAudio(source: AudioSource): Promise<void> {
   if (source.type === "file") {
@@ -10,5 +10,5 @@ export async function playAudio(source: AudioSource): Promise<void> {
     await audio.play();
     return;
   }
-  await invoke("tts_speak", { text: source.text });
+  await invoke("tts_speak", { text: source.text, rate: source.rate });
 }
