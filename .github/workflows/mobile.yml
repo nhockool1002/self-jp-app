@@ -8,17 +8,29 @@ name: Mobile
 #              result can't be installed on a real device without a dev
 #              team + certificate. Good for verifying the app still builds
 #              for iOS; not distributable yet.
-#   - Android: `tauri android build --apk --debug` — a debug APK, auto-signed
-#              by Gradle's built-in debug keystore. This one IS directly
-#              installable on any Android device/emulator with "install
-#              unknown apps" allowed.
+#   - Android: `tauri android build --apk --split-per-abi --debug` — debug
+#              APKs, auto-signed by Gradle's built-in debug keystore, one
+#              per CPU architecture (arm64, arm, x86, x86_64) instead of a
+#              single "fat" universal APK. By default `--apk` bundles all
+#              four architectures' native libraries into one file, which is
+#              why builds were 400MB+; `--split-per-abi` is Tauri's
+#              documented fix for exactly this (see
+#              https://v2.tauri.app/distribute/google-play/#separate-bundles-per-architecture).
+#              Each split APK is directly installable on a matching Android
+#              device/emulator with "install unknown apps" allowed.
+#              We also build a universal debug AAB (`--aab`, no split — AAB
+#              is meant for Google Play, which does its own per-device
+#              splitting) so an Android App Bundle is available alongside
+#              the APKs once Play Store distribution is set up.
 #
 # To get real, distributable builds later:
 #   - iOS: add an Apple Developer Team ID as the APPLE_DEVELOPMENT_TEAM repo
 #     secret (plus a signing certificate + provisioning profile in the
 #     keychain), then drop --no-sign.
 #   - Android: add a release signingConfig (keystore + passwords as repo
-#     secrets) to src-tauri/gen/android, then build without --debug.
+#     secrets) to src-tauri/gen/android, then build without --debug. A
+#     release build will also shrink further via minification/resource
+#     shrinking, which debug builds intentionally skip.
 #
 # Only runs on workflow_dispatch or a v* tag (not every push to main) since
 # mobile toolchain setup is heavier and newer than the desktop pipeline.
@@ -113,19 +125,31 @@ jobs:
       - name: Init Android project
         run: npm run tauri android init -- --ci
 
-      - name: Build unsigned debug APK
-        run: npm run tauri android build -- --ci --apk --debug
+      - name: Build unsigned debug APKs (split per ABI)
+        run: npm run tauri android build -- --ci --apk --split-per-abi --debug
 
-      - name: Upload build artifact
+      - name: Build unsigned debug AAB (universal)
+        run: npm run tauri android build -- --ci --aab --debug
+
+      - name: Upload APK artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: self-jp-app-android-debug
+          name: self-jp-app-android-debug-apk
           path: src-tauri/gen/android/app/build/outputs/apk/**/*.apk
+          if-no-files-found: warn
+
+      - name: Upload AAB artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: self-jp-app-android-debug-aab
+          path: src-tauri/gen/android/app/build/outputs/bundle/**/*.aab
           if-no-files-found: warn
 
       - name: Publish to GitHub Release
         if: startsWith(github.ref, 'refs/tags/v')
         uses: softprops/action-gh-release@v2
         with:
-          files: src-tauri/gen/android/app/build/outputs/apk/**/*.apk
+          files: |
+            src-tauri/gen/android/app/build/outputs/apk/**/*.apk
+            src-tauri/gen/android/app/build/outputs/bundle/**/*.aab
           fail_on_unmatched_files: true

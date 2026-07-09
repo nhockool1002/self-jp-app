@@ -88,12 +88,12 @@ The `.app`/`.dmg`, `.msi`/`.exe`, and `.deb`/`.AppImage` are always uploaded as 
 
 ### Mobile (iOS & Android)
 
-[.github/workflows/mobile.yml](.github/workflows/mobile.yml) builds an **unsigned** iOS app and an unsigned **debug** Android APK, on a `v*` tag or manual trigger only (not every push, since mobile toolchain setup is newer/heavier). No Apple Developer account or Android keystore is configured yet:
+[.github/workflows/mobile.yml](.github/workflows/mobile.yml) builds an **unsigned** iOS app and unsigned **debug** Android APKs/AAB, on a `v*` tag or manual trigger only (not every push, since mobile toolchain setup is newer/heavier). No Apple Developer account or Android keystore is configured yet:
 
 - **iOS** (`macos-latest` runner): `tauri ios build --no-sign` — verifies the app still compiles/archives for iOS, but the result can't be installed on a real device without a signing certificate + provisioning profile.
-- **Android** (`ubuntu-latest` runner): `tauri android build --apk --debug` — a debug APK, auto-signed by Gradle's debug keystore, directly installable on any device/emulator with "install unknown apps" allowed.
+- **Android** (`ubuntu-latest` runner): `tauri android build --apk --split-per-abi --debug` — one debug APK **per CPU architecture** (arm64, arm, x86, x86_64), auto-signed by Gradle's debug keystore, directly installable on any matching device/emulator with "install unknown apps" allowed. Splitting per ABI is what keeps each APK small instead of one 400MB+ universal file with all four architectures bundled together — pick the APK matching your device (most phones are `arm64`). A universal debug **AAB** is also built (`tauri android build --aab --debug`, no split, since Android App Bundles are meant for Google Play, which does its own per-device splitting) for future Play Store distribution.
 
-Both are uploaded as workflow artifacts (`self-jp-app-ios-unsigned`, `self-jp-app-android-debug`) on every run, and — like the desktop builds — additionally attached to the GitHub Release when triggered by a `v*` tag. To get real, distributable builds: add an `APPLE_DEVELOPMENT_TEAM` secret + signing certificate for iOS, or a release keystore for Android, then drop `--no-sign`/`--debug` in the workflow.
+All are uploaded as workflow artifacts (`self-jp-app-ios-unsigned`, `self-jp-app-android-debug-apk`, `self-jp-app-android-debug-aab`) on every run, and — like the desktop builds — additionally attached to the GitHub Release when triggered by a `v*` tag. To get real, distributable (and smaller, minified) builds: add an `APPLE_DEVELOPMENT_TEAM` secret + signing certificate for iOS, or a release keystore for Android, then drop `--no-sign`/`--debug` in the workflow.
 
 `src-tauri/gen/` (the generated Xcode/Android Studio projects) is gitignored and regenerated fresh by `tauri ios/android init` on every run, both locally and in CI.
 

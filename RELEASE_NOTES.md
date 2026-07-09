@@ -1,4 +1,4 @@
-# Self JP App — v0.1.5 Release Notes
+# Self JP App — v0.1.6 Release Notes
 
 **Date:** 2026-07-09
 **Platform:** macOS (Apple Silicon, built & verified) · Windows & Linux (built via CI, not yet verified on physical hardware) · iOS & Android (unsigned/debug builds via CI — see [README.md](README.md#mobile-ios--android))
@@ -55,7 +55,7 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 - **Fix**: macOS build showed "‘self-jp-app’ is damaged and can’t be opened" after downloading from a Release — the linker's default ad-hoc signature claimed the bundle's resources were sealed but never actually sealed them, which Gatekeeper treats as tampering once the quarantine attribute is applied. `tauri.conf.json`'s `bundle.macOS.signingIdentity: "-"` now makes Tauri properly re-sign the bundle. The app still isn't notarized (needs a paid Apple Developer account), so first launch will show the normal, bypassable "unidentified developer" Gatekeeper prompt — see [README.md](README.md#macos).
 - **New**: native Japanese font for all kana/kanji text (Hiragino Sans / Yu Gothic / Meiryo / Noto Sans JP by platform), separate from the Vietnamese Latin font
 - **New**: 214-radical reference, now built into Kanji mode as a "部 Bộ thủ" toggle — grouped by stroke-count bucket (1–5 nét, "Nhiều nét") and shown as a card grid instead of a table
-- **New**: CI now builds an unsigned iOS app and a debug Android APK on every tagged release (see [README.md](README.md#mobile-ios--android))
+- **New (v0.1.6)**: Android APK size fix — CI was producing a single 400MB+ "universal" APK bundling all four CPU architectures together; it now builds one debug APK per architecture (`--split-per-abi`) so each download is a fraction of that size, plus a universal debug AAB for future Google Play distribution (see [README.md](README.md#mobile-ios--android))
 - **Mobile**: fixed the layout overlapping the notch/Dynamic Island (iOS) and status-bar cutout (Android) — the app now insets itself using `env(safe-area-inset-*)` on all four sides
 - **Mobile**: added a branded splash/intro screen shown while the app loads on startup, instead of a plain "Đang tải..." text flash
 - Kana mode no longer auto-plays audio on every card change — audio now only plays on click, matching Kanji/Vocab/Grammar behavior
@@ -77,4 +77,4 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 - **Windows**: `npm run tauri build` on a Windows machine → `.msi`/`.exe` (see [README.md](README.md#windows))
 - **Linux**: `npm run tauri build` on a Linux machine → `.deb`/`.AppImage` (see [README.md](README.md#linux))
 - **CI (desktop)**: [.github/workflows/build.yml](.github/workflows/build.yml) builds macOS, Windows, and Linux on every push to `main`, on manual trigger, or on a `v*` tag (see [README.md](README.md#building-via-ci-no-macoswindowslinux-machine-needed))
-- **CI (mobile)**: [.github/workflows/mobile.yml](.github/workflows/mobile.yml) builds an unsigned iOS app and a debug Android APK on a `v*` tag or manual trigger (see [README.md](README.md#mobile-ios--android))
+- **CI (mobile)**: [.github/workflows/mobile.yml](.github/workflows/mobile.yml) builds an unsigned iOS app and split-per-ABI debug Android APKs (plus a universal debug AAB) on a `v*` tag or manual trigger (see [README.md](README.md#mobile-ios--android))
