@@ -1,13 +1,13 @@
-# Self JP App — v0.1.4 Release Notes
+# Self JP App — v0.1.5 Release Notes
 
-**Date:** 2026-07-07
+**Date:** 2026-07-09
 **Platform:** macOS (Apple Silicon, built & verified) · Windows & Linux (built via CI, not yet verified on physical hardware) · iOS & Android (unsigned/debug builds via CI — see [README.md](README.md#mobile-ios--android))
 
 A Tauri v2 + React desktop app for daily Japanese study, built for Vietnamese speakers — all learning content and UI text is in Vietnamese.
 
 ## Highlights
 
-- **4 learning modes**: Kana, Kanji (N5–N1, plus a built-in 214-radical reference), Từ vựng (Minna no Nihongo), Ngữ pháp (grammar)
+- **5 learning modes**: Kana, Kanji (N5–N1, plus a built-in 214-radical reference), Từ vựng (Minna no Nihongo), Ngữ pháp (grammar), Nghe từ vựng (audio drills)
 - **Fully Vietnamese**: Hán-Việt kanji readings, hand-translated vocabulary, original grammar explanations
 - **Native Japanese typography**: kana/kanji render in the OS's native Japanese font (Hiragino Sans / Yu Gothic / Meiryo / Noto Sans JP), kept separate from the Vietnamese Latin font
 - **Animated stroke order** for every kana and kanji in the app
@@ -28,6 +28,12 @@ The complete Minna no Nihongo Shokyū I & II vocabulary — 2,692 words across 5
 ### Ngữ pháp (Grammar)
 101 grammar points across all 50 MNN lessons, each with its structure pattern, a Vietnamese explanation, 5 example sentences with audio, and a usage note for points with a common pitfall or exception.
 
+### Nghe từ vựng (Audio) — new in v0.1.5
+Hands-free vocabulary drills built on the same Minna no Nihongo word list. Pick one or more lessons and they're mixed and shuffled into a single session; a play/pause/next/previous control bar and an adjustable speech speed (0.5x–2x) round out playback. Two directions, toggled at any time without losing the session:
+
+- **🎧 Nghe → Đoán nghĩa** (listening): hear the Japanese word, pause a few seconds to guess, then the Vietnamese meaning is revealed.
+- **💬 Đọc nghĩa → Nói tiếng Nhật** (speaking recall): the Vietnamese meaning is shown up front; after a pause to attempt saying the Japanese aloud, the Japanese text is revealed and spoken as the answer.
+
 ### About
 App name, version, author, and tech stack, via the ⓘ icon.
 
@@ -44,6 +50,8 @@ Full attribution and licensing details are in [README.md](README.md#data-sources
 
 ## Fixes since initial implementation
 
+- **New**: Nghe từ vựng (Audio) mode — multi-lesson shuffled vocab drills with a listening/speaking-recall direction toggle (see above)
+- **Change**: the `tts_speak` command now awaits the OS speech process instead of firing it and returning immediately, and accepts a playback-speed rate — needed so Audio mode's auto-advance timing lines up with when speech actually finishes
 - **Fix**: macOS build showed "‘self-jp-app’ is damaged and can’t be opened" after downloading from a Release — the linker's default ad-hoc signature claimed the bundle's resources were sealed but never actually sealed them, which Gatekeeper treats as tampering once the quarantine attribute is applied. `tauri.conf.json`'s `bundle.macOS.signingIdentity: "-"` now makes Tauri properly re-sign the bundle. The app still isn't notarized (needs a paid Apple Developer account), so first launch will show the normal, bypassable "unidentified developer" Gatekeeper prompt — see [README.md](README.md#macos).
 - **New**: native Japanese font for all kana/kanji text (Hiragino Sans / Yu Gothic / Meiryo / Noto Sans JP by platform), separate from the Vietnamese Latin font
 - **New**: 214-radical reference, now built into Kanji mode as a "部 Bộ thủ" toggle — grouped by stroke-count bucket (1–5 nét, "Nhiều nét") and shown as a card grid instead of a table

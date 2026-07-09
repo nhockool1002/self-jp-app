@@ -10,6 +10,7 @@ The UI and all learning content (kanji meanings, vocabulary, grammar explanation
 - **Kanji (N5–N1)** — daily kanji list sized by a configurable words-per-day setting, per-level browsing, Hán-Việt reading + Vietnamese meanings, example words (from the MNN vocab list, with Vietnamese meanings), animated stroke-order popover, daily progress tracking, TTS audio. A "部 Bộ thủ" toggle in the controls bar swaps the kanji card for a full 214-radical reference chart (grouped 1–5 nét + "Nhiều nét", card grid with Hán-Việt name and meaning) in place.
 - **Từ vựng (Vocab)** — Minna no Nihongo Shokyū I & II vocabulary, browsable lesson by lesson (1–50), Vietnamese meanings, TTS audio.
 - **Ngữ pháp (Grammar)** — MNN grammar points by lesson (1–50), each with structure, Vietnamese explanation, 5 example sentences with audio, and a usage note where relevant.
+- **Nghe từ vựng (Audio)** — hands-free vocab drills: pick one or more MNN lessons to mix and shuffle into one session, with play/pause/next/previous controls and adjustable TTS speed (0.5x–2x). Toggle between two directions at any time: "🎧 Nghe → Đoán nghĩa" (hear the Japanese, pause, then reveal the Vietnamese meaning) and "💬 Đọc nghĩa → Nói tiếng Nhật" (see the Vietnamese meaning, pause to attempt saying the Japanese, then reveal/hear it as the answer).
 - **About** (ⓘ icon, top right) — app name, version, author, tech stack.
 
 ## Data sources
